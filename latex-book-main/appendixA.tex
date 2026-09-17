@@ -1,0 +1,216 @@
+Phụ lục này trình bày mã nguồn SQL được sử dụng để xây dựng cơ sở dữ liệu cho hệ thống Chăm sóc Sức khỏe Thú cưng''. Nội dung bao gồm các câu lệnh tạo cơ sở dữ liệu, tạo bảng, thiết lập khóa chính, khóa ngoại và các ràng buộc toàn vẹn dữ liệu.
+
+\section{Tạo cơ sở dữ liệu}
+Cơ sở dữ liệu được đặt tên là \texttt{PetHealthCare}. Câu lệnh sau được sử dụng để tạo và lựa chọn cơ sở dữ liệu:
+
+\begin{verbatim}
+CREATE DATABASE pet_health_care;
+USE pet_health_care;
+\end{verbatim}
+
+\section{Tạo bảng Customer}
+Bảng \texttt{Customer} lưu trữ thông tin của khách hàng sử dụng dịch vụ chăm sóc thú cưng.
+
+\begin{verbatim}
+CREATE TABLE Customer (
+    customer_id INT primary key,
+    full_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100),
+    address VARCHAR(255)
+);
+\end{verbatim}
+
+\section{Tạo bảng Pet}
+Bảng \texttt{Pet} lưu trữ thông tin thú cưng và liên kết mỗi thú cưng với một khách hàng thông qua khóa ngoại \texttt{customer\_id}.
+
+\begin{verbatim}
+CREATE TABLE Pet (
+    pet_id INT primary key,
+    name VARCHAR(100) NOT NULL,
+    species VARCHAR(50) NOT NULL,
+    breed VARCHAR(100),
+    age INT,
+    customer_id INT NOT NULL,
+    CONSTRAINT fk_pet_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+);
+\end{verbatim}
+
+\section{Tạo bảng Veterinarian}
+Bảng \texttt{Veterinarian} lưu trữ thông tin bác sĩ thú y, chuyên môn và lịch làm việc.
+
+\begin{verbatim}
+CREATE TABLE Veterinarian (
+    vet_id INT primary key,
+    full_name VARCHAR(100) NOT NULL,
+    schedule VARCHAR(255)
+);
+\end{verbatim}
+
+\section{Tạo bảng Staff}
+Bảng \texttt{Staff} lưu trữ thông tin nhân viên tham gia hỗ trợ và xử lý các lịch hẹn.
+
+\begin{verbatim}
+CREATE TABLE Staff (
+    staff_id INT primary key,
+    full_name VARCHAR(100) NOT NULL,
+    role VARCHAR(50) NOT NULL
+);
+\end{verbatim}
+
+\section{Tạo bảng Admin}
+Bảng \texttt{Admin} lưu trữ thông tin tài khoản quản trị hệ thống. Thuộc tính \texttt{username} được thiết lập ràng buộc \texttt{UNIQUE} nhằm tránh trường hợp nhiều tài khoản sử dụng cùng một tên đăng nhập.
+
+\begin{verbatim}
+CREATE TABLE Admin (
+    admin_id INT primary key,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+\end{verbatim}
+
+\section{Tạo bảng Booking}
+Bảng \texttt{Booking} lưu trữ thông tin lịch hẹn giữa khách hàng, thú cưng và bác sĩ thú y. Thuộc tính \texttt{staff\_id} có thể nhận giá trị \texttt{NULL} vì một lịch hẹn có thể chưa được phân công nhân viên xử lý.
+
+\begin{verbatim}
+CREATE TABLE Booking (
+    booking_id INT primary key,
+    date_time DATETIME NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    payment DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    customer_id INT NOT NULL,
+    pet_id INT NOT NULL,
+    vet_id INT NOT NULL,
+    staff_id INT,
+
+    CONSTRAINT fk_booking_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id),
+
+    CONSTRAINT fk_booking_pet
+        FOREIGN KEY (pet_id)
+        REFERENCES Pet(pet_id),
+
+    CONSTRAINT fk_booking_vet
+        FOREIGN KEY (vet_id)
+        REFERENCES Veterinarian(vet_id),
+
+    CONSTRAINT fk_booking_staff
+        FOREIGN KEY (staff_id)
+        REFERENCES Staff(staff_id)
+);
+\end{verbatim}
+
+\section{Tạo bảng Invoice}
+Bảng \texttt{Invoice} lưu trữ thông tin hóa đơn tương ứng với lịch hẹn. Thuộc tính \texttt{booking\_id} vừa là khóa ngoại vừa có ràng buộc \texttt{UNIQUE}, đảm bảo một Booking có tối đa một Invoice.
+
+\begin{verbatim}
+CREATE TABLE Invoice (
+    invoice_id INT primary key,
+    amount DECIMAL(10,2) NOT NULL,
+    date DATE NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    booking_id INT NOT NULL UNIQUE,
+    customer_id INT NOT NULL,
+
+    CONSTRAINT fk_invoice_booking
+        FOREIGN KEY (booking_id)
+        REFERENCES Booking(booking_id),
+
+    CONSTRAINT fk_invoice_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+);
+\end{verbatim}
+
+\section{Tạo bảng MedicalRecord}
+Bảng \texttt{MedicalRecord} lưu trữ hồ sơ khám bệnh của thú cưng, bao gồm chẩn đoán, phương pháp điều trị, vaccine và bác sĩ thực hiện.
+
+\begin{verbatim}
+CREATE TABLE MedicalRecord (
+    record_id INT primary key,
+    diagnosis TEXT,
+    treatment TEXT,
+    date DATE NOT NULL,
+    pet_id INT NOT NULL,
+    vet_id INT NOT NULL,
+
+    CONSTRAINT fk_medical_pet
+        FOREIGN KEY (pet_id)
+        REFERENCES Pet(pet_id),
+
+    CONSTRAINT fk_medical_vet
+        FOREIGN KEY (vet_id)
+        REFERENCES Veterinarian(vet_id)
+);
+\end{verbatim}
+
+\section{Tạo bảng Room}
+Bảng \texttt{Room} lưu trữ thông tin các phòng được sử dụng trong quá trình chăm sóc và điều trị thú cưng.
+
+\begin{verbatim}
+CREATE TABLE Room (
+    room_id INT primary key,
+    room_type VARCHAR(50) NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    note VARCHAR(255)
+);
+\end{verbatim}
+
+\section{Tổng hợp cấu trúc cơ sở dữ liệu}
+Sau khi thực hiện các câu lệnh trên, cơ sở dữ liệu \texttt{PetHealthCare} bao gồm 9 bảng:
+
+\begin{itemize}
+\item \texttt{Customer}: quản lý thông tin khách hàng.
+\item \texttt{Pet}: quản lý thông tin thú cưng.
+\item \texttt{Veterinarian}: quản lý thông tin bác sĩ thú y.
+\item \texttt{Staff}: quản lý thông tin nhân viên.
+\item \texttt{Admin}: quản lý tài khoản quản trị hệ thống.
+\item \texttt{Booking}: quản lý lịch hẹn.
+\item \texttt{Invoice}: quản lý hóa đơn.
+\item \texttt{MedicalRecord}: quản lý hồ sơ khám bệnh.
+\item \texttt{Room}: quản lý thông tin phòng.
+\end{itemize}
+
+Các bảng được liên kết với nhau thông qua các khóa ngoại đã được trình bày trong các câu lệnh SQL. Việc sử dụng khóa chính, khóa ngoại và các ràng buộc \texttt{NOT NULL}, \texttt{UNIQUE} giúp đảm bảo tính toàn vẹn và nhất quán của dữ liệu trong hệ thống.
+
+\section{Thứ tự thực thi mã nguồn}
+Do các bảng có sự phụ thuộc thông qua khóa ngoại, cần tạo bảng theo thứ tự phù hợp. Thứ tự thực thi được đề xuất như sau:
+
+\begin{verbatim}
+1. Customer
+2. Pet
+3. Veterinarian
+4. Staff
+5. Admin
+6. Booking
+7. Invoice
+8. MedicalRecord
+9. Room
+   \end{verbatim}
+
+Trong đó, các bảng được tham chiếu bởi khóa ngoại cần được tạo trước bảng chứa khóa ngoại. Ví dụ, bảng \texttt{Booking} tham chiếu đến \texttt{Customer}, \texttt{Pet}, \texttt{Veterinarian} và \texttt{Staff}, do đó các bảng này phải được tạo trước \texttt{Booking}.
+Tương tự, bảng \texttt{Invoice} tham chiếu đến bảng \texttt{Booking}, vì vậy bảng \texttt{Booking} phải được tạo trước bảng \texttt{Invoice}.
+
+\section{Kiểm tra cấu trúc sau khi cài đặt}
+Sau khi tạo các bảng, có thể sử dụng các câu lệnh sau để kiểm tra cấu trúc:
+
+\begin{verbatim}
+SHOW TABLES;
+DESCRIBE Customer;
+DESCRIBE Pet;
+DESCRIBE Veterinarian;
+DESCRIBE Staff;
+DESCRIBE Admin;
+DESCRIBE Booking;
+DESCRIBE Invoice;
+DESCRIBE MedicalRecord;
+DESCRIBE Room;
+\end{verbatim}
+
+Các câu lệnh trên giúp kiểm tra tên bảng, tên thuộc tính, kiểu dữ liệu, khả năng nhận giá trị \texttt{NULL}, khóa chính và các thông tin liên quan đến cấu trúc bảng.
+
+\section{Kết luận phụ lục}
+Mã nguồn trong phụ lục này là phần triển khai trực tiếp từ mô hình quan hệ đã được xây dựng trong các chương trước. Các câu lệnh SQL tạo thành cơ sở cho việc nhập dữ liệu mẫu, thực hiện truy vấn và kiểm thử cơ sở dữ liệu trong các phần tiếp theo của đề tài.

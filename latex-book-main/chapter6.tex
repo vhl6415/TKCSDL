@@ -1,0 +1,333 @@
+Sau khi hoàn thành việc xây dựng cơ sở dữ liệu và đưa dữ liệu mẫu vào hệ thống, cần tiến hành kiểm thử nhằm đánh giá tính đúng đắn, tính toàn vẹn và khả năng đáp ứng các yêu cầu nghiệp vụ. Chương này trình bày các trường hợp kiểm thử đối với cơ sở dữ liệu Chăm sóc Sức khỏe Thú cưng.
+Nội dung kiểm thử tập trung vào các ràng buộc của cơ sở dữ liệu như khóa chính, khóa ngoại, \texttt{NOT NULL}, \texttt{UNIQUE}, cũng như kiểm tra các thao tác thêm, cập nhật và xóa dữ liệu. Ngoài ra, các mối quan hệ giữa khách hàng, thú cưng, lịch hẹn, bác sĩ thú y, nhân viên, hóa đơn và hồ sơ khám bệnh cũng được kiểm tra để đảm bảo dữ liệu hoạt động đúng theo mô hình đã thiết kế.
+
+\section{Mục tiêu kiểm thử}\label{s:test_objectives}
+Mục tiêu của quá trình kiểm thử là xác định cơ sở dữ liệu có đáp ứng đúng các yêu cầu đã phân tích hay không. Các nội dung chính bao gồm:
+
+\begin{itemize}
+\item Kiểm tra sự tồn tại và cấu trúc của các bảng dữ liệu.
+\item Kiểm tra khóa chính của từng bảng.
+\item Kiểm tra khóa ngoại và tính toàn vẹn tham chiếu.
+\item Kiểm tra các thuộc tính bắt buộc với ràng buộc \texttt{NOT NULL}.
+\item Kiểm tra ràng buộc \texttt{UNIQUE} đối với tài khoản quản trị và hóa đơn.
+\item Kiểm tra khả năng thêm dữ liệu hợp lệ.
+\item Kiểm tra khả năng phát hiện và từ chối dữ liệu không hợp lệ.
+\item Kiểm tra các quan hệ giữa các bảng.
+\item Kiểm tra các trường hợp giá trị \texttt{NULL} được cho phép.
+\end{itemize}
+
+\section{Kiểm thử khóa chính}\label{s:primary_key_testing}
+Khóa chính có nhiệm vụ xác định duy nhất mỗi bản ghi trong một bảng. Trong hệ thống, mỗi bảng đều có một khóa chính riêng.
+Các khóa chính được sử dụng gồm:
+
+\begin{verbatim}
+Customer       -> customer_id
+Pet            -> pet_id
+Veterinarian   -> vet_id
+Staff          -> staff_id
+Admin          -> admin_id
+Booking        -> booking_id
+Invoice        -> invoice_id
+MedicalRecord  -> record_id
+Room           -> room_id
+\end{verbatim}
+
+Để kiểm tra tính duy nhất của khóa chính, có thể thử thêm một bản ghi có mã đã tồn tại:
+
+\begin{verbatim}
+INSERT INTO Customer
+(customer_id, full_name, phone, email, address)
+VALUES
+(1, 'Test Customer', '0900000000',
+'[test@gmail.com](mailto:test@gmail.com)', 'Test Address');
+\end{verbatim}
+
+Kết quả mong đợi là hệ quản trị cơ sở dữ liệu từ chối thao tác vì giá trị \texttt{customer\_id = 1} đã tồn tại. Điều này chứng minh khóa chính đang thực hiện đúng chức năng xác định duy nhất bản ghi.
+
+\section{Kiểm thử khóa ngoại}\label{s:foreign_key_testing}
+Khóa ngoại đảm bảo rằng giá trị được lưu trong bảng con phải tham chiếu đến một bản ghi tồn tại trong bảng cha.
+Ví dụ, bảng \texttt{Pet} có khóa ngoại \texttt{customer\_id} tham chiếu đến bảng \texttt{Customer}. Có thể kiểm tra bằng cách thêm thú cưng với một khách hàng không tồn tại:
+
+\begin{verbatim}
+INSERT INTO Pet
+(pet_id, name, species, breed, age, customer_id)
+VALUES
+(16, 'TestPet', 'Dog', 'Poodle', 2, 9999);
+\end{verbatim}
+
+Nếu không tồn tại khách hàng có \texttt{customer\_id = 9999}, hệ quản trị cơ sở dữ liệu phải từ chối thao tác.
+Tương tự, bảng \texttt{Booking} có các khóa ngoại:
+
+\begin{verbatim}
+customer_id -> Customer.customer_id
+pet_id      -> Pet.pet_id
+vet_id      -> Veterinarian.vet_id
+staff_id    -> Staff.staff_id
+\end{verbatim}
+
+Có thể kiểm tra bằng cách thực hiện:
+
+\begin{verbatim}
+INSERT INTO Booking
+(booking_id,date_time, status, payment, customer_id,
+pet_id, vet_id, staff_id)
+VALUES
+(36, '2026-09-10 09:00:00', 'Pending', 200000.00,
+9999, 1, 1, 1);
+\end{verbatim}
+
+Kết quả mong đợi là câu lệnh không được thực hiện do \texttt{customer\_id = 9999} không tồn tại trong bảng \texttt{Customer}.
+
+\section{Kiểm thử ràng buộc NOT NULL}\label{s:not_null_testing}
+Các thuộc tính quan trọng trong hệ thống được thiết lập \texttt{NOT NULL} nhằm ngăn chặn việc lưu dữ liệu thiếu thông tin bắt buộc.
+Ví dụ, trường \texttt{full\_name} của bảng \texttt{Customer} không được để trống:
+
+\begin{verbatim}
+INSERT INTO Customer
+(customer_id, full_name, phone, email, address)
+VALUES
+(6, NULL, '0900000000',
+'test@gmail.com', 'Ho Chi Minh City');
+\end{verbatim}
+
+Kết quả mong đợi là hệ quản trị cơ sở dữ liệu từ chối bản ghi do thuộc tính \texttt{full\_name} được khai báo \texttt{NOT NULL}.
+Tương tự, trường \texttt{date\_time} của bảng \texttt{Booking} cũng bắt buộc phải có giá trị:
+
+\begin{verbatim}
+INSERT INTO Booking
+(booking_id, date_time, status, payment, customer_id,
+pet_id, vet_id)
+VALUES
+(37, NULL, 'Pending', 200000.00, 1, 1, 1);
+\end{verbatim}
+
+Kết quả kiểm thử phải cho thấy bản ghi không được thêm vào cơ sở dữ liệu.
+
+\section{Kiểm thử ràng buộc UNIQUE}\label{s:unique_testing}
+Bảng \texttt{Admin} sử dụng ràng buộc \texttt{UNIQUE} cho trường \texttt{username} nhằm đảm bảo mỗi tài khoản có tên đăng nhập duy nhất.
+Có thể kiểm tra bằng cách thêm một tài khoản sử dụng username đã tồn tại:
+
+\begin{verbatim}
+INSERT INTO Admin
+(username, password, role)
+VALUES
+('91', 'newpassword', 'Administrator');
+\end{verbatim}
+
+Do \texttt{91} đã tồn tại trong dữ liệu mẫu, hệ quản trị cơ sở dữ liệu phải từ chối thao tác.
+Ngoài ra, bảng \texttt{Invoice} có ràng buộc \texttt{UNIQUE} trên \texttt{booking\_id}. Điều này đảm bảo một lịch hẹn chỉ có tối đa một hóa đơn.
+Có thể kiểm tra bằng câu lệnh:
+
+\begin{verbatim}
+INSERT INTO Invoice
+(amount, date, status, booking_id)
+VALUES
+(350000.00, '2026-09-05', 'Paid', 31);
+\end{verbatim}
+
+Nếu hóa đơn cho \texttt{booking\_id = 31} đã tồn tại, hệ quản trị cơ sở dữ liệu phải từ chối bản ghi mới.
+
+\section{Kiểm thử mối quan hệ Customer -- Pet}\label{s:customer_pet_testing}
+Theo mô hình ERD, một khách hàng có thể sở hữu nhiều thú cưng, trong khi mỗi thú cưng thuộc về một khách hàng.
+Để kiểm tra mối quan hệ này, sử dụng truy vấn:
+
+\begin{verbatim}
+SELECT c.customer_id,
+c.full_name AS customer_name,
+p.pet_id,
+p.name AS pet_name
+FROM Customer c
+JOIN Pet p
+ON c.customer_id = p.customer_id
+ORDER BY c.customer_id;
+\end{verbatim}
+
+Kết quả phải thể hiện đúng khách hàng và thú cưng tương ứng. Nếu một khách hàng có nhiều thú cưng, khách hàng đó sẽ xuất hiện trên nhiều dòng kết quả.
+
+\section{Kiểm thử mối quan hệ Booking}\label{s:booking_testing}
+Bảng \texttt{Booking} liên kết với nhiều bảng khác nhau. Vì vậy, đây là một trong những bảng quan trọng cần được kiểm thử.
+Truy vấn sau được sử dụng để kiểm tra toàn bộ thông tin liên quan đến một lịch hẹn:
+
+\begin{verbatim}
+SELECT b.booking_id,
+c.full_name AS customer_name,
+p.name AS pet_name,
+v.full_name AS veterinarian,
+s.full_name AS staff_name,
+b.date_time,
+b.status,
+b.payment
+FROM Booking b
+JOIN Customer c
+ON b.customer_id = c.customer_id
+JOIN Pet p
+ON b.pet_id = p.pet_id
+JOIN Veterinarian v
+ON b.vet_id = v.vet_id
+LEFT JOIN Staff s
+ON b.staff_id = s.staff_id
+ORDER BY b.booking_id;
+\end{verbatim}
+
+Trong truy vấn trên, \texttt{LEFT JOIN} được sử dụng với bảng \texttt{Staff} vì một lịch hẹn có thể chưa được phân công nhân viên. Nếu \texttt{staff\_id} có giá trị \texttt{NULL}, thông tin nhân viên tương ứng cũng sẽ hiển thị dưới dạng \texttt{NULL}.
+
+\section{Kiểm thử quan hệ Booking -- Invoice}\label{s:booking_invoice_testing}
+Mỗi lịch hẹn có thể có tối đa một hóa đơn. Quan hệ này được đảm bảo bằng khóa ngoại kết hợp với ràng buộc \texttt{UNIQUE} trên trường \texttt{booking\_id} của bảng \texttt{Invoice}.
+Truy vấn kiểm tra được thực hiện như sau:
+
+\begin{verbatim}
+SELECT b.booking_id,
+b.date_time,
+b.status AS booking_status,
+i.invoice_id,
+i.amount,
+i.status AS invoice_status
+FROM Booking b
+LEFT JOIN Invoice i
+ON b.booking_id = i.booking_id
+ORDER BY b.booking_id;
+\end{verbatim}
+
+Việc sử dụng \texttt{LEFT JOIN} cho phép hiển thị cả những lịch hẹn chưa có hóa đơn.
+Kết quả kiểm thử được sử dụng để xác nhận rằng một lịch hẹn không xuất hiện nhiều hóa đơn trong dữ liệu.
+
+\section{Kiểm thử hồ sơ khám bệnh}\label{s:medical_record_testing}
+Bảng \texttt{MedicalRecord} liên kết mỗi hồ sơ với một thú cưng và một bác sĩ thú y. Truy vấn sau được sử dụng để kiểm tra các mối liên kết:
+
+\begin{verbatim}
+SELECT mr.record_id,
+p.name AS pet_name,
+v.full_name AS veterinarian,
+mr.diagnosis,
+mr.treatment,
+mr.date
+FROM MedicalRecord mr
+JOIN Pet p
+ON mr.pet_id = p.pet_id
+JOIN Veterinarian v
+ON mr.vet_id = v.vet_id
+ORDER BY mr.date;
+\end{verbatim}
+
+Kết quả phải xác định được thú cưng, bác sĩ thực hiện khám, chẩn đoán, phương pháp điều trị và ngày khám tương ứng.
+
+\section{Kiểm thử thao tác cập nhật dữ liệu}\label{s:update_testing}
+Các thao tác cập nhật được kiểm thử nhằm đảm bảo dữ liệu có thể thay đổi khi cần thiết mà không làm mất tính toàn vẹn của cơ sở dữ liệu.
+Ví dụ, cập nhật trạng thái của một lịch hẹn:
+
+\begin{verbatim}
+UPDATE Booking
+SET status = 'Completed'
+WHERE booking_id = 33;
+\end{verbatim}
+
+Sau khi cập nhật, sử dụng truy vấn:
+
+\begin{verbatim}
+SELECT *
+FROM Booking
+WHERE booking_id =33;
+\end{verbatim}
+
+để kiểm tra kết quả.
+Tương tự, có thể cập nhật trạng thái thanh toán của hóa đơn:
+
+\begin{verbatim}
+UPDATE Invoice
+SET status = 'Paid'
+WHERE invoice_id = 43;
+\end{verbatim}
+
+Sau đó kiểm tra lại dữ liệu để xác nhận giá trị đã được cập nhật chính xác.
+
+\section{Kiểm thử thao tác xóa dữ liệu}\label{s:delete_testing}
+Thao tác xóa cần được kiểm tra cẩn thận vì các bản ghi có thể đang được tham chiếu bởi các bảng khác.
+Ví dụ, khách hàng có thể đang được tham chiếu bởi bảng \texttt{Pet} và \texttt{Booking}. Khi thực hiện:
+
+\begin{verbatim}
+DELETE FROM Customer
+WHERE customer_id = 1;
+\end{verbatim}
+
+nếu vẫn tồn tại các bản ghi trong \texttt{Pet} hoặc \texttt{Booking} tham chiếu đến khách hàng này, thao tác xóa sẽ bị ngăn chặn bởi ràng buộc khóa ngoại.
+Điều này giúp tránh tình trạng tồn tại dữ liệu tham chiếu đến một khách hàng không còn tồn tại trong hệ thống.
+
+\section{Kiểm thử truy vấn thống kê}\label{s:statistics_testing}
+Các truy vấn thống kê được kiểm tra nhằm đảm bảo hệ thống có thể tổng hợp dữ liệu phục vụ hoạt động quản lý.
+Ví dụ, thống kê số lượng lịch hẹn theo trạng thái:
+
+\begin{verbatim}
+SELECT status,
+COUNT(*) AS total
+FROM Booking
+GROUP BY status;
+\end{verbatim}
+
+Thống kê tổng doanh thu của các hóa đơn đã thanh toán:
+
+\begin{verbatim}
+SELECT SUM(amount) AS total_revenue
+FROM Invoice
+WHERE status = 'Paid';
+\end{verbatim}
+
+Thống kê số lượng thú cưng theo loài:
+
+\begin{verbatim}
+SELECT species,
+COUNT(*) AS total_pets
+FROM Pet
+GROUP BY species;
+\end{verbatim}
+
+Các kết quả này được đối chiếu với dữ liệu mẫu để xác định truy vấn có trả về kết quả chính xác hay không.
+
+\section{Bảng tổng hợp kết quả kiểm thử}\label{s:test_summary}
+
+Các trường hợp kiểm thử chính của cơ sở dữ liệu được tổng hợp như sau:
+
+\begin{table}[htbp]
+\centering
+\caption{Tổng hợp các trường hợp kiểm thử cơ sở dữ liệu}
+\label{t:test_summary}
+
+\begin{tabular}{|p{0.06\textwidth}|p{0.28\textwidth}|p{0.33\textwidth}|p{0.14\textwidth}|}
+\hline
+\textbf{STT} & \textbf{Nội dung kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\
+\hline
+1 & Khóa chính & Không cho phép giá trị trùng & Đạt \\
+\hline
+2 & Khóa ngoại & Không cho phép tham chiếu đến bản ghi không tồn tại & Đạt \\
+\hline
+3 & NOT NULL & Không cho phép bỏ trống thuộc tính bắt buộc & Đạt \\
+\hline
+4 & UNIQUE Admin & Không cho phép username trùng & Đạt \\
+\hline
+5 & UNIQUE Invoice & Một booking có tối đa một invoice & Đạt \\
+\hline
+6 & Quan hệ Customer--Pet & Liên kết đúng khách hàng và thú cưng & Đạt \\
+\hline
+7 & Quan hệ Booking & Liên kết đúng khách hàng, pet, vet và staff & Đạt \\
+\hline
+8 & Booking--Invoice & Liên kết tối đa một hóa đơn với booking & Đạt \\
+\hline
+9 & MedicalRecord & Liên kết đúng pet và veterinarian & Đạt \\
+\hline
+10 & UPDATE & Dữ liệu được cập nhật chính xác & Đạt \\
+\hline
+11 & DELETE & Duy trì tính toàn vẹn tham chiếu & Đạt \\
+\hline
+\end{tabular}
+\end{table}
+
+Kết quả tổng hợp cho thấy các ràng buộc quan trọng của cơ sở dữ liệu được thiết kế phù hợp với yêu cầu của hệ thống. Các trường hợp dữ liệu không hợp lệ phải được hệ quản trị cơ sở dữ liệu từ chối, trong khi các thao tác hợp lệ được thực hiện bình thường.
+
+\section{Đánh giá kết quả kiểm thử}\label{s:test_evaluation}
+Thông qua các trường hợp kiểm thử, cơ sở dữ liệu đã thể hiện được các đặc điểm cần thiết của một hệ thống quản lý dữ liệu. Khóa chính đảm bảo tính duy nhất của bản ghi, trong khi khóa ngoại duy trì mối liên hệ giữa các bảng.
+Các ràng buộc \texttt{NOT NULL} giúp hạn chế dữ liệu thiếu đối với các thuộc tính bắt buộc. Ràng buộc \texttt{UNIQUE} trên \texttt{Admin.username} đảm bảo mỗi tài khoản quản trị có tên đăng nhập riêng biệt. Đồng thời, \texttt{UNIQUE} trên \texttt{Invoice.booking\_id} đảm bảo mỗi lịch hẹn có tối đa một hóa đơn.
+Bên cạnh đó, các truy vấn kết hợp nhiều bảng cho thấy dữ liệu có thể được khai thác theo các nghiệp vụ chính như tra cứu lịch hẹn, thông tin thú cưng, bác sĩ thú y, hóa đơn và hồ sơ khám bệnh.
+
+\section{Kết luận chương}\label{s:chapter6_conclusion}
+Chương này đã trình bày quá trình kiểm thử cơ sở dữ liệu Chăm sóc Sức khỏe Thú cưng. Các nội dung kiểm thử bao gồm khóa chính, khóa ngoại, ràng buộc \texttt{NOT NULL}, \texttt{UNIQUE}, các mối quan hệ giữa các bảng và các thao tác cập nhật, xóa dữ liệu.
+Kết quả kiểm thử cho thấy mô hình cơ sở dữ liệu có khả năng duy trì tính toàn vẹn dữ liệu và đáp ứng các yêu cầu nghiệp vụ cơ bản của hệ thống. Các kiểm thử này cũng tạo cơ sở để đánh giá mức độ chuẩn hóa của cơ sở dữ liệu ở chương tiếp theo.
+Trong quá trình thực hiện báo cáo, các trường hợp kiểm thử có thể được minh họa bằng ảnh chụp màn hình kết quả thực thi SQL. Những hình ảnh này là bằng chứng cho việc kiểm tra các ràng buộc và kết quả hoạt động thực tế của cơ sở dữ liệu.

@@ -1,0 +1,101 @@
+Hệ thống Pet Health Care được xây dựng nhằm hỗ trợ quản lý thông tin và các hoạt động chăm sóc sức khỏe thú cưng tại cơ sở thú y. Trong quá trình hoạt động, cơ sở thú y cần quản lý nhiều loại thông tin khác nhau như thông tin khách hàng, thú cưng, bác sĩ thú y, nhân viên, lịch khám, hồ sơ bệnh án, hóa đơn và phòng điều trị. Nếu các thông tin này được lưu trữ không có cấu trúc hoặc quản lý thủ công, việc tìm kiếm, cập nhật và kiểm tra dữ liệu có thể gặp nhiều khó khăn.
+Vì vậy, đề tài tập trung vào việc phân tích nghiệp vụ và thiết kế một cơ sở dữ liệu có cấu trúc cho hệ thống \textnormal{Pet Health Care}. Cơ sở dữ liệu được thiết kế dựa trên các yêu cầu nghiệp vụ, sau đó chuyển đổi từ mô hình thực thể--mối kết hợp (ERD) sang mô hình quan hệ và triển khai bằng hệ quản trị cơ sở dữ liệu. Hệ thống trong phạm vi đề tài chỉ tập trung vào phần cơ sở dữ liệu, không triển khai giao diện web hoặc ứng dụng người dùng.
+
+\section{Mục tiêu của đề tài}\label{s:objectives}
+Mục tiêu chính của đề tài là phân tích các yêu cầu nghiệp vụ của cơ sở thú y và xây dựng mô hình cơ sở dữ liệu phù hợp với các hoạt động quản lý chăm sóc sức khỏe thú cưng.
+Cụ thể, đề tài hướng đến các mục tiêu sau:
+
+\begin{itemize}
+\item Phân tích nghiệp vụ của hệ thống quản lý chăm sóc sức khỏe thú cưng.
+\item Xác định các đối tượng dữ liệu cần được lưu trữ trong hệ thống.
+\item Xác định các thực thể, thuộc tính, khóa và mối quan hệ giữa các thực thể.
+\item Xây dựng mô hình ERD thể hiện cấu trúc dữ liệu và các ràng buộc nghiệp vụ.
+\item Chuyển đổi mô hình ERD sang lược đồ quan hệ.
+\item Xác định khóa chính, khóa ngoại và các ràng buộc dữ liệu như \texttt{NOT NULL} và \texttt{UNIQUE}.
+\item Xây dựng các bảng cơ sở dữ liệu bằng SQL.
+\item Đưa dữ liệu mẫu vào cơ sở dữ liệu để kiểm tra mô hình.
+\item Kiểm thử các mối quan hệ và ràng buộc dữ liệu thông qua các tình huống phù hợp.
+\item Kiểm tra khả năng chuẩn hóa của các quan hệ trong cơ sở dữ liệu.
+\end{itemize}
+
+\section{Phạm vi của hệ thống}\label{s:scope}
+
+Phạm vi của đề tài tập trung vào việc thiết kế và xây dựng cơ sở dữ liệu cho hoạt động chăm sóc sức khỏe thú cưng tại cơ sở thú y.
+
+Các nhóm dữ liệu chính được quản lý bao gồm:
+
+\begin{itemize}
+\item \textbf{Customer}: lưu trữ thông tin khách hàng như họ tên, số điện thoại, email và địa chỉ.
+\item \textbf{Pet}: lưu trữ thông tin thú cưng như tên, loài, giống, tuổi và khách hàng sở hữu.
+\item \textbf{Veterinarian}: lưu trữ thông tin bác sĩ thú y và lịch làm việc.
+\item \textbf{Staff}: lưu trữ thông tin nhân viên hỗ trợ hoạt động của cơ sở.
+\item \textbf{Admin}: lưu trữ thông tin tài khoản quản trị hệ thống.
+\item \textbf{Booking}: quản lý các lịch đặt khám của khách hàng cho thú cưng.
+\item \textbf{MedicalRecord}: lưu trữ thông tin khám và điều trị của thú cưng.
+\item \textbf{Invoice}: quản lý chi phí phát sinh từ các lần đặt lịch và trạng thái thanh toán.
+\item \textbf{Room}: quản lý thông tin các phòng được sử dụng cho thú cưng.
+\end{itemize}
+
+Trong phạm vi hiện tại, đề tài không xây dựng giao diện website, ứng dụng di động hoặc các chức năng tương tác trực tiếp với người dùng. Các thao tác được thực hiện chủ yếu thông qua hệ quản trị cơ sở dữ liệu và các câu lệnh SQL.
+
+\section{Đối tượng và chức năng quản lý}\label{s:entities}
+Hệ thống có các nhóm đối tượng chính tương ứng với các thực thể trong cơ sở dữ liệu.
+
+\subsection{Khách hàng và thú cưng}
+Khách hàng đăng ký thông tin cá nhân và có thể sở hữu một hoặc nhiều thú cưng. Mỗi thú cưng được lưu trữ các thông tin cơ bản như tên, loài, giống và tuổi. Mối quan hệ giữa \textit{Customer} và \textit{Pet} được xác định là quan hệ một--nhiều, trong đó một khách hàng có thể có nhiều thú cưng và mỗi thú cưng thuộc về một khách hàng.
+
+\subsection{Bác sĩ thú y và nhân viên}
+Bác sĩ thú y chịu trách nhiệm thực hiện việc khám và chăm sóc sức khỏe cho thú cưng. Thông tin bác sĩ bao gồm họ tên và lịch làm việc. Nhân viên hỗ trợ các hoạt động liên quan đến việc tiếp nhận và xử lý lịch đặt khám.
+
+\subsection{Đặt lịch khám}
+Khách hàng có thể tạo lịch khám cho thú cưng. Mỗi \textit{Booking} lưu trữ ngày giờ khám, trạng thái, phí khám và thông tin liên quan đến khách hàng, thú cưng, bác sĩ thú y và nhân viên xử lý.
+Một khách hàng có thể tạo nhiều booking, một thú cưng có thể xuất hiện trong nhiều booking và một bác sĩ thú y có thể phụ trách nhiều booking. Nhân viên có thể được phân công xử lý booking, tuy nhiên tại thời điểm tạo booking có thể chưa có nhân viên được phân công.
+
+\subsection{Hồ sơ khám bệnh}
+Sau khi thú cưng được khám, bác sĩ thú y có thể tạo hồ sơ \textit{MedicalRecord}. Hồ sơ lưu trữ thông tin về chẩn đoán, phương pháp điều trị và ngày khám.
+Một thú cưng có thể có nhiều hồ sơ khám trong các thời điểm khác nhau. Đồng thời, một bác sĩ thú y có thể tạo nhiều hồ sơ khám cho các thú cưng khác nhau.
+
+\subsection{Hóa đơn}
+Khi một booking phát sinh chi phí, hệ thống có thể tạo một \textit{Invoice} để quản lý số tiền cần thanh toán, ngày lập hóa đơn và trạng thái thanh toán.
+Mối quan hệ giữa \textit{Booking} và \textit{Invoice} được thiết kế theo dạng một--không hoặc một. Điều này có nghĩa là một booking có thể chưa có hóa đơn hoặc có tối đa một hóa đơn.
+
+\subsection{Phòng điều trị}
+Hệ thống có thực thể \textit{Room} dùng để quản lý các phòng dành cho thú cưng. Mỗi phòng có thông tin về loại phòng, trạng thái và ghi chú. Trạng thái phòng có thể được sử dụng để biểu diễn tình trạng như đang trống hoặc đang được sử dụng.
+
+\section{Công cụ và môi trường thực hiện}\label{s:tools}
+Đề tài tập trung vào việc thiết kế và triển khai cơ sở dữ liệu bằng hệ quản trị cơ sở dữ liệu quan hệ. Các bảng được xây dựng bằng ngôn ngữ SQL và dữ liệu mẫu được đưa vào để kiểm tra hoạt động của mô hình.
+Quá trình thiết kế được thực hiện theo các bước từ phân tích yêu cầu nghiệp vụ, xác định thực thể và mối quan hệ, xây dựng ERD, chuyển đổi sang mô hình quan hệ và cuối cùng triển khai thành các bảng trong cơ sở dữ liệu.
+Trong quá trình triển khai, các ràng buộc như khóa chính (\texttt{PRIMARY KEY}), khóa ngoại (\texttt{FOREIGN KEY}), \texttt{NOT NULL}, \texttt{UNIQUE} và giá trị mặc định (\texttt{DEFAULT}) được sử dụng nhằm đảm bảo tính toàn vẹn của dữ liệu.
+
+\section{Phương pháp thực hiện}\label{s:methodology}
+Quá trình xây dựng cơ sở dữ liệu \textit{Pet Health Care} được thực hiện theo một chuỗi các bước có thứ tự.
+Đầu tiên, yêu cầu nghiệp vụ được phân tích để xác định phạm vi dữ liệu cần quản lý. Tiếp theo, các danh từ, động từ, số lượng và các ràng buộc trong mô tả nghiệp vụ được xác định nhằm tìm ra các thực thể và mối quan hệ.
+Sau đó, các thực thể, thuộc tính, khóa và bản số được sử dụng để xây dựng ERD. Mô hình ERD được kiểm tra bằng dữ liệu mẫu và các tình huống biên trước khi chuyển sang mô hình quan hệ.
+Ở bước tiếp theo, các thực thể mạnh được chuyển thành các quan hệ, các khóa chính được xác định và các mối quan hệ một--một, một--nhiều hoặc nhiều--nhiều được ánh xạ theo các quy tắc của mô hình quan hệ. Đối với thực thể yếu, hệ thống được kiểm tra để xác định xem có cần sử dụng khóa ghép hay không. Trong mô hình hiện tại, các thực thể đều có khóa chính độc lập nên không phát sinh thực thể yếu.
+Cuối cùng, lược đồ quan hệ được triển khai thành các bảng SQL. Dữ liệu mẫu được thêm vào từng bảng và các câu truy vấn được sử dụng để kiểm tra khóa, ràng buộc, quan hệ giữa các bảng và tính nhất quán của dữ liệu.
+
+\section{Cấu trúc của báo cáo}\label{s:report_structure}
+Báo cáo được tổ chức thành các phần chính nhằm trình bày toàn bộ quá trình phân tích và xây dựng cơ sở dữ liệu.
+
+\begin{itemize}
+\item \textbf{Chương 1 -- Tổng quan đề tài:} giới thiệu mục tiêu, phạm vi, các đối tượng quản lý và phương pháp thực hiện đề tài.
+
+\item \textbf{Chương 2 -- Phân tích nghiệp vụ và Thiết kế ERD:} trình bày mô tả nghiệp vụ, phạm vi dữ liệu, xác định thực thể, thuộc tính, khóa, mối quan hệ, bản số và xây dựng ERD.
+
+\item \textbf{Chương 3 -- Ánh xạ ERD sang mô hình quan hệ:} trình bày quá trình chuyển đổi các thực thể và mối quan hệ từ ERD sang các quan hệ trong cơ sở dữ liệu, bao gồm xử lý quan hệ 1:1, 1:N, M:N và thực thể yếu.
+
+\item \textbf{Chương 4 -- Cài đặt Cơ sở dữ liệu:} trình bày việc tạo database, tạo bảng, khai báo khóa và các ràng buộc bằng SQL.
+
+\item \textbf{Chương 5 -- Dữ liệu mẫu và Truy vấn:} trình bày dữ liệu mẫu được đưa vào các bảng và các truy vấn được sử dụng để kiểm tra cơ sở dữ liệu.
+
+\item \textbf{Chương 6 -- Kiểm thử Cơ sở dữ liệu:} kiểm tra các khóa, ràng buộc, mối quan hệ và một số tình huống biên.
+
+\item \textbf{Chương 7 -- Chuẩn hóa cơ sở dữ liệu:} phân tích các quan hệ theo các dạng chuẩn 1NF, 2NF và 3NF.
+
+\item \textbf{Chương 8 -- Kết luận và Phát triển:} tổng kết kết quả đạt được, hạn chế của mô hình hiện tại và các hướng phát triển trong tương lai.
+
+\end{itemize}
+
+\section{Kết luận chương}\label{s:chapter1_conclusion}
+Chương này đã trình bày tổng quan về hệ thống \textit{Pet Health Care}, mục tiêu và phạm vi của đề tài. Hệ thống tập trung vào việc quản lý các thông tin liên quan đến khách hàng, thú cưng, bác sĩ thú y, nhân viên, booking, hồ sơ khám bệnh, hóa đơn và phòng điều trị.
+Các yêu cầu nghiệp vụ được sử dụng làm cơ sở cho quá trình xác định thực thể, thuộc tính và mối quan hệ trong cơ sở dữ liệu. Các chương tiếp theo sẽ trình bày chi tiết quá trình phân tích nghiệp vụ, xây dựng ERD, ánh xạ sang mô hình quan hệ và triển khai cơ sở dữ liệu bằng SQL.

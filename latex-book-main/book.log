@@ -1,0 +1,1699 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.16)  17 SEP 2026 13:57
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**d:/latex-book-main/book.tex
+(d:/latex-book-main/book.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\leqno.clo
+File: leqno.clo 2016/12/29 v1.2b Standard LaTeX option (left equation numbers)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\bk11.clo
+File: bk11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count276
+\c@chapter=\count277
+\c@section=\count278
+\c@subsection=\count279
+\c@subsubsection=\count280
+\c@paragraph=\count281
+\c@subparagraph=\count282
+\c@figure=\count283
+\c@table=\count284
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+) (book.sty (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pdftex\glyphtounicode.tex) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/sourceserif\sourceserifpro.sty
+Package: sourceserifpro 2025/04/05 v2.0 Compatibility package for sourceserif
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex))
+\XKV@depth=\count285
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+
+Package sourceserifpro Warning: This package has been replaced by `sourceserif'.
+
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/sourceserif\sourceserif.sty
+Package: sourceserif 2025/04/06 v2.0 Adobe's Source Serif typeface
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/ly1\ly1enc.def
+File: ly1enc.def 2022/06/11 v0.8 TeX 'n ANSI encoding (DPC/KB)
+Now handling font encoding LY1 ...
+... processing UTF-8 mapping file for font encoding LY1
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\ly1enc.dfu
+File: ly1enc.dfu 2022/06/07 v1.3c UTF-8 support
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+)))) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/sourcecodepro\sourcecodepro.sty
+Package: sourcecodepro 2025/04/06 v2.8 Adobe's Source Code Pro typeface
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+SourceSerifFour-LF on input line 116.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/sourceserif\t1sourceseriffour-lf.fd
+File: T1SourceSerifFour-LF.fd 2026/03/01 (autoinst) Font definitions for T1/SourceSerifFour-LF.
+)
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 116.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 116.
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/mnsymbol\MnSymbol.sty
+Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen151
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen152
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count286
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count287
+\leftroot@=\count288
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count289
+\DOTSCASE@=\count290
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count291
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count292
+\dotsspace@=\muskip17
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks20
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks21
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\eufrak.sty
+Package: eufrak 2009/06/22 v3.00 Euler Fraktur fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuFrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 39.
+)
+LaTeX Info: Redefining \dagger on input line 84.
+LaTeX Info: Redefining \ddagger on input line 84.
+LaTeX Info: Redefining \mathparagraph on input line 84.
+LaTeX Info: Redefining \mathsection on input line 84.
+LaTeX Info: Redefining \mathdollar on input line 84.
+LaTeX Info: Redefining \mathsterling on input line 84.
+LaTeX Info: Redefining \Re on input line 84.
+LaTeX Info: Redefining \Im on input line 84.
+\symMnSyA=\mathgroup4
+\symMnSyB=\mathgroup5
+\symMnSyC=\mathgroup6
+\symMnSyD=\mathgroup7
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `MnSyA' in version `bold'
+(Font)                  U/MnSymbolA/m/n --> U/MnSymbolA/b/n on input line 121.
+LaTeX Font Info:    Overwriting symbol font `MnSyB' in version `bold'
+(Font)                  U/MnSymbolB/m/n --> U/MnSymbolB/b/n on input line 122.
+LaTeX Font Info:    Overwriting symbol font `MnSyC' in version `bold'
+(Font)                  U/MnSymbolC/m/n --> U/MnSymbolC/b/n on input line 123.
+LaTeX Font Info:    Overwriting symbol font `MnSyD' in version `bold'
+(Font)                  U/MnSymbolD/m/n --> U/MnSymbolD/b/n on input line 124.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 125.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/MnSymbolF/m/n --> U/MnSymbolF/b/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 241.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 241.
+LaTeX Info: Redefining \longrightarrow on input line 548.
+LaTeX Info: Redefining \longleftarrow on input line 549.
+LaTeX Info: Redefining \longleftrightarrow on input line 550.
+LaTeX Info: Redefining \Longrightarrow on input line 551.
+LaTeX Info: Redefining \Longleftarrow on input line 552.
+LaTeX Info: Redefining \Longleftrightarrow on input line 553.
+LaTeX Info: Redefining \longmapsto on input line 554.
+LaTeX Info: Redefining \vdots on input line 868.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 1721.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 1722.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 1723.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 1724.
+LaTeX Info: Redefining \downbracefill on input line 1799.
+LaTeX Info: Redefining \upbracefill on input line 1800.
+LaTeX Info: Redefining \overbrace on input line 1819.
+LaTeX Info: Redefining \underbrace on input line 1820.
+LaTeX Info: Redefining \surd on input line 1843.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/mathalpha\mathalpha.sty
+Package: mathalpha 2025/01/17 - 1.145mathalpha (License LPPL) Michael Sharpe
+ `mathalpha' v1.145, 2025/01/17, a renaming of mathalfa (msharpe)
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 477.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `normal'
+(Font)                  OMS/MnSymbolS/m/n --> U/eus/m/n on input line 477.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/MnSymbolS/b/n --> U/eus/m/n on input line 477.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 479.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/mathastext\mathastext.sty
+Package: mathastext 2024/10/26 v1.4e Use the text font in math mode (JFB)
+
+Package mathastext Info: Starting the math mode configuration.
+\mst@exists@muskip=\muskip18
+\mst@forall@muskip=\muskip19
+\mst@prime@muskip=\muskip20
+\mst@do@nonletters=\toks24
+\mst@undo@nonletters=\toks25
+\mst@do@easynonletters=\toks26
+\mst@undo@easynonletters=\toks27
+\symmtoperatorfont=\mathgroup8
+\symmtletterfont=\mathgroup9
+(   mathastext:   ) will use Euler font; command \MTEulerScale
+\symmteulervm=\mathgroup10
+(   mathastext:   ) ! and ?
+(   mathastext:   ) punctuation: , . : ; and \colon
+(   mathastext:   ) \# \mathdollar \% \& 
+(   mathastext:   ) \imath and \jmath 
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `normal'
+(Font)                  T1/SourceSerifFour-LF/b/it --> T1/SourceSerifFour-LF/b/it on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `bold'
+(Font)                  T1/SourceSerifFour-LF/b/it --> T1/SourceSerifFour-LF/b/it on input line 2934.
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `normal'
+(Font)                  T1/SourceSerifFour-LF/regular/it --> T1/SourceSerifFour-LF/regular/it on input line 2934.
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `bold'
+(Font)                  T1/SourceSerifFour-LF/regular/it --> T1/SourceSerifFour-LF/b/it on input line 2934.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `normal'
+(Font)                  T1/SourceSerifFour-LF/regular/n --> T1/SourceSerifFour-LF/regular/n on input line 2934.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `bold'
+(Font)                  T1/SourceSerifFour-LF/regular/n --> T1/SourceSerifFour-LF/b/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `normal'
+(Font)                  T1/SourceSerifFour-LF/b/n --> T1/SourceSerifFour-LF/b/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `bold'
+(Font)                  T1/SourceSerifFour-LF/b/n --> T1/SourceSerifFour-LF/b/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `normal'
+(Font)                  T1/SourceSerifFour-LF/regular/it --> T1/SourceSerifFour-LF/regular/it on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `bold'
+(Font)                  T1/SourceSerifFour-LF/regular/it --> T1/SourceSerifFour-LF/b/it on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `normal'
+(Font)                  T1/cmss/regular/n --> T1/cmss/regular/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `bold'
+(Font)                  T1/cmss/regular/n --> T1/cmss/b/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `normal'
+(Font)                  T1/SourceCodePro-TLF/regular/n --> T1/SourceCodePro-TLF/regular/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `bold'
+(Font)                  T1/SourceCodePro-TLF/regular/n --> T1/SourceCodePro-TLF/b/n on input line 2934.
+LaTeX Font Info:    Overwriting symbol font `mteulervm' in version `bold'
+(Font)                  U/zeur/m/n --> U/zeur/b/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\MathEulerBold' in version `normal'
+(Font)                  U/zeur/b/n --> U/zeur/b/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\MathEulerBold' in version `bold'
+(Font)                  U/zeur/b/n --> U/zeur/b/n on input line 2934.
+(   mathastext:   ) Latin letters in the `normal', resp. `bold',
+(   mathastext:   ) math versions are now set up to use the fonts
+(   mathastext:   ) T1/SourceSerifFour-LF/regular/it, resp. T1/SourceSerifFour-LF/b/it.
+(   mathastext:   ) Other characters (digits, ...) and \log-like names will be
+(   mathastext:   ) typeset with the n shape.
+(   mathastext:   ) The italic option is in effect.
+(   mathastext:   ) Greek letters will use the Euler font.
+(   mathastext:   ) Use \MathastextEulerScale{<factor>} to scale the font.
+(   mathastext:   ) \HUGE has been (re)-defined.
+(   mathastext:   ) mathastext has declared larger sizes for subscripts.
+(   mathastext:   ) To keep LaTeX defaults, use option `defaultmathsizes'.
+
+Package mathastext Info: Loading is complete.  You can now use \Mathastext to
+(mathastext)             modify the normal and bold math versions.  Use it
+(mathastext)             with optional argument or use \MTDeclareVersion to
+(mathastext)             declare additional math versions.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count298
+\Gm@cntv=\count299
+\c@Gm@tempcnt=\count300
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks28
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count301
+)
+\MT@toks=\toks29
+\MT@tempbox=\box55
+\MT@count=\count302
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks30
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen168
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count303
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdftex.def
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip54
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\x11nam.def
+File: x11nam.def 2024/09/29 v3.02 Predefined colors according to Unix/X11 (UK)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip55
+\f@nch@offset@elh=\skip56
+\f@nch@offset@erh=\skip57
+\f@nch@offset@olh=\skip58
+\f@nch@offset@orh=\skip59
+\f@nch@offset@elf=\skip60
+\f@nch@offset@erf=\skip61
+\f@nch@offset@olf=\skip62
+\f@nch@offset@orf=\skip63
+\f@nch@height=\skip64
+\f@nch@footalignment=\skip65
+\f@nch@widthL=\skip66
+\f@nch@widthC=\skip67
+\f@nch@widthR=\skip68
+\@temptokenb=\toks31
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/emptypage\emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip69
+\thanksmargin=\skip70
+\droptitle=\skip71
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2026-08-21 v3.0b parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 64.
+\cftparskip=\skip72
+\cftbeforetoctitleskip=\skip73
+\cftaftertoctitleskip=\skip74
+\cftbeforepartskip=\skip75
+\cftpartnumwidth=\skip76
+\cftpartindent=\skip77
+\cftbeforechapskip=\skip78
+\cftchapindent=\skip79
+\cftchapnumwidth=\skip80
+\cftbeforesecskip=\skip81
+\cftsecindent=\skip82
+\cftsecnumwidth=\skip83
+\cftbeforesubsecskip=\skip84
+\cftsubsecindent=\skip85
+\cftsubsecnumwidth=\skip86
+\cftbeforesubsubsecskip=\skip87
+\cftsubsubsecindent=\skip88
+\cftsubsubsecnumwidth=\skip89
+\cftbeforeparaskip=\skip90
+\cftparaindent=\skip91
+\cftparanumwidth=\skip92
+\cftbeforesubparaskip=\skip93
+\cftsubparaindent=\skip94
+\cftsubparanumwidth=\skip95
+\cftbeforeloftitleskip=\skip96
+\cftafterloftitleskip=\skip97
+\cftbeforefigskip=\skip98
+\cftfigindent=\skip99
+\cftfignumwidth=\skip100
+\c@lofdepth=\count304
+\c@lotdepth=\count305
+\cftbeforelottitleskip=\skip101
+\cftafterlottitleskip=\skip102
+\cftbeforetabskip=\skip103
+\cfttabindent=\skip104
+\cfttabnumwidth=\skip105
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box56
+\beforetitleunit=\skip106
+\aftertitleunit=\skip107
+\ttl@plus=\dimen169
+\ttl@minus=\dimen170
+\ttl@toksa=\toks32
+\titlewidth=\dimen171
+\titlewidthlast=\dimen172
+\titlewidthfirst=\dimen173
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks33
+\thm@bodyfont=\toks34
+\thm@headfont=\toks35
+\thm@notefont=\toks36
+\thm@headpunct=\toks37
+\thm@preskip=\skip108
+\thm@postskip=\skip109
+\thm@headsep=\skip110
+\dth@everypar=\toks38
+)
+\c@theorem=\count306
+\c@proposition=\count307
+\c@lemma=\count308
+\c@corollary=\count309
+\c@definition=\count310
+\c@assumption=\count311
+\c@remark=\count312
+\c@result=\count313
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen176
+\lightrulewidth=\dimen177
+\cmidrulewidth=\dimen178
+\belowrulesep=\dimen179
+\belowbottomsep=\dimen180
+\aboverulesep=\dimen181
+\abovetopsep=\dimen182
+\cmidrulesep=\dimen183
+\cmidrulekern=\dimen184
+\defaultaddspace=\dimen185
+\@cmidla=\count314
+\@cmidlb=\count315
+\@aboverulesep=\dimen186
+\@belowrulesep=\dimen187
+\@thisruleclass=\count316
+\@lastruleclass=\count317
+\@thisrulewidth=\dimen188
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
+Package: rotating 2026-05-17 v2.16e rotated objects in LaTeX
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count318
+\rotFPtop=\skip111
+\rotFPbot=\skip112
+\rot@float@box=\box57
+\rot@mess@toks=\toks39
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip113
+\multirow@cntb=\count319
+\multirow@dima=\skip114
+\bigstrutjot=\dimen189
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen190
+\captionmargin=\dimen191
+\caption@leftmargin=\dimen192
+\caption@rightmargin=\dimen193
+\caption@width=\dimen194
+\caption@indent=\dimen195
+\caption@parindent=\dimen196
+\caption@hangindent=\dimen197
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count320
+\c@continuedfloat=\count321
+Package caption Info: rotating package is loaded.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count322
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count323
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\enitkv@toks@=\toks40
+\labelindent=\skip115
+\enit@outerparindent=\dimen198
+\enit@toks=\toks41
+\enit@inbox=\box58
+\enit@count@id=\count324
+\enitdp@description=\count325
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip116
+\bibsep=\skip117
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count326
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.sty
+Package: tocbibind 2026/06/01 v1.5l extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/imakeidx\imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchronous mode
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count327
+\mult@box=\box59
+\multicol@leftmargin=\dimen199
+\c@unbalance=\count328
+\c@collectmore=\count329
+\doublecol@number=\count330
+\multicoltolerance=\count331
+\multicolpretolerance=\count332
+\full@width=\dimen256
+\page@free=\dimen257
+\premulticols=\dimen258
+\postmulticols=\dimen259
+\multicolsep=\skip118
+\multicolbaselineskip=\skip119
+\partial@page=\box60
+\last@line=\box61
+\mc@boxedresult=\box62
+\maxbalancingoverflow=\dimen260
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@firstbox=\box65
+\mult@gfirstbox=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\c@minrows=\count333
+\c@columnbadness=\count334
+\c@finalcolumnbadness=\count335
+\last@try=\dimen261
+\multicolovershoot=\dimen262
+\multicolundershoot=\dimen263
+\mult@nat@firstbox=\box103
+\colbreak@box=\box104
+\mc@col@check@num=\count336
+\g__mc_curr_col_int=\count337
+))
+\book@idxfile=\write3
+\openout3 = `book.idx'.
+
+
+Writing index file book.idx
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count338
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen264
+\Hy@linkcounter=\count339
+\Hy@pagecounter=\count340
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count341
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `hypertexnames' set `false' on input line 4070.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 4070.
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count342
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip21
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen265
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count343
+\Field@Width=\dimen266
+\Fld@charsize=\dimen267
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count344
+\c@Item=\count345
+\c@Hfootnote=\count346
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-06-17 v7.01r Hyperref driver for pdfTeX
+\Fld@listcount=\count347
+\c@bookmark@seq@number=\count348
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip120
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
+File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
+Now handling font encoding T5 ...
+... processing UTF-8 mapping file for font encoding T5
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.dfu
+File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+01A0 (decimal 416)
+   defining Unicode char U+01A1 (decimal 417)
+   defining Unicode char U+01AF (decimal 431)
+   defining Unicode char U+01B0 (decimal 432)
+   defining Unicode char U+1EA0 (decimal 7840)
+   defining Unicode char U+1EA1 (decimal 7841)
+   defining Unicode char U+1EA2 (decimal 7842)
+   defining Unicode char U+1EA3 (decimal 7843)
+   defining Unicode char U+1EA4 (decimal 7844)
+   defining Unicode char U+1EA5 (decimal 7845)
+   defining Unicode char U+1EA6 (decimal 7846)
+   defining Unicode char U+1EA7 (decimal 7847)
+   defining Unicode char U+1EA8 (decimal 7848)
+   defining Unicode char U+1EA9 (decimal 7849)
+   defining Unicode char U+1EAA (decimal 7850)
+   defining Unicode char U+1EAB (decimal 7851)
+   defining Unicode char U+1EAC (decimal 7852)
+   defining Unicode char U+1EAD (decimal 7853)
+   defining Unicode char U+1EAE (decimal 7854)
+   defining Unicode char U+1EAF (decimal 7855)
+   defining Unicode char U+1EB0 (decimal 7856)
+   defining Unicode char U+1EB1 (decimal 7857)
+   defining Unicode char U+1EB2 (decimal 7858)
+   defining Unicode char U+1EB3 (decimal 7859)
+   defining Unicode char U+1EB4 (decimal 7860)
+   defining Unicode char U+1EB5 (decimal 7861)
+   defining Unicode char U+1EB6 (decimal 7862)
+   defining Unicode char U+1EB7 (decimal 7863)
+   defining Unicode char U+1EB8 (decimal 7864)
+   defining Unicode char U+1EB9 (decimal 7865)
+   defining Unicode char U+1EBA (decimal 7866)
+   defining Unicode char U+1EBB (decimal 7867)
+   defining Unicode char U+1EBC (decimal 7868)
+   defining Unicode char U+1EBD (decimal 7869)
+   defining Unicode char U+1EBE (decimal 7870)
+   defining Unicode char U+1EBF (decimal 7871)
+   defining Unicode char U+1EC0 (decimal 7872)
+   defining Unicode char U+1EC1 (decimal 7873)
+   defining Unicode char U+1EC2 (decimal 7874)
+   defining Unicode char U+1EC3 (decimal 7875)
+   defining Unicode char U+1EC4 (decimal 7876)
+   defining Unicode char U+1EC5 (decimal 7877)
+   defining Unicode char U+1EC6 (decimal 7878)
+   defining Unicode char U+1EC7 (decimal 7879)
+   defining Unicode char U+1EC8 (decimal 7880)
+   defining Unicode char U+1EC9 (decimal 7881)
+   defining Unicode char U+1ECA (decimal 7882)
+   defining Unicode char U+1ECB (decimal 7883)
+   defining Unicode char U+1ECC (decimal 7884)
+   defining Unicode char U+1ECD (decimal 7885)
+   defining Unicode char U+1ECE (decimal 7886)
+   defining Unicode char U+1ECF (decimal 7887)
+   defining Unicode char U+1ED0 (decimal 7888)
+   defining Unicode char U+1ED1 (decimal 7889)
+   defining Unicode char U+1ED2 (decimal 7890)
+   defining Unicode char U+1ED3 (decimal 7891)
+   defining Unicode char U+1ED4 (decimal 7892)
+   defining Unicode char U+1ED5 (decimal 7893)
+   defining Unicode char U+1ED6 (decimal 7894)
+   defining Unicode char U+1ED7 (decimal 7895)
+   defining Unicode char U+1ED8 (decimal 7896)
+   defining Unicode char U+1ED9 (decimal 7897)
+   defining Unicode char U+1EDA (decimal 7898)
+   defining Unicode char U+1EDB (decimal 7899)
+   defining Unicode char U+1EDC (decimal 7900)
+   defining Unicode char U+1EDD (decimal 7901)
+   defining Unicode char U+1EDE (decimal 7902)
+   defining Unicode char U+1EDF (decimal 7903)
+   defining Unicode char U+1EE0 (decimal 7904)
+   defining Unicode char U+1EE1 (decimal 7905)
+   defining Unicode char U+1EE2 (decimal 7906)
+   defining Unicode char U+1EE3 (decimal 7907)
+   defining Unicode char U+1EE4 (decimal 7908)
+   defining Unicode char U+1EE5 (decimal 7909)
+   defining Unicode char U+1EE6 (decimal 7910)
+   defining Unicode char U+1EE7 (decimal 7911)
+   defining Unicode char U+1EE8 (decimal 7912)
+   defining Unicode char U+1EE9 (decimal 7913)
+   defining Unicode char U+1EEA (decimal 7914)
+   defining Unicode char U+1EEB (decimal 7915)
+   defining Unicode char U+1EEC (decimal 7916)
+   defining Unicode char U+1EED (decimal 7917)
+   defining Unicode char U+1EEE (decimal 7918)
+   defining Unicode char U+1EEF (decimal 7919)
+   defining Unicode char U+1EF0 (decimal 7920)
+   defining Unicode char U+1EF1 (decimal 7921)
+   defining Unicode char U+1EF2 (decimal 7922)
+   defining Unicode char U+1EF3 (decimal 7923)
+   defining Unicode char U+1EF4 (decimal 7924)
+   defining Unicode char U+1EF5 (decimal 7925)
+   defining Unicode char U+1EF6 (decimal 7926)
+   defining Unicode char U+1EF7 (decimal 7927)
+   defining Unicode char U+1EF8 (decimal 7928)
+   defining Unicode char U+1EF9 (decimal 7929)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+))
+LaTeX Font Info:    Trying to load font information for T5+SourceSerifFour-LF on input line 116.
+LaTeX Font Info:    No file T5SourceSerifFour-LF.fd. on input line 116.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 116.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/regular/n' undefined
+(Font)              using `T5/cmr/m/n' instead on input line 116.
+
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks42
+\inpenc@posthook=\toks43
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/09/09 v26.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count349
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2095.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2097.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2099.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2100.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2101.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2103.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2128.
+\U@D=\dimen268
+\l@unhyphenated=\language79
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count350
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4331.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel-vietnamese.tex)
+Package babel Info: Importing font and identification data for 'vietnamese'
+(babel)             from babel-vi.ini. Reported on input line 4459.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietnamese.ldf
+Language: vietnamese 
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Vietnamese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 36.
+
+Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
+(babel)             (\language0). Reported on input line 37.
+Package babel Info: Hyphen rules for 'vietnam' set to \l@english
+(babel)             (\language0). Reported on input line 38.
+Loading definitions for the Vietnamese font encoding (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
+File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
+LaTeX Font Info:    Redeclaring font encoding T5 on input line 75.
+LaTeX Encoding Info:    Redeclaring text command \` (encoding T5) on input line 79.
+LaTeX Encoding Info:    Redeclaring text command \' (encoding T5) on input line 80.
+LaTeX Encoding Info:    Redeclaring text command \^ (encoding T5) on input line 81.
+LaTeX Encoding Info:    Redeclaring text command \~ (encoding T5) on input line 82.
+LaTeX Encoding Info:    Redeclaring text command \" (encoding T5) on input line 83.
+LaTeX Encoding Info:    Redeclaring text command \r (encoding T5) on input line 84.
+LaTeX Encoding Info:    Redeclaring text command \v (encoding T5) on input line 85.
+LaTeX Encoding Info:    Redeclaring text command \u (encoding T5) on input line 86.
+LaTeX Encoding Info:    Redeclaring text command \= (encoding T5) on input line 87.
+LaTeX Encoding Info:    Redeclaring text command \. (encoding T5) on input line 88.
+LaTeX Encoding Info:    Redeclaring text command \b (encoding T5) on input line 90.
+LaTeX Encoding Info:    Redeclaring text command \c (encoding T5) on input line 94.
+LaTeX Encoding Info:    Redeclaring text command \d (encoding T5) on input line 98.
+LaTeX Encoding Info:    Redeclaring text command \h (encoding T5) on input line 103.
+LaTeX Encoding Info:    Redeclaring text symbol \quotesinglbase (encoding T5) on input line 105.
+LaTeX Encoding Info:    Redeclaring text symbol \guilsinglleft (encoding T5) on input line 106.
+LaTeX Encoding Info:    Redeclaring text symbol \guilsinglright (encoding T5) on input line 107.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotedblleft (encoding T5) on input line 108.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotedblright (encoding T5) on input line 109.
+LaTeX Encoding Info:    Redeclaring text symbol \quotedblbase (encoding T5) on input line 110.
+LaTeX Encoding Info:    Redeclaring text symbol \guillemotleft (encoding T5) on input line 111.
+LaTeX Encoding Info:    Redeclaring text symbol \guillemotright (encoding T5) on input line 112.
+LaTeX Encoding Info:    Redeclaring text symbol \textendash (encoding T5) on input line 113.
+LaTeX Encoding Info:    Redeclaring text symbol \textemdash (encoding T5) on input line 114.
+LaTeX Encoding Info:    Redeclaring text symbol \textcompwordmark (encoding T5) on input line 115.
+LaTeX Encoding Info:    Redeclaring text command \textperthousand (encoding T5) on input line 117.
+LaTeX Encoding Info:    Redeclaring text command \textpertenthousand (encoding T5) on input line 118.
+LaTeX Encoding Info:    Redeclaring text symbol \i (encoding T5) on input line 119.
+LaTeX Encoding Info:    Redeclaring text symbol \textvisiblespace (encoding T5) on input line 121.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotedbl (encoding T5) on input line 122.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollar (encoding T5) on input line 123.
+LaTeX Encoding Info:    Redeclaring text symbol \textquoteright (encoding T5) on input line 124.
+LaTeX Encoding Info:    Redeclaring text symbol \textless (encoding T5) on input line 125.
+LaTeX Encoding Info:    Redeclaring text symbol \textgreater (encoding T5) on input line 126.
+LaTeX Encoding Info:    Redeclaring text symbol \textbackslash (encoding T5) on input line 127.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciicircum (encoding T5) on input line 128.
+LaTeX Encoding Info:    Redeclaring text symbol \textunderscore (encoding T5) on input line 129.
+LaTeX Encoding Info:    Redeclaring text symbol \textquoteleft (encoding T5) on input line 130.
+LaTeX Encoding Info:    Redeclaring text symbol \textbraceleft (encoding T5) on input line 131.
+LaTeX Encoding Info:    Redeclaring text symbol \textbar (encoding T5) on input line 132.
+LaTeX Encoding Info:    Redeclaring text symbol \textbraceright (encoding T5) on input line 133.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciitilde (encoding T5) on input line 134.
+LaTeX Encoding Info:    Redeclaring text command \horn (encoding T5) on input line 137.
+LaTeX Encoding Info:    Redeclaring text symbol \DJ (encoding T5) on input line 306.
+LaTeX Encoding Info:    Redeclaring text symbol \dj (encoding T5) on input line 307.
+LaTeX Encoding Info:    Redeclaring text symbol \Acircumflex (encoding T5) on input line 312.
+LaTeX Encoding Info:    Redeclaring text symbol \Abreve (encoding T5) on input line 319.
+LaTeX Encoding Info:    Redeclaring text symbol \Ecircumflex (encoding T5) on input line 326.
+LaTeX Encoding Info:    Redeclaring text symbol \Ocircumflex (encoding T5) on input line 333.
+LaTeX Encoding Info:    Redeclaring text symbol \Ohorn (encoding T5) on input line 340.
+LaTeX Encoding Info:    Redeclaring text symbol \Uhorn (encoding T5) on input line 347.
+LaTeX Encoding Info:    Redeclaring text symbol \acircumflex (encoding T5) on input line 354.
+LaTeX Encoding Info:    Redeclaring text symbol \abreve (encoding T5) on input line 361.
+LaTeX Encoding Info:    Redeclaring text symbol \ecircumflex (encoding T5) on input line 368.
+LaTeX Encoding Info:    Redeclaring text symbol \ocircumflex (encoding T5) on input line 375.
+LaTeX Encoding Info:    Redeclaring text symbol \ohorn (encoding T5) on input line 382.
+LaTeX Encoding Info:    Redeclaring text symbol \uhorn (encoding T5) on input line 389.
+LaTeX Encoding Info:    Redeclaring text symbol \ACIRCUMFLEX (encoding T5) on input line 397.
+LaTeX Encoding Info:    Redeclaring text symbol \ABREVE (encoding T5) on input line 404.
+LaTeX Encoding Info:    Redeclaring text symbol \ECIRCUMFLEX (encoding T5) on input line 411.
+LaTeX Encoding Info:    Redeclaring text symbol \OCIRCUMFLEX (encoding T5) on input line 418.
+LaTeX Encoding Info:    Redeclaring text symbol \OHORN (encoding T5) on input line 425.
+LaTeX Encoding Info:    Redeclaring text symbol \UHORN (encoding T5) on input line 432.
+)
+Package babel Info: Making " an active character on input line 147.
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count351
+) (book.aux
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 9.
+)
+\openout1 = `book.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 16.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 16.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/ly1\ly1ptm.fd
+File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
+)
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(93.95122pt, 426.39256pt, 93.95122pt)
+* v-part:(T,H,B)=(72.26999pt, 635.97623pt, 86.72377pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=426.39256pt
+* \textheight=635.97623pt
+* \oddsidemargin=21.68123pt
+* \evensidemargin=21.68123pt
+* \topmargin=-31.8738pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=50.58878pt
+* \marginparwidth=116.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 16.
+Package microtype Info: Applying patch `item' on input line 16.
+Package microtype Info: Applying patch `toc' on input line 16.
+Package microtype Info: Applying patch `eqnum' on input line 16.
+Package microtype Info: Applying patch `footnote' on input line 16.
+Package microtype Info: Applying patch `verbatim' on input line 16.
+LaTeX Info: Redefining \microtypesetup on input line 16.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No font expansion.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 16.
+
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count352
+\scratchdimen=\dimen269
+\scratchbox=\box105
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen270
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks45
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 16.
+ (book.out) (book.out)
+\@outlinefile=\write4
+\openout4 = `book.out'.
+
+Package babel Info: Main language set to 'vietnamese'.
+
+
+LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/bold/n' undefined
+(Font)              using `T5/cmr/m/n' instead on input line 32.
+
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 32.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/n/29.86'. Switching off
+(microtype)                protrusion for this font on input line 32.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/n/20.74'. Switching off
+(microtype)                protrusion for this font on input line 32.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/20.74'. Switching off
+(microtype)                protrusion for this font on input line 32.
+
+[1
+
+
+
+{C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2
+
+]
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/24.88'. Switching off
+(microtype)                protrusion for this font on input line 36.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/n/24.88'. Switching off
+(microtype)                protrusion for this font on input line 36.
+
+(book.toc
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `SourceSerifFour-LF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/regular/sc' undefined
+(Font)              using `T5/SourceSerifFour-LF/regular/n' instead on input line 2.
+
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/10.95'
+(microtype)             (new value: 10.95pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/9'
+(microtype)             (new value: 9.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/7'
+(microtype)             (new value: 7.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/10.95'
+(microtype)             (new value: 10.95pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/9'
+(microtype)             (new value: 9.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/7'
+(microtype)             (new value: 7.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/10.95'
+(microtype)             (new value: 10.95pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/9'
+(microtype)             (new value: 9.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/7'
+(microtype)             (new value: 7.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/10.95'
+(microtype)             (new value: 10.95pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/9'
+(microtype)             (new value: 9.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/7'
+(microtype)             (new value: 7.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/10.95'
+(microtype)             (new value: 10.95pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/9'
+(microtype)             (new value: 9.0pt) on input line 2.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/7'
+(microtype)             (new value: 7.0pt) on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 2.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+zeur on input line 2.
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/eulervm\uzeur.fd
+File: uzeur.fd 2005/01/11 v4.0 (WaS)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg
+File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
+)
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/12'. Switching off
+(microtype)                protrusion for this font on input line 3.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/n/12'. Switching off
+(microtype)                protrusion for this font on input line 3.
+
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/10'
+(microtype)             (new value: 10.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/10'
+(microtype)             (new value: 10.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/10'
+(microtype)             (new value: 10.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/10'
+(microtype)             (new value: 10.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/10'
+(microtype)             (new value: 10.0pt) on input line 3.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 3.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 3.
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/sc/10.95'. Switching off
+(microtype)                protrusion for this font on input line 4.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3])
+\tf@toc=\write5
+\openout5 = `book.toc'.
+
+ [4] (preface.tex) [5
+
+] [6
+
+]
+
+LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/bold/sc' undefined
+(Font)              using `T5/SourceSerifFour-LF/bold/n' instead on input line 45.
+
+[1
+
+] [2]
+Ch\uhorn \ohorn ng 1.
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/sc/20.74'. Switching off
+(microtype)                protrusion for this font on input line 47.
+
+(Chapter1.tex
+LaTeX Font Info:    Trying to load font information for TS1+SourceSerifFour-LF on input line 9.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/sourceserif\ts1sourceseriffour-lf.fd
+File: TS1SourceSerifFour-LF.fd 2026/03/01 (autoinst) Font definitions for TS1/SourceSerifFour-LF.
+)
+LaTeX Font Info:    Font shape `TS1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `TS1/SourceSerifFour-LF/m/n' on input line 9.
+LaTeX Font Info:    Font shape `TS1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 9.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `SourceSerifFour-LF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [3
+
+{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_hfktdb.enc}]
+LaTeX Font Info:    Trying to load font information for T5+SourceCodePro-TLF on input line 14.
+LaTeX Font Info:    No file T5SourceCodePro-TLF.fd. on input line 14.
+
+
+LaTeX Font Warning: Font shape `T5/SourceCodePro-TLF/regular/n' undefined
+(Font)              using `T5/cmr/m/n' instead on input line 14.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceCodePro-TLF/regular/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 14.
+
+
+LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/regular/it' undefined
+(Font)              using `T5/SourceSerifFour-LF/regular/n' instead on input line 45.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/it/10.95'. Switching off
+(microtype)                protrusion for this font on input line 45.
+
+[4] [5] [6]) [7] [8
+
+]
+Ch\uhorn \ohorn ng 2.
+(Chapter2.tex [9] [10] [11] [12] [13]
+
+pdfTeX warning: pdflatex (file ./figures/pet_health_care_erd.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/pet_health_care_erd.pdf, id=730, 794.97pt x 614.295pt>
+File: figures/pet_health_care_erd.pdf Graphic file (type pdf)
+<use figures/pet_health_care_erd.pdf>
+Package pdftex.def Info: figures/pet_health_care_erd.pdf  used on input line 142.
+(pdftex.def)             Requested size: 426.39256pt x 329.49286pt.
+[14 <./figures/pet_health_care_erd.pdf>]) [15] [16
+
+]
+Ch\uhorn \ohorn ng 3.
+(Chapter3.tex [17{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/9'. Switching off
+(microtype)                protrusion for this font on input line 26.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/7'. Switching off
+(microtype)                protrusion for this font on input line 26.
+
+[18{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_5c2bot.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_blpqyz.enc}]
+Overfull \hbox (20.85481pt too wide) detected at line 76
+\T1/SourceSerifFour-LF/m/it/10.95 BOOKING\OMX/MnSymbolE/m/n/10.95 à\T1/SourceSerifFour-LF/m/it/10.95 booking[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 date[]time\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 status\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 a[]ment\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 customer[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 et[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 vet[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 sta[][][]id\OMX/MnSymbolE/m/n/10.95 ç
+ []
+
+[19] [20] [21]
+Overfull \hbox (20.85481pt too wide) detected at line 211
+\T1/SourceSerifFour-LF/m/it/10.95 BOOKING\OMX/MnSymbolE/m/n/10.95 à\T1/SourceSerifFour-LF/m/it/10.95 booking[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 date[]time\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 status\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 a[]ment\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 customer[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 et[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 vet[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 sta[][][]id\OMX/MnSymbolE/m/n/10.95 ç
+ []
+
+[22]) [23] [24]
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/bold/sc/24.88'. Switching off
+(microtype)                protrusion for this font on input line 59.
+
+[25
+
+] [26]
+Ch\uhorn \ohorn ng 4.
+(Chapter4.tex [27
+
+] [28] [29] [30] [31] [32] [33]) [34] [35] [36
+
+]
+Ch\uhorn \ohorn ng 5.
+(Chapter5.tex [37] [38]
+Overfull \hbox (123.2226pt too wide) in paragraph at lines 68--68
+[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES[] 
+ []
+
+
+Overfull \hbox (18.09814pt too wide) in paragraph at lines 82--82
+[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES[] 
+ []
+
+
+Overfull \hbox (27.40337pt too wide) in paragraph at lines 99--99
+[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES[] 
+ []
+
+[39] [40] [41] [42] [43] [44]) [45] [46] [47
+
+] [48]
+Ch\uhorn \ohorn ng 6.
+(Chapter6.tex [49
+
+] [50] [51] [52] [53] [54] [55]
+Underfull \hbox (badness 1454) in paragraph at lines 302--302
+[]\T5/SourceSerifFour-LF/regular/it/10.95 KhÊng cho ph≤p b‰ trËng
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 304--304
+[]\T5/SourceSerifFour-LF/regular/it/10.95 KhÊng cho ph≤p user-name
+ []
+
+[56]) [57] [58
+
+]
+Ch\uhorn \ohorn ng 7.
+(Chapter7.tex [59] [60] [61] [62] [63] [64] [65]) [66] [67
+
+] [68]
+Ch\uhorn \ohorn ng 8.
+(Chapter8.tex [69
+
+] [70] [71]) [72] [73] [74
+
+] [75] [76]
+Ph\d {u} l\d {u}c A.
+(appendixA.tex [77
+
+] [78] [79] [80] [81]) [82]
+Ph\d {u} l\d {u}c B.
+(appendixB.tex [83
+
+]
+Overfull \hbox (123.2226pt too wide) in paragraph at lines 70--70
+[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES[] 
+ []
+
+[84]
+Overfull \hbox (18.09814pt too wide) in paragraph at lines 85--85
+[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES[] 
+ []
+
+
+Overfull \hbox (27.40337pt too wide) in paragraph at lines 99--99
+[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES[] 
+ []
+
+[85] [86] [87]) [88] (book.bbl
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\ecircumflex' on input line 1.
+
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\h' on input line 1.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/n/10'. Switching off
+(microtype)                protrusion for this font on input line 1.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceSerifFour-LF/regular/it/10'. Switching off
+(microtype)                protrusion for this font on input line 8.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/SourceCodePro-TLF/regular/n/10'. Switching off
+(microtype)                protrusion for this font on input line 19.
+
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 19.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 19.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 19.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 19.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 19.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 19.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 19.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 19.
+LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 19.
+) [89
+
+
+] [90
+
+] (acknowledgements.tex) [91] [92
+
+]
+runsystem(makeindex book.idx)...executed safely (allowed).
+
+ (book.ind)
+
+Package caption Warning: Unused \captionsetup[sub] on input line 223.
+See the caption package documentation for explanation.
+
+(book.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `book.out' has not changed.
+(rerunfilecheck)             Checksum: FC45712F9F8A0A6FADA3B6547C9CDDD1;23682.
+ ) 
+Here is how much of TeX's memory you used:
+ 24230 strings out of 467441
+ 396518 string characters out of 5408077
+ 842328 words of memory out of 5000000
+ 52813 multiletter control sequences out of 15000+600000
+ 939928 words of font info for 126 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 88i,12n,131p,1020b,754s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourceserif/SourceSerif4-It.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourceserif/SourceSerif4-Regular.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb>
+Output written on book.pdf (100 pages, 778245 bytes).
+PDF statistics:
+ 1275 PDF objects out of 1440 (max. 8388607)
+ 327 named destinations out of 1000 (max. 500000)
+ 12750 words of extra memory for PDF output out of 14400 (max. 10000000)
+

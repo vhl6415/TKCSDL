@@ -1,0 +1,41 @@
+\begin{thebibliography}{7}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+
+\bibitem[{Coronel and Morris(2019)}]{coronel2019}
+Coronel, Carlos and Steven Morris. 2019.
+\newblock \emph{Database Systems: Design, Implementation, and Management}.
+\newblock 13 ed. Cengage Learning.
+
+\bibitem[{Elmasri and Navathe(2016)}]{elmasri2016}
+Elmasri, Ramez and Shamkant~B. Navathe. 2016.
+\newblock \emph{Fundamentals of Database Systems}.
+\newblock 7 ed. Pearson.
+
+\bibitem[{{Oracle Corporation}(2026{\natexlab{a}})}]{mysql_reference}
+{Oracle Corporation}. 2026{\natexlab{a}}.
+\newblock \enquote{MySQL 8.0 Reference Manual.}
+\newblock \url{https://dev.mysql.com/doc/refman/8.0/en/}.
+
+\bibitem[{{Oracle Corporation}(2026{\natexlab{b}})}]{mysql_constraints}
+{Oracle Corporation}. 2026{\natexlab{b}}.
+\newblock \enquote{MySQL 8.0 Reference Manual: Constraints.}
+\newblock \url{https://dev.mysql.com/doc/refman/8.0/en/constraints.html}.
+
+\bibitem[{{Oracle Corporation}(2026{\natexlab{c}})}]{mysql_create_table}
+{Oracle Corporation}. 2026{\natexlab{c}}.
+\newblock \enquote{MySQL 8.0 Reference Manual: CREATE TABLE Statement.}
+\newblock \url{https://dev.mysql.com/doc/refman/8.0/en/create-table.html}.
+
+\bibitem[{{Oracle Corporation}(2026{\natexlab{d}})}]{mysql_select}
+{Oracle Corporation}. 2026{\natexlab{d}}.
+\newblock \enquote{MySQL 8.0 Reference Manual: SELECT Statement.}
+\newblock \url{https://dev.mysql.com/doc/refman/8.0/en/select.html}.
+
+\bibitem[{Silberschatz, Korth, and Sudarshan(2019)}]{silberschatz2019}
+Silberschatz, Abraham, Henry~F. Korth, and S.~Sudarshan. 2019.
+\newblock \emph{Database System Concepts}.
+\newblock 7 ed. McGraw-Hill Education.
+
+\end{thebibliography}

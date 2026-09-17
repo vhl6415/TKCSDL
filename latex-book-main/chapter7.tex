@@ -1,0 +1,280 @@
+Chuẩn hóa cơ sở dữ liệu là quá trình tổ chức dữ liệu thành các bảng và mối quan hệ phù hợp nhằm giảm sự dư thừa dữ liệu, hạn chế các bất thường khi thêm, cập nhật hoặc xóa dữ liệu, đồng thời đảm bảo tính nhất quán của cơ sở dữ liệu.
+Đối với hệ thống Chăm sóc Sức khỏe Thú cưng, quá trình chuẩn hóa được thực hiện dựa trên mô hình quan hệ đã xây dựng ở các chương trước. Các quan hệ được phân tích theo các dạng chuẩn từ 1NF đến 3NF. Kết quả chuẩn hóa được sử dụng để đánh giá lại cấu trúc của các bảng trước khi đưa vào sử dụng.
+
+\section{Mục tiêu của chuẩn hóa}\label{s:normalization_objectives}
+Quá trình chuẩn hóa cơ sở dữ liệu của hệ thống hướng đến các mục tiêu sau:
+
+\begin{itemize}
+\item Giảm sự dư thừa dữ liệu giữa các bảng.
+\item Hạn chế việc lưu trữ cùng một thông tin ở nhiều vị trí.
+\item Tránh các bất thường khi thêm dữ liệu.
+\item Tránh các bất thường khi cập nhật dữ liệu.
+\item Tránh mất dữ liệu không mong muốn khi xóa dữ liệu.
+\item Đảm bảo các thuộc tính phụ thuộc đúng vào khóa của quan hệ.
+\item Tạo ra cấu trúc cơ sở dữ liệu rõ ràng và dễ bảo trì.
+\end{itemize}
+
+Trong phạm vi đề tài, quá trình chuẩn hóa được xem xét đến dạng chuẩn thứ ba (Third Normal Form -- 3NF).
+
+\section{Dạng chuẩn thứ nhất -- 1NF}\label{s:first_normal_form}
+Một quan hệ đạt dạng chuẩn thứ nhất khi mỗi ô dữ liệu chứa một giá trị nguyên tố, không chứa nhóm thuộc tính lặp hoặc nhiều giá trị trong cùng một ô.
+Trong hệ thống, các bảng đều được thiết kế theo nguyên tắc mỗi thuộc tính chỉ lưu một giá trị cho một bản ghi.
+Ví dụ, bảng \texttt{Customer} có dạng:
+
+\begin{verbatim}
+CUSTOMER(customer_id, full_name, phone, email, address)
+\end{verbatim}
+
+Mỗi khách hàng được lưu thành một bản ghi riêng. Các thuộc tính như \texttt{name}, \texttt{phone}, \texttt{email} và \texttt{address} đều chứa một giá trị tương ứng.
+Tương tự, bảng \texttt{Pet} có dạng:
+
+\begin{verbatim}
+PET(pet_id, name, species, breed, age, customer_id)
+\end{verbatim}
+
+Mỗi thú cưng được lưu trong một bản ghi và chỉ thuộc về một khách hàng thông qua \texttt{customer\_id}.
+Do đó, các quan hệ trong hệ thống đáp ứng yêu cầu cơ bản của dạng chuẩn 1NF.
+
+\section{Dạng chuẩn thứ hai -- 2NF}\label{s:second_normal_form}
+Một quan hệ đạt dạng chuẩn thứ hai khi quan hệ đã đạt 1NF và mọi thuộc tính không khóa phụ thuộc đầy đủ vào toàn bộ khóa chính.
+Trong cơ sở dữ liệu của đề tài, các bảng đều sử dụng khóa chính đơn, chẳng hạn:
+
+\begin{verbatim}
+Customer      -> customer_id
+Pet           -> pet_id
+Booking       -> booking_id
+Invoice       -> invoice_id
+MedicalRecord -> record_id
+\end{verbatim}
+
+Do mỗi khóa chính chỉ gồm một thuộc tính nên không xảy ra hiện tượng phụ thuộc bộ phận vào một phần của khóa chính.
+Ví dụ, trong bảng \texttt{Booking}:
+
+\begin{verbatim}
+BOOKING(booking_id, date_time, status, payment,
+customer_id, pet_id, vet_id, staff_id)
+\end{verbatim}
+
+Các thuộc tính \texttt{date\_time}, \texttt{status}, \texttt{payment}, \texttt{customer\_id}, \texttt{pet\_id}, \texttt{vet\_id} và \texttt{staff\_id} đều phụ thuộc vào \texttt{booking\_id}.
+Vì khóa chính không phải là khóa ghép nên không có thuộc tính nào chỉ phụ thuộc vào một phần của khóa chính. Do đó, các quan hệ trong hệ thống đáp ứng dạng chuẩn 2NF.
+
+\section{Dạng chuẩn thứ ba -- 3NF}\label{s:third_normal_form}
+Một quan hệ đạt dạng chuẩn thứ ba khi đã đạt 2NF và không tồn tại phụ thuộc bắc cầu giữa các thuộc tính không khóa. Nói cách khác, các thuộc tính không khóa phải phụ thuộc trực tiếp vào khóa chính thay vì phụ thuộc thông qua một thuộc tính không khóa khác.
+
+\subsection{Chuẩn hóa bảng Customer}
+Bảng \texttt{Customer} được biểu diễn:
+
+\begin{verbatim}
+CUSTOMER(customer_id, full_name, phone, email, address)
+\end{verbatim}
+
+Các thuộc tính thông tin khách hàng đều phụ thuộc trực tiếp vào \texttt{customer\_id}. Không có thuộc tính không khóa nào đóng vai trò xác định một thuộc tính không khóa khác.
+Do đó, bảng \texttt{Customer} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Pet}
+Bảng \texttt{Pet} có dạng:
+
+\begin{verbatim}
+PET(pet_id, name, species, breed, age, customer_id)
+\end{verbatim}
+
+Các thuộc tính của thú cưng phụ thuộc trực tiếp vào \texttt{pet\_id}. Thuộc tính
+\texttt{customer\_id} chỉ dùng để xác định chủ sở hữu và là khóa ngoại tham
+chiếu đến bảng \texttt{Customer}.
+Thông tin như tên, số điện thoại hoặc địa chỉ của khách hàng không được lưu lại trong bảng \texttt{Pet}. Vì vậy, dữ liệu khách hàng không bị lặp lại khi một khách hàng sở hữu nhiều thú cưng.
+Bảng \texttt{Pet} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Veterinarian}
+Bảng \texttt{Veterinarian} có dạng:
+
+\begin{verbatim}
+VETERINARIAN(vet_id, full_name, schedule)
+\end{verbatim}
+
+Các thông tin về bác sĩ thú y đều phụ thuộc trực tiếp vào
+\texttt{vet\_id}. Không lưu thông tin của lịch hẹn hoặc thú cưng
+trong bảng này.
+Do đó, bảng \texttt{Veterinarian} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Staff}
+Bảng \texttt{Staff} có dạng:
+
+\begin{verbatim}
+STAFF(staff_id, full_name, role)
+\end{verbatim}
+
+Thông tin nhân viên phụ thuộc trực tiếp vào \texttt{staff\_id}. Bảng không chứa
+thông tin của các lịch hẹn mà nhân viên xử lý.
+Do đó, bảng \texttt{Staff} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Admin}
+Bảng \texttt{Admin} có dạng:
+
+\begin{verbatim}
+ADMIN(admin_id, username, password)
+\end{verbatim}
+
+Các thuộc tính \texttt{username}, \texttt{password} và \texttt{role} phụ thuộc trực tiếp vào \texttt{admin\_id}. Thuộc tính \texttt{username} được đặt ràng buộc \texttt{UNIQUE} để tránh hai tài khoản sử dụng cùng một tên đăng nhập.
+Do đó, bảng \texttt{Admin} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Booking}
+Bảng \texttt{Booking} có dạng:
+
+\begin{verbatim}
+BOOKING(booking_id, date_time, status, payment,
+customer_id, pet_id, vet_id, staff_id)
+\end{verbatim}
+
+Các thông tin \texttt{date\textunderscore time}, \texttt{status} và \texttt{payment} phụ thuộc trực tiếp vào \texttt{booking\textunderscore id}.
+Các thuộc tính \texttt{customer\_id}, \texttt{pet\_id}, \texttt{vet\_id} và \texttt{staff\_id} là các khóa ngoại dùng để liên kết với những thực thể khác. Thông tin chi tiết của khách hàng, thú cưng, bác sĩ và nhân viên không được lặp lại trong bảng \texttt{Booking}.
+Ví dụ, bảng \texttt{Booking} không lưu lại tên khách hàng mà chỉ lưu \texttt{customer\_id}. Khi cần lấy tên khách hàng, dữ liệu được truy xuất thông qua phép \texttt{JOIN} với bảng \texttt{Customer}.
+Do đó, bảng \texttt{Booking} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Invoice}
+Bảng \texttt{Invoice} được thiết kế:
+
+\begin{verbatim}
+INVOICE(invoice_id, amount, date, status, booking_id)
+\end{verbatim}
+
+Các thuộc tính \texttt{amount}, \texttt{date}, \texttt{status} và \texttt{booking\_id} phụ thuộc vào \texttt{invoice\_id}.
+Đặc biệt, bảng \texttt{Invoice} không lưu \texttt{customer\_id}. Thông tin khách hàng có thể được xác định thông qua:
+
+\begin{verbatim}
+Invoice -> Booking -> Customer
+\end{verbatim}
+
+Nếu lưu đồng thời \texttt{booking\_id} và \texttt{customer\_id} trong \texttt{Invoice}, thông tin khách hàng sẽ bị dư thừa vì có thể xác định từ \texttt{Booking}. Điều này có thể dẫn đến tình trạng không nhất quán nếu hai giá trị tham chiếu không tương ứng với nhau.
+Vì vậy, loại bỏ \texttt{customer\_id} khỏi \texttt{Invoice} giúp giảm dư thừa dữ liệu và phù hợp với nguyên tắc chuẩn hóa.
+Ngoài ra, \texttt{booking\_id} được đặt \texttt{UNIQUE} để đảm bảo một lịch hẹn chỉ có tối đa một hóa đơn.
+Do đó, bảng \texttt{Invoice} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng MedicalRecord}
+Bảng \texttt{MedicalRecord} có dạng:
+
+\begin{verbatim}
+MEDICAL_RECORD(record_id, diagnosis, treatment, date, pet_id, vet_id)
+\end{verbatim}
+
+Các thông tin chẩn đoán, điều trị và ngày khám phụ thuộc trực tiếp vào \verb|record_id|.
+Thông tin chi tiết của thú cưng không được lưu lại trong bảng hồ sơ khám bệnh mà được tham chiếu thông qua \texttt{pet\_id}. Tương tự, thông tin bác sĩ được tham chiếu thông qua \texttt{vet\_id}.
+Do đó, bảng \texttt{MedicalRecord} đạt 3NF.
+
+\subsection{Chuẩn hóa bảng Room}
+Bảng \texttt{Room} được biểu diễn:
+
+\begin{verbatim}
+ROOM(room_id, room_type, status, note)
+\end{verbatim}
+
+Các thuộc tính \texttt{room\_type}, \texttt{status} và \texttt{note} phụ thuộc trực tiếp vào \texttt{room\_id}.
+Bảng không lưu thông tin khách hàng hoặc thú cưng nên không phát sinh dữ liệu dư thừa từ các thực thể khác.
+Do đó, bảng \texttt{Room} đạt 3NF.
+
+\section{Kiểm tra phụ thuộc hàm}\label{s:functional_dependencies}
+Phụ thuộc hàm mô tả mối quan hệ giữa các thuộc tính trong một quan hệ. Với cơ sở dữ liệu của đề tài, một số phụ thuộc hàm chính có thể được biểu diễn như sau:
+
+\begin{verbatim}
+customer_id -> full_name, phone, email, address
+pet_id -> name, species, breed, age, customer_id
+vet_id -> full_name, schedule
+staff_id -> full_name, role
+admin_id -> username, password
+booking_id -> date_time, status, payment, customer_id, pet_id, vet_id, staff_id
+invoice_id -> amount, date, status, booking_id
+record_id -> diagnosis, treatment, date, pet_id, vet_id
+room_id -> room_type, status, note
+\end{verbatim}
+
+Các phụ thuộc trên cho thấy những thuộc tính mô tả của mỗi thực thể phụ thuộc trực tiếp vào khóa chính của quan hệ tương ứng.
+
+\section{Kiểm tra các bất thường dữ liệu}\label{s:data_anomalies}
+Chuẩn hóa giúp hạn chế ba loại bất thường thường gặp trong cơ sở dữ liệu: bất thường khi thêm, bất thường khi cập nhật và bất thường khi xóa.
+
+\subsection{Bất thường khi thêm dữ liệu}
+Nếu thông tin khách hàng và thông tin thú cưng được lưu chung trong một bảng, muốn thêm một khách hàng chưa có thú cưng có thể phải tạo một bản ghi với nhiều thuộc tính thú cưng để trống.
+Sau khi tách thành hai bảng \texttt{Customer} và \texttt{Pet}, có thể thêm khách hàng độc lập:
+
+\begin{verbatim}
+INSERT INTO Customer
+(customer_id, full_name, phone, email, address)
+VALUES
+(1, 'Test Customer', '0900000000',
+'[test@gmail.com](mailto:test@gmail.com)', 'Ho Chi Minh City');
+\end{verbatim}
+
+Không cần tạo một bản ghi thú cưng tương ứng.
+
+\subsection{Bất thường khi cập nhật dữ liệu}
+Nếu thông tin khách hàng được lặp lại ở nhiều bản ghi lịch hẹn, khi khách hàng thay đổi số điện thoại phải cập nhật nhiều bản ghi.
+Trong thiết kế hiện tại, thông tin khách hàng chỉ được lưu tại bảng \texttt{Customer}. Các bảng khác chỉ sử dụng \texttt{customer\_id} để tham chiếu.
+Do đó, khi thay đổi số điện thoại, chỉ cần cập nhật một bản ghi:
+
+\begin{verbatim}
+UPDATE Customer
+SET phone = '0988888888'
+WHERE customer_id = 1;
+\end{verbatim}
+
+\subsection{Bất thường khi xóa dữ liệu}
+Nếu thông tin khách hàng và thú cưng được lưu chung trong một bảng, việc xóa thú cưng cuối cùng của một khách hàng có thể vô tình làm mất luôn thông tin khách hàng.
+Trong mô hình hiện tại, \texttt{Customer} và \texttt{Pet} được tách thành hai quan hệ. Do đó, dữ liệu của khách hàng được quản lý độc lập với dữ liệu thú cưng.
+Các khóa ngoại giúp hệ quản trị cơ sở dữ liệu kiểm soát việc xóa những bản ghi đang được các bảng khác tham chiếu.
+
+\section{Tổng hợp kết quả chuẩn hóa}\label{s:normalization_summary}
+Kết quả phân tích chuẩn hóa các quan hệ được tổng hợp như sau:
+
+\begin{table}[htbp]
+\centering
+\caption{Kết quả chuẩn hóa các quan hệ}
+\label{t:normalization_summary}
+\begin{tabular}{|p{0.20\textwidth}|p{0.25\textwidth}|p{0.22\textwidth}|}
+\hline
+\textbf{Quan hệ} & \textbf{Khóa chính} & \textbf{Kết quả} \\
+\hline
+Customer & \texttt{customer\_id} & Đạt 3NF \\
+\hline
+Pet & \texttt{pet\_id} & Đạt 3NF \\
+\hline
+Veterinarian & \texttt{vet\_id} & Đạt 3NF \\
+\hline
+Staff & \texttt{staff\_id} & Đạt 3NF \\
+\hline
+Admin & \texttt{admin\_id} & Đạt 3NF \\
+\hline
+Booking & \texttt{booking\_id} & Đạt 3NF \\
+\hline
+Invoice & \texttt{invoice\_id} & Đạt 3NF \\
+\hline
+MedicalRecord & \texttt{record\_id} & Đạt 3NF \\
+\hline
+Room & \texttt{room\_id} & Đạt 3NF \\
+\hline
+\end{tabular}
+\end{table}
+
+Kết quả cho thấy các quan hệ trong hệ thống đều được tổ chức theo dạng chuẩn phù hợp. Các thuộc tính mô tả được đặt trong đúng quan hệ và thông tin từ các thực thể khác được tham chiếu thông qua khóa ngoại.
+
+\section{Đánh giá cấu trúc sau chuẩn hóa}\label{s:normalization_evaluation}
+Sau quá trình chuẩn hóa, cơ sở dữ liệu có cấu trúc rõ ràng với các bảng được phân chia theo từng nhóm đối tượng và nghiệp vụ. Thông tin khách hàng, thú cưng, bác sĩ, nhân viên, tài khoản quản trị, lịch hẹn, hóa đơn, hồ sơ khám bệnh và phòng được quản lý độc lập.
+Việc tách các quan hệ giúp giảm sự lặp lại dữ liệu. Đồng thời, các khóa ngoại giúp duy trì mối liên kết giữa các bảng mà không cần sao chép toàn bộ thông tin của thực thể liên quan.
+Một ví dụ điển hình là bảng \texttt{Invoice}. Thay vì lưu cả \texttt{customer\_id}, bảng chỉ cần lưu \texttt{booking\_id}. Khi cần xác định khách hàng, hệ thống có thể thực hiện phép nối:
+
+\begin{verbatim}
+Invoice
+|
+| booking_id
+v
+Booking
+|
+| customer_id
+v
+Customer
+\end{verbatim}
+
+Cách thiết kế này giúp hạn chế dữ liệu dư thừa và đảm bảo mỗi loại thông tin được quản lý tại một vị trí thích hợp.
+
+\section{Kết luận chương}\label{s:chapter7_conclusion}
+Chương này đã trình bày quá trình chuẩn hóa cơ sở dữ liệu Chăm sóc Sức khỏe Thú cưng từ dạng chuẩn thứ nhất đến dạng chuẩn thứ ba. Các quan hệ được phân tích dựa trên khóa chính, phụ thuộc hàm và sự phụ thuộc của các thuộc tính không khóa.
+Kết quả cho thấy các bảng trong hệ thống đáp ứng các yêu cầu của 1NF, 2NF và 3NF. Việc chuẩn hóa giúp giảm dữ liệu dư thừa, hạn chế các bất thường khi thêm, cập nhật và xóa dữ liệu, đồng thời nâng cao tính nhất quán của cơ sở dữ liệu.
+Đặc biệt, việc loại bỏ \texttt{customer\_id} khỏi bảng \texttt{Invoice} giúp tránh lưu trữ thông tin khách hàng dư thừa, vì khách hàng đã có thể được xác định thông qua bảng \texttt{Booking}. Đây là một ví dụ quan trọng cho việc áp dụng nguyên tắc chuẩn hóa vào thiết kế cơ sở dữ liệu của đề tài.

@@ -1,0 +1,89 @@
+\section{Tổng kết đề tài}\label{s:project_summary}
+Đề tài hệ thống Chăm sóc Sức khỏe Thú cưng được thực hiện với mục tiêu phân tích, thiết kế và xây dựng cơ sở dữ liệu phục vụ việc quản lý thông tin khách hàng, thú cưng, bác sĩ thú y, nhân viên, lịch hẹn, hồ sơ khám bệnh, hóa đơn và phòng chăm sóc.
+Trong quá trình thực hiện, đề tài đã tiến hành phân tích các yêu cầu nghiệp vụ và xác định phạm vi dữ liệu cần quản lý. Từ đó, mô hình thực thể -- liên kết (ERD) được xây dựng với các thực thể chính gồm Customer, Pet, Veterinarian, Staff, Admin, Booking, Invoice, MedicalRecord và Room.
+Sau khi hoàn thành mô hình ERD, các thực thể và mối quan hệ được ánh xạ sang mô hình quan hệ. Các khóa chính, khóa ngoại và các ràng buộc toàn vẹn được xác định nhằm đảm bảo tính nhất quán của dữ liệu. Đặc biệt, mối quan hệ giữa Booking và Invoice được biểu diễn bằng khóa ngoại kết hợp với ràng buộc UNIQUE nhằm đảm bảo mỗi lịch hẹn có tối đa một hóa đơn.
+Cơ sở dữ liệu sau đó được cài đặt bằng SQL. Các bảng dữ liệu được tạo theo thứ tự phù hợp với sự phụ thuộc giữa các khóa ngoại. Dữ liệu mẫu được đưa vào hệ thống để kiểm tra hoạt động của các bảng và mối quan hệ.
+
+\section{Kết quả đạt được}\label{s:achieved_results}
+Sau quá trình phân tích, thiết kế, cài đặt và kiểm thử, đề tài đã đạt được các kết quả chính sau:
+
+\begin{itemize}
+\item Phân tích được các yêu cầu cơ bản của hệ thống chăm sóc sức khỏe thú cưng.
+
+\item Xác định được các thực thể, thuộc tính, khóa chính và mối quan hệ giữa các thực thể.
+
+\item Xây dựng được mô hình ERD phù hợp với phạm vi nghiệp vụ của đề tài.
+
+\item Ánh xạ mô hình ERD sang mô hình quan hệ theo các quy tắc ánh xạ thực thể và quan hệ.
+
+\item Xây dựng được cơ sở dữ liệu gồm 9 bảng: Customer, Pet, Veterinarian, Staff, Admin, Booking, Invoice, MedicalRecord và Room.
+
+\item Thiết lập các khóa chính và khóa ngoại nhằm đảm bảo tính toàn vẹn tham chiếu giữa các bảng.
+
+\item Sử dụng các ràng buộc \texttt{NOT NULL}, \texttt{UNIQUE} và khóa ngoại để hạn chế dữ liệu không hợp lệ.
+
+\item Xây dựng dữ liệu mẫu phục vụ cho quá trình kiểm tra và thực hiện các truy vấn SQL.
+
+\item Thực hiện các truy vấn cơ bản, truy vấn kết hợp nhiều bảng và truy vấn thống kê nhằm kiểm tra khả năng khai thác dữ liệu.
+
+\item Thực hiện kiểm thử các ràng buộc về khóa chính, khóa ngoại, \texttt{NOT NULL}, \texttt{UNIQUE}, giá trị \texttt{NULL}, cập nhật và xóa dữ liệu.
+
+\item Phân tích các phụ thuộc hàm và kiểm tra mức độ chuẩn hóa của các quan hệ.
+
+\item Cấu trúc cơ sở dữ liệu được thiết kế hướng tới dạng chuẩn thứ ba (3NF), giúp hạn chế dư thừa dữ liệu và các bất thường khi thêm, sửa hoặc xóa dữ liệu.
+
+\end{itemize}
+
+\section{Đánh giá cơ sở dữ liệu}\label{s:database_evaluation}
+Cơ sở dữ liệu được xây dựng đáp ứng các yêu cầu chính trong phạm vi của đề tài. Việc phân chia dữ liệu thành các bảng riêng biệt giúp các nhóm thông tin được quản lý rõ ràng và hạn chế việc lưu trữ trùng lặp.
+Mối quan hệ giữa Customer và Pet cho phép một khách hàng có thể quản lý nhiều thú cưng. Bảng Booking liên kết khách hàng, thú cưng, bác sĩ thú y và nhân viên, từ đó lưu trữ được các thông tin cần thiết của một lần đặt lịch.
+Bảng MedicalRecord cho phép lưu trữ lịch sử khám bệnh của thú cưng, đồng thời xác định bác sĩ thú y thực hiện việc khám. Bảng Invoice được liên kết với Booking để quản lý thông tin thanh toán của từng lịch hẹn.
+Các ràng buộc khóa chính và khóa ngoại góp phần đảm bảo dữ liệu giữa các bảng có sự liên kết hợp lệ. Việc chuẩn hóa đến 3NF cũng giúp giảm sự dư thừa và hạn chế các bất thường trong quá trình thao tác dữ liệu.
+Tuy nhiên, cơ sở dữ liệu hiện tại mới tập trung vào các nghiệp vụ cốt lõi. Một số chức năng thực tế của một hệ thống chăm sóc thú cưng quy mô lớn chưa được mô hình hóa, chẳng hạn như quản lý thuốc, dịch vụ, chi tiết hóa đơn, lịch làm việc chi tiết của bác sĩ hoặc quá trình lưu trú của thú cưng.
+
+\section{Hạn chế của đề tài}\label{s:limitations}
+Bên cạnh những kết quả đạt được, đề tài vẫn còn một số hạn chế do phạm vi của bài tập tập trung chủ yếu vào việc phân tích và xây dựng cơ sở dữ liệu.
+Thứ nhất, thông tin về lịch làm việc của bác sĩ thú y hiện được lưu dưới dạng thuộc tính \texttt{schedule}. Cách thiết kế này phù hợp với phạm vi hiện tại nhưng chưa thuận tiện nếu cần quản lý lịch làm việc theo từng ngày, ca làm việc hoặc thời gian cụ thể.
+Thứ hai, bảng Room mới quản lý thông tin cơ bản về loại phòng, trạng thái và ghi chú. Cơ sở dữ liệu chưa quản lý chi tiết lịch sử sử dụng phòng hoặc quá trình một thú cưng được phân phòng trong từng khoảng thời gian.
+Thứ ba, bảng Invoice hiện mới quản lý tổng số tiền, ngày lập, trạng thái và lịch hẹn tương ứng. Các thành phần chi tiết tạo nên hóa đơn như dịch vụ, thuốc hoặc sản phẩm chưa được tách thành các bảng riêng.
+Thứ tư, hệ thống chưa xây dựng các chức năng quản lý tài khoản người dùng ở mức chi tiết như phân quyền theo từng chức năng, thay đổi mật khẩu hoặc ghi nhận lịch sử hoạt động.
+Những hạn chế trên không ảnh hưởng đến mục tiêu chính của đề tài trong phạm vi hiện tại nhưng có thể được tiếp tục mở rộng trong các phiên bản sau.
+
+\section{Hướng phát triển}\label{s:future_development}
+Trong tương lai, cơ sở dữ liệu có thể được mở rộng để đáp ứng tốt hơn các yêu cầu của một hệ thống chăm sóc thú cưng thực tế.
+
+\subsection{Mở rộng quản lý lịch làm việc của bác sĩ}
+Có thể xây dựng thêm các bảng quản lý ca làm việc và lịch làm việc của Veterinarian thay cho việc lưu lịch dưới dạng chuỗi trong thuộc tính \texttt{schedule}. Thiết kế này cho phép kiểm tra lịch trống của bác sĩ và hạn chế việc đặt nhiều lịch trùng thời gian.
+
+\subsection{Mở rộng quản lý dịch vụ}
+Có thể bổ sung bảng Service để quản lý các dịch vụ như khám tổng quát, tiêm phòng, phẫu thuật, chăm sóc và các dịch vụ khác. Khi đó, hệ thống có thể liên kết dịch vụ với Booking và Invoice để xác định chi phí của từng dịch vụ.
+
+\subsection{Mở rộng chi tiết hóa đơn}
+Bảng Invoice có thể được kết hợp với bảng InvoiceDetail để lưu từng khoản phí trong một hóa đơn. Cách thiết kế này cho phép một hóa đơn có nhiều dòng chi tiết và thuận tiện cho việc thống kê doanh thu theo từng loại dịch vụ.
+
+\subsection{Mở rộng quản lý thuốc}
+Hệ thống có thể bổ sung các bảng Drug để quản lý thông tin thuốc, liều lượng và lịch sử sử dụng. Điều này giúp theo dõi quá trình điều trị và tiêm chủng của từng thú cưng một cách chi tiết hơn.
+
+\subsection{Mở rộng quản lý lưu trú}
+Nếu hệ thống cần quản lý thú cưng ở lại cơ sở chăm sóc, có thể bổ sung bảng quản lý quá trình lưu trú, chẳng hạn như thông tin thú cưng, phòng được sử dụng, thời gian nhận phòng và thời gian trả phòng. Khi đó, trạng thái phòng có thể được xác định dựa trên dữ liệu lưu trú thay vì chỉ lưu một trạng thái hiện tại.
+
+\subsection{Phát triển chức năng báo cáo và thống kê}
+Cơ sở dữ liệu có thể được sử dụng để xây dựng thêm các báo cáo như:
+
+\begin{itemize}
+\item Số lượng lịch hẹn theo ngày, tháng hoặc năm.
+\item Doanh thu theo khoảng thời gian.
+\item Doanh thu theo từng loại dịch vụ.
+\item Số lượng thú cưng theo từng loài.
+\item Số lượt khám của từng bác sĩ thú y.
+\item Thống kê tình trạng thanh toán hóa đơn.
+\item Thống kê lịch sử khám bệnh và tiêm chủng của thú cưng.
+\end{itemize}
+
+\subsection{Tăng cường bảo mật cơ sở dữ liệu}
+Trong các phiên bản tiếp theo, hệ thống có thể được bổ sung cơ chế phân quyền người dùng, kiểm soát quyền truy cập theo vai trò và lưu lại lịch sử thao tác dữ liệu. Đặc biệt, thông tin mật khẩu trong bảng Admin cần được bảo vệ bằng cơ chế mã hóa hoặc băm mật khẩu phù hợp thay vì lưu trực tiếp dưới dạng văn bản.
+
+\section{Kết luận chương}\label{s:chapter8_conclusion}
+Đề tài đã hoàn thành quá trình phân tích yêu cầu, thiết kế ERD, ánh xạ sang mô hình quan hệ, cài đặt cơ sở dữ liệu, xây dựng dữ liệu mẫu, kiểm thử và đánh giá mức độ chuẩn hóa. Cơ sở dữ liệu gồm 9 bảng đã mô hình hóa được các đối tượng và nghiệp vụ chính của hệ thống Chăm sóc Sức khỏe Thú cưng.
+Thông qua đề tài, các kiến thức về mô hình ER, ánh xạ ER sang mô hình quan hệ, khóa chính, khóa ngoại, ràng buộc toàn vẹn, truy vấn SQL, kiểm thử và chuẩn hóa cơ sở dữ liệu được vận dụng vào một bài toán thực tế.
+Mặc dù vẫn còn một số hạn chế, cấu trúc hiện tại là nền tảng để tiếp tục phát triển hệ thống trong tương lai. Các hướng mở rộng về dịch vụ, hóa đơn chi tiết, lịch làm việc, quản lý thuốc, lưu trú, báo cáo và bảo mật có thể giúp cơ sở dữ liệu đáp ứng tốt hơn các yêu cầu của một hệ thống chăm sóc thú cưng thực tế.

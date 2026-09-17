@@ -1,0 +1,152 @@
+Chương này trình là quá trình phân tích nghiệp vụ và thiết kế mô hình dữ liệu cho hệ thống \textbf{Chăm sóc Sức khỏe Thú cưng}. Nội dung chương tập trung vào việc xác định phạm vi dữ liệu, phân tích các đối tượng và quy tắc nghiệp vụ, xác định thực thể, thuộc tính, khóa chính, khóa ngoại và các mối quan hệ giữa các thực thể. Từ kết quả phân tích, mô hình \textbf{Entity--Relationship Diagram (ERD)} được xây dựng làm cơ sở cho bước ánh xạ sang mô hình quan hệ và cài đặt cơ sở dữ liệu ở các chương tiếp theo.
+
+\section{Phân tích yêu cầu nghiệp vụ}\label{s:business_analysis}
+Hệ thống được xây dựng nhằm hỗ trợ quản lý thông tin và các hoạt động chăm sóc sức khỏe thú cưng tại cơ sở thú y. Hệ thống cần lưu trữ thông tin khách hàng, thú cưng, bác sĩ thú y, nhân viên, lịch đặt khám, hồ sơ bệnh án, hóa đơn và phòng chăm sóc.
+Quy trình nghiệp vụ tổng quát của hệ thống được mô tả như sau:
+
+\begin{enumerate}
+    \item Khách hàng đăng ký và cung cấp thông tin cá nhân như họ tên, số điện thoại, email và địa chỉ.
+    \item Khách hàng có thể đăng ký một hoặc nhiều thú cưng thuộc quyền sở hữu của mình. Mỗi thú cưng được lưu các thông tin như tên, loài, giống và tuổi.
+    \item Khách hàng đặt lịch khám cho thú cưng. Mỗi lịch khám xác định thời gian khám, trạng thái, chi phí khám, bác sĩ thú y phụ trách và nhân viên hỗ trợ (nếu có).
+    \item Bác sĩ thú y thực hiện việc khám và cập nhật hồ sơ bệnh án cho thú cưng. Hồ sơ bệnh án bao gồm thông tin chẩn đoán, điều trị và ngày thực hiện.
+    \item Sau khi hoàn thành dịch vụ, hệ thống có thể lập hóa đơn tương ứng với lịch đặt khám. Hóa đơn lưu số tiền và trạng thái thanh toán.
+    \item Đối với thú cưng cần chăm sóc hoặc theo dõi tại cơ sở, hệ thống quản lý thông tin phòng bao gồm loại phòng, trạng thái phòng và ghi chú.
+    \item Tài khoản quản trị được sử dụng để quản lý và kiểm soát thông tin trong hệ thống.
+\end{enumerate}
+
+Các nghiệp vụ trên là cơ sở để xác định các thực thể và mối quan hệ cần thiết trong mô hình dữ liệu.
+
+\section{Xác định phạm vi dữ liệu}\label{s:data_scope}
+Dựa trên yêu cầu nghiệp vụ, phạm vi dữ liệu của hệ thống được giới hạn trong các nhóm thông tin chính sau:
+
+\begin{itemize}
+    \item Thông tin khách hàng và thú cưng.
+    \item Thông tin bác sĩ thú y và nhân viên.
+    \item Thông tin đặt lịch khám.
+    \item Thông tin hồ sơ bệnh án.
+    \item Thông tin hóa đơn và thanh toán.
+    \item Thông tin phòng chăm sóc thú cưng.
+    \item Thông tin tài khoản quản trị hệ thống.
+\end{itemize}
+
+Hệ thống tập trung vào việc quản lý dữ liệu và các mối quan hệ giữa các đối tượng. Các chức năng như giao diện website, thanh toán trực tuyến hoặc gửi thông báo tự động không thuộc phạm vi của thiết kế cơ sở dữ liệu trong đề tài này.
+
+\section{Xác định thực thể}\label{s:entities_identification}
+Từ phần mô tả nghiệp vụ, các danh từ quan trọng được xác định và lựa chọn làm các thực thể chính của hệ thống. Mô hình gồm chín thực thể:
+
+\begin{enumerate}
+    \item \textbf{Customer}: lưu thông tin khách hàng.
+    \item \textbf{Pet}: lưu thông tin thú cưng thuộc khách hàng.
+    \item \textbf{Veterinarian}: lưu thông tin bác sĩ thú y.
+    \item \textbf{Staff}: lưu thông tin nhân viên.
+    \item \textbf{Admin}: lưu thông tin tài khoản quản trị.
+    \item \textbf{Booking}: lưu thông tin lịch đặt khám.
+    \item \textbf{MedicalRecord}: lưu thông tin hồ sơ bệnh án.
+    \item \textbf{Invoice}: lưu thông tin hóa đơn.
+    \item \textbf{Room}: lưu thông tin phòng chăm sóc.
+\end{enumerate}
+
+\subsection{Customer và Pet}
+Thực thể \textbf{Customer} đại diện cho khách hàng sử dụng dịch vụ chăm sóc thú cưng. Các thuộc tính chính gồm mã khách hàng, họ tên, số điện thoại, email và địa chỉ.
+Thực thể \textbf{Pet} đại diện cho thú cưng được khách hàng đăng ký. Các thuộc tính gồm mã thú cưng, tên, loài, giống, tuổi và mã khách hàng.
+Một khách hàng có thể sở hữu nhiều thú cưng, trong khi mỗi thú cưng thuộc về một khách hàng. Do đó, mối quan hệ giữa \textbf{Customer} và \textbf{Pet} là quan hệ \textbf{1:N}.
+
+\subsection{Veterinarian và Staff}
+Thực thể \textbf{Veterinarian} lưu thông tin bác sĩ thú y, bao gồm mã bác sĩ, họ tên và lịch làm việc.
+Thực thể \textbf{Staff} lưu thông tin nhân viên của cơ sở, bao gồm mã nhân viên, họ tên và vai trò.
+Một bác sĩ thú y có thể phụ trách nhiều lịch khám và nhiều hồ sơ bệnh án. Tương tự, một nhân viên có thể hỗ trợ hoặc xử lý nhiều lịch đặt khám.
+
+\subsection{Booking}
+Thực thể \textbf{Booking} đại diện cho một lần đặt lịch khám của khách hàng cho thú cưng.
+Các thuộc tính của Booking gồm mã đặt lịch, ngày giờ khám, trạng thái, phí khám, mã khách hàng, mã thú cưng, mã bác sĩ và mã nhân viên.
+Mỗi Booking phải gắn với một khách hàng, một thú cưng và một bác sĩ thú y. Nhân viên hỗ trợ có thể chưa được phân công tại thời điểm tạo lịch nên thuộc tính \texttt{staff\_id} có thể nhận giá trị \texttt{NULL}.
+
+\subsection{MedicalRecord}
+Thực thể \textbf{MedicalRecord} đại diện cho hồ sơ khám và điều trị của thú cưng.
+Các thuộc tính chính gồm mã hồ sơ, chẩn đoán, phương pháp điều trị, ngày lập hồ sơ, mã thú cưng và mã bác sĩ thú y.
+Một thú cưng có thể có nhiều hồ sơ bệnh án theo thời gian. Mỗi hồ sơ bệnh án được lập bởi một bác sĩ thú y. Vì vậy, quan hệ giữa \textbf{Pet} và \textbf{MedicalRecord} là \textbf{1:N}, đồng thời quan hệ giữa \textbf{Veterinarian} và \textbf{MedicalRecord} cũng là \textbf{1:N}.
+
+\subsection{Invoice}
+Thực thể \textbf{Invoice} lưu thông tin hóa đơn phát sinh từ quá trình sử dụng dịch vụ.
+Các thuộc tính gồm mã hóa đơn, số tiền, trạng thái thanh toán và mã đặt lịch.
+Mỗi Booking có thể chưa có hóa đơn hoặc có một hóa đơn. Một Invoice bắt buộc phải thuộc về một Booking. Do đó, quan hệ giữa \textbf{Booking} và \textbf{Invoice} được xác định là \textbf{1:0..1}.
+Để đảm bảo mỗi lịch đặt khám không có nhiều hơn một hóa đơn, thuộc tính \texttt{booking\_id} trong Invoice được đặt ràng buộc \texttt{UNIQUE}.
+
+\subsection{Room}
+Thực thể \textbf{Room} đại diện cho các phòng được sử dụng trong quá trình chăm sóc thú cưng.
+Các thuộc tính gồm mã phòng, loại phòng, trạng thái và ghi chú. Ví dụ, phòng có thể có loại Tiêu chuẩn, VIP, Riêng biệt hoặc Phẫu thuật.
+Trong phạm vi mô hình hiện tại, Room được quản lý như một thực thể độc lập. Mô hình không ép buộc mỗi thú cưng phải gắn cố định với một phòng vì việc phân phòng có thể thay đổi theo từng thời điểm.
+
+\subsection{Admin}
+Thực thể \textbf{Admin} lưu thông tin tài khoản quản trị hệ thống.
+Các thuộc tính gồm mã quản trị viên, tên đăng nhập và mật khẩu. Thuộc tính \texttt{username} phải là duy nhất để tránh việc nhiều tài khoản sử dụng cùng một tên đăng nhập.
+
+\section{Xác định thuộc tính và khóa}\label{s:attributes_keys}
+Sau khi xác định các thực thể, các thuộc tính và khóa của từng thực thể được xác định như sau:
+
+\begin{itemize}
+    \item \textbf{Customer}: \texttt{customer\_id} là khóa chính.
+    \item \textbf{Pet}: \texttt{pet\_id} là khóa chính; \texttt{customer\_id} là khóa ngoại.
+    \item \textbf{Veterinarian}: \texttt{vet\_id} là khóa chính.
+    \item \textbf{Staff}: \texttt{staff\_id} là khóa chính.
+    \item \textbf{Admin}: \texttt{admin\_id} là khóa chính; \texttt{username} có ràng buộc duy nhất.
+    \item \textbf{Booking}: \texttt{booking\_id} là khóa chính; \texttt{customer\_id}, \texttt{pet\_id}, \texttt{vet\_id} và \texttt{staff\_id} là các khóa ngoại.
+    \item \textbf{Invoice}: \texttt{invoice\_id} là khóa chính; \texttt{booking\_id} là khóa ngoại và có ràng buộc duy nhất.
+    \item \textbf{MedicalRecord}: \texttt{record\_id} là khóa chính; \texttt{pet\_id} và \texttt{vet\_id} là các khóa ngoại.
+    \item \textbf{Room}: \texttt{room\_id} là khóa chính.
+\end{itemize}
+
+Các khóa chính được sử dụng để định danh duy nhất các bản ghi trong từng thực thể. Khóa ngoại được sử dụng để liên kết các thực thể và đảm bảo tính toàn vẹn tham chiếu giữa các bảng.
+
+\section{Xác định mối quan hệ và lực lượng kết hợp}\label{s:relationships}
+Dựa trên các quy tắc nghiệp vụ, các mối quan hệ chính trong hệ thống được xác định như sau:
+
+\begin{table}[htbp]
+\centering
+\caption{Các mối quan hệ giữa các thực thể}
+\label{tab:relationships}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Thực thể 1} & \textbf{Quan hệ} & \textbf{Thực thể 2} \\ \hline
+Customer & 1:N & Pet \\ \hline
+Customer & 1:N & Booking \\ \hline
+Pet & 1:N & Booking \\ \hline
+Veterinarian & 1:N & Booking \\ \hline
+Staff & 1:N & Booking \\ \hline
+Pet & 1:N & MedicalRecord \\ \hline
+Veterinarian & 1:N & MedicalRecord \\ \hline
+Booking & 1:0..1 & Invoice \\ \hline
+\end{tabular}
+\end{table}
+
+Trong đó, quan hệ \textbf{Customer--Pet} thể hiện quyền sở hữu thú cưng. Quan hệ \textbf{Customer--Booking} thể hiện khách hàng thực hiện đặt lịch. Quan hệ \textbf{Pet--Booking} xác định thú cưng được đưa đi khám.
+Quan hệ \textbf{Veterinarian--Booking} cho biết bác sĩ phụ trách lịch khám, trong khi \textbf{Staff--Booking} thể hiện nhân viên có thể được phân công hỗ trợ một lịch khám.
+Quan hệ \textbf{Pet--MedicalRecord} lưu lịch sử khám chữa bệnh của từng thú cưng. Quan hệ \textbf{Veterinarian--MedicalRecord} xác định bác sĩ lập hồ sơ bệnh án.
+Cuối cùng, quan hệ \textbf{Booking--Invoice} được thiết kế theo dạng \textbf{1:0..1}, vì một lịch khám có thể chưa phát sinh hóa đơn hoặc chỉ có tối đa một hóa đơn.
+
+\section{Kiểm tra tính hợp lý của mô hình}\label{s:model_validation}
+Sau khi xác định các thực thể và mối quan hệ, mô hình được kiểm tra bằng cách sử dụng dữ liệu mẫu và một số trường hợp nghiệp vụ đặc biệt.
+Trường hợp thứ nhất, một khách hàng có thể sở hữu nhiều thú cưng. Mô hình phải cho phép nhiều bản ghi Pet cùng tham chiếu đến một Customer.
+Trường hợp thứ hai, một thú cưng có thể được đặt lịch khám nhiều lần ở các thời điểm khác nhau. Do đó, Pet có quan hệ 1:N với Booking.
+Trường hợp thứ ba, một nhân viên có thể chưa được phân công cho Booking tại thời điểm tạo lịch. Vì vậy, \texttt{staff\_id} trong Booking được cho phép nhận giá trị \texttt{NULL}.
+Trường hợp thứ tư, một Booking chưa hoàn thành có thể chưa có Invoice. Điều này phù hợp với quan hệ 1:0..1 giữa Booking và Invoice.
+Trường hợp thứ năm, một thú cưng có thể có nhiều hồ sơ bệnh án trong suốt quá trình được chăm sóc. Mỗi hồ sơ được gắn với một bác sĩ thú y cụ thể để xác định người thực hiện việc khám và điều trị.
+Các trường hợp trên cho thấy mô hình có thể biểu diễn được những nghiệp vụ cơ bản của hệ thống mà không cần tạo thêm các quan hệ nhiều-nhiều hoặc thực thể yếu trong phạm vi hiện tại.
+
+\section{Mô hình ERD}\label{s:erd_model}
+Từ kết quả phân tích, mô hình ERD của hệ thống gồm chín thực thể chính: \textbf{Customer, Pet, Veterinarian, Staff, Admin, Booking, Invoice, MedicalRecord} và \textbf{Room}.
+Các thực thể được liên kết thông qua khóa chính và khóa ngoại. Các quan hệ 1:N được thể hiện bằng cách đưa khóa chính của phía ``1'' vào phía ``N'' dưới dạng khóa ngoại. Đối với quan hệ Booking--Invoice, thuộc tính \texttt{booking\_id} của Invoice được đặt ràng buộc duy nhất để đảm bảo mỗi Booking có tối đa một Invoice.
+
+\begin{figure}[htbp]
+    \centering % Thay tên file bên dưới bằng file ERD thực tế
+    \includegraphics[width=\textwidth]{figures/pet_health_care_erd}
+    \caption{Mô hình ERD của hệ thống Chăm sóc Sức khỏe Thú cưng}
+    \label{fig:pet_health_care_erd}
+\end{figure}
+
+Mô hình ERD là cơ sở để thực hiện bước tiếp theo là ánh xạ mô hình thực thể--liên kết sang mô hình quan hệ. Từ đó, các bảng dữ liệu, khóa chính, khóa ngoại và các ràng buộc toàn vẹn sẽ được cài đặt bằng SQL.
+
+\section{Kết luận chương}\label{s:chapter2_conclusion}
+Chương này đã trình bày quá trình phân tích yêu cầu nghiệp vụ và thiết kế mô hình ERD cho hệ thống Chăm sóc Sức khỏe Thú cưng. Từ mô tả nghiệp vụ, chín thực thể chính đã được xác định cùng với các thuộc tính, khóa chính, khóa ngoại và các mối quan hệ giữa chúng.
+Mô hình hiện tại chủ yếu sử dụng các quan hệ 1:N và quan hệ 1:0..1. Không có thực thể yếu hoặc quan hệ M:N trong phạm vi thiết kế hiện tại. Các ràng buộc như \texttt{NOT NULL}, \texttt{UNIQUE} và khóa ngoại sẽ được sử dụng trong bước cài đặt để đảm bảo tính toàn vẹn của dữ liệu.
+Kết quả của chương là một mô hình dữ liệu khái niệm hoàn chỉnh, làm nền tảng cho việc ánh xạ ERD sang mô hình quan hệ và xây dựng cơ sở dữ liệu ở chương tiếp theo.
