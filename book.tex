@@ -1,0 +1,107 @@
+\documentclass[letterpaper,11pt,leqno]{book}
+\usepackage{book}
+\bibliographystyle{book}
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+% Enter book title to populate PDF metadata:
+\hypersetup{pdftitle={Minimalist LaTeX Template for Academic Books}}
+
+% Enter path to BibTeX file with references:
+\newcommand{\bib}{book.bib}
+
+% Enter path to PDF file with figures:
+\newcommand{\pdf}{figures.pdf}
+
+\begin{document}
+
+% Enter title:
+\title{Chăm Sóc Sức Khỏe Thú Cưng}
+
+% Enter subtitle (can be commented out):
+\subtitle{Thiết kế và Xây dựng Cơ sở dữ liệu}
+
+% Enter author:
+\author{Vũ Hoàng Lan}
+
+% Enter date:
+\date{09.2026}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\frontmatter
+
+\tableofcontents
+
+% Enter book structure
+\chapter{Lời mở đầu}
+
+\input{preface}
+
+\mainmatter
+
+\part{Phân tích và Thiết kế hệ thống}\label{p:analysis}
+
+\chapter{Tổng quan đề tài}\label{c:introduction}
+
+\input{Chapter1}
+
+\chapter{Phân tích nghiệp vụ và Thiết kế ERD}\label{c:erd}
+
+\input{Chapter2}
+
+\chapter{Ánh xạ ERD sang mô hình quan hệ}\label{c:mapping}
+
+\input{Chapter3}
+
+\part{Xây dựng Cơ sở dữ liệu}\label{p:database}
+
+\chapter{Cài đặt Cơ sở dữ liệu}\label{c:implement}
+
+\input{Chapter4}
+
+\chapter{Dữ liệu mẫu và Truy vấn}\label{c:datatest}
+
+\input{Chapter5}
+
+\part{Kiểm thử}\label{p:test}
+
+\chapter{Kiểm thử Cơ sở dữ liệu}\label{c:testing}
+
+\input{Chapter6}
+
+\chapter{Chuẩn hóa Cơ sở dữ liệu}\label{c:normalization}
+
+\input{Chapter7}
+
+\part{Kết luận}\label{p:conclusion}
+
+\chapter{Kết luận và Phát triển}\label{c:update}
+
+\input{Chapter8}
+
+\appendix
+
+\part{Phụ lục}\label{p:appendix}
+
+\chapter{Mã nguồn SQL}\label{a:SQL}
+
+\input{appendixA}
+
+\chapter{Dữ liệu mẫu}\label{a:data}
+
+\input{appendixB}
+
+\backmatter
+
+\nocite{*}
+\bibliography{\bib}
+
+\chapter{Lời cảm ơn}
+\input{acknowledgements}
+
+\printindex
+
+\end{document}
