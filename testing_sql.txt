@@ -1,0 +1,26 @@
+-- TESTING
+-- customer_id đã có
+INSERT INTO Customer (customer_id, full_name, phone, email, address)
+VALUES (1, 'Test Customer', '0900000000', '[test@gmail.com](mailto:test@gmail.com)', 'Test Address');
+
+-- kiểm tra foreign key
+INSERT INTO Pet (pet_id, name, species, breed, age, customer_id)
+VALUES (16, 'TestPet', 'Dog', 'Poodle', 2, 9999);
+
+-- kiểm thử NOT NULL
+INSERT INTO Customer (customer_id, full_name, phone, email, address)
+VALUES (6, NULL, '0900000000', '[test@gmail.com](mailto:test@gmail.com)', 'Ho Chi Minh City');
+
+-- kiểm thử UNIQUE
+INSERT INTO Admin (username, password, role)
+VALUES ('91', 'newpassword', 'Administrator');
+
+-- kiểm thử mối quan hệ
+SELECT c.customer_id,
+c.full_name AS customer_name,
+p.pet_id,
+p.name AS pet_name
+FROM Customer c
+JOIN Pet p
+ON c.customer_id = p.customer_id
+ORDER BY c.customer_id;
