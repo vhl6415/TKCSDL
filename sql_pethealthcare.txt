@@ -1,0 +1,159 @@
+create database pet_health_care;
+use pet_health_care;
+
+CREATE TABLE Customer (
+    customer_id INT primary key,
+    full_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100),
+    address VARCHAR(255)
+);
+CREATE TABLE Pet (
+    pet_id INT primary key,
+    name VARCHAR(100) NOT NULL,
+    species VARCHAR(50) NOT NULL,
+    breed VARCHAR(100),
+    age INT,
+    customer_id INT NOT NULL,
+    CONSTRAINT fk_pet_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+);
+CREATE TABLE Veterinarian (
+    vet_id INT primary key,
+    full_name VARCHAR(100) NOT NULL,
+    schedule VARCHAR(255)
+);
+CREATE TABLE Staff (
+    staff_id INT primary key,
+    full_name VARCHAR(100) NOT NULL,
+    role VARCHAR(50) NOT NULL
+);
+CREATE TABLE Admin (
+    admin_id INT primary key,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+CREATE TABLE Booking (
+    booking_id INT primary key,
+    date_time DATETIME NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    payment DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    customer_id INT NOT NULL,
+    pet_id INT NOT NULL,
+    vet_id INT NOT NULL,
+    staff_id INT,
+
+    CONSTRAINT fk_booking_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id),
+
+    CONSTRAINT fk_booking_pet
+        FOREIGN KEY (pet_id)
+        REFERENCES Pet(pet_id),
+
+    CONSTRAINT fk_booking_vet
+        FOREIGN KEY (vet_id)
+        REFERENCES Veterinarian(vet_id),
+
+    CONSTRAINT fk_booking_staff
+        FOREIGN KEY (staff_id)
+        REFERENCES Staff(staff_id)
+);
+CREATE TABLE Invoice (
+    invoice_id INT primary key,
+    amount DECIMAL(10,2) NOT NULL,
+    date DATE NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    booking_id INT NOT NULL UNIQUE,
+    customer_id INT NOT NULL,
+
+    CONSTRAINT fk_invoice_booking
+        FOREIGN KEY (booking_id)
+        REFERENCES Booking(booking_id),
+
+    CONSTRAINT fk_invoice_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+);
+CREATE TABLE MedicalRecord (
+    record_id INT primary key,
+    diagnosis TEXT,
+    treatment TEXT,
+    date DATE NOT NULL,
+    pet_id INT NOT NULL,
+    vet_id INT NOT NULL,
+
+    CONSTRAINT fk_medical_pet
+        FOREIGN KEY (pet_id)
+        REFERENCES Pet(pet_id),
+
+    CONSTRAINT fk_medical_vet
+        FOREIGN KEY (vet_id)
+        REFERENCES Veterinarian(vet_id)
+);
+CREATE TABLE Room (
+    room_id INT primary key,
+    room_type VARCHAR(50) NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    note VARCHAR(255)
+);
+INSERT INTO Customer (customer_id, full_name, phone, email, address) VALUES
+(1,'Nguyen Van An', '0901234567', 'nva@gmail.com', 'Ho Chi Minh'),
+(2,'Tran Thi Binh', '0912345678', 'ttb@gmail.com', 'Ha Noi'),
+(3,'Le Minh Chau', '0923456789', 'lmc@gmail.com', 'Da Nang'),
+(4,'Pham Quang Dung', '0934567890', 'pqd@gmail.com', 'Can Tho');
+
+INSERT INTO Pet (pet_id, name, species, breed, age, customer_id) VALUES
+(11,'Milo', 'Dog', 'Poodle', 3, 1),
+(12,'Luna', 'Cat', 'British Shorthair', 2, 2),
+(13,'Max', 'Dog', 'Golden Retriever', 5, 3),
+(14,'Coco', 'Cat', 'Persian', 4, 1),
+(15,'Buddy', 'Dog', 'Corgi', 1, 4);
+
+INSERT INTO Veterinarian (vet_id, full_name, schedule) VALUES
+(111,'Nguyen Thanh Son', 'Mon-Fri 08:00-17:00'),
+(112,'Tran Minh Anh', 'Mon-Sat 09:00-18:00'),
+(113,'Le Hoang Nam', 'Tue-Sun 08:00-16:00'),
+(114,'Vo Quoc Bao', 'Thu-Sun 10:00-16:00');
+
+INSERT INTO Staff (staff_id, full_name, role) VALUES
+(21,'Nguyen Thi Mai', 'Receptionist'),
+(22,'Tran Van Long', 'Receptionist'),
+(23,'Le Thi Thuy', 'Assistant'),
+(24,'Pham Minh Duc', 'Manager');
+
+
+INSERT INTO Admin (admin_id, username, password) VALUES
+(91,'admin01', 'admin123'),
+(92,'manager01', 'manager123'),
+(93,'system01', 'system123');
+
+INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES
+(31,'2026-09-05 09:00:00', 'Completed', 300000.00, 1, 11, 111, 21),
+(32,'2026-09-05 10:30:00', 'Completed', 500000.00, 2, 12, 112, 22),
+(33,'2026-09-06 14:00:00', 'Confirmed', 400000.00, 3, 13, 113, 23),
+(34,'2026-09-07 08:30:00', 'Pending', 250000.00, 1, 14, 114, NULL),
+(35,'2026-09-07 15:00:00', 'Cancelled', 0.00, 4, 15, 111, 24);
+
+INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES
+(41, 300000.00, '2026-09-05', 'Paid', 31, 1),
+(42, 500000.00, '2026-09-05', 'Paid', 32, 2),
+(43, 400000.00, '2026-09-06', 'Unpaid', 33, 3),
+(44, 250000.00, '2026-09-07', 'Unpaid', 34, 1),
+(45, 0.00, '2026-09-07', 'Cancelled', 35, 4);
+
+INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES
+(51, 'Di ung da', 'Thuoc khang sinh', '2026-09-05', 11, 111),
+(52, 'Nhiem trung duong ho hap', 'Uong khang sinh', '2026-09-05', 12, 112),
+(53, 'Chan thuong chan', 'Lam sach vet thuong va boi thuoc', '2026-09-06', 13, 113),
+(54, 'Nhiem trung da', 'Thuoc boi ngoai da', '2026-09-07', 14, 114),
+(55, 'Kiem tra dinh ki', 'Khong yeu cau', '2026-09-07', 15, 111);
+
+INSERT INTO Room (room_id, room_type, status, note) VALUES
+(61, 'Tieu chuan', 'Trong', 'Pet >= 3 tuoi'),
+(62, 'Tieu chuan', 'Dang su dung', 'Pet < 3 tuoi'),
+(63, 'VIP', 'Trong', 'Duoc giam sat 24/7'),
+(64, 'Rieng biet', 'Dang su dung', 'Phong khu trung cho pet benh truyen nhiem'),
+(65, 'Phau thuat', 'Trong', 'Hoi suc sau phau thuat');
+
