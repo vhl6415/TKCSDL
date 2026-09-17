@@ -1,0 +1,47 @@
+-- kiểm tra danh sách bảng
+show tables;
+
+-- kiểm tra cấu trúc từng bảng
+DESCRIBE Customer;
+DESCRIBE Pet;
+DESCRIBE Booking;
+DESCRIBE Invoice;
+DESCRIBE MedicalRecord;
+
+-- kiểm tra ràng buộc foreign key (k add được vì cus_id k có 999)
+INSERT INTO Pet (pet_id, name, species, breed, age, customer_id)
+VALUES (16,'Tom', 'Cat', 'Persian', 2, 999);
+
+-- truy vấn thông tin bảng
+SELECT * FROM Customer;
+
+-- truy vấn kết hợp
+SELECT b.booking_id,
+b.date_time,
+c.full_name AS customer_name,
+b.status,
+b.payment
+FROM Booking b
+JOIN Customer c
+ON b.customer_id = c.customer_id;
+
+-- truy vấn thống kê
+SELECT status, COUNT(*) AS total_bookings
+FROM Booking GROUP BY status;
+
+-- truy vấn NULL
+SELECT * FROM Booking
+WHERE staff_id IS NULL;
+-- NOT NULL
+SELECT * FROM Booking
+WHERE staff_id IS NOT NULL;
+
+-- truy vấn toàn vẹn
+SELECT c.customer_id,
+c.full_name AS customer_name,
+p.pet_id,
+p.name AS pet_name
+FROM Customer c
+LEFT JOIN Pet p
+ON c.customer_id = p.customer_id
+ORDER BY c.customer_id;
