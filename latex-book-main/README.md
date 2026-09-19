@@ -1,48 +1,139 @@
-# Minimalist LaTeX Template for Academic Books
+## Pet Health Care – Hệ thống Chăm sóc Sức khỏe Thú cưng
 
-This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic book. The template follows typographical best practices and has a minimalist design. It is well suited for research monographs, textbooks, and lecture notes. It is designed so books are comfortable to read and easy to scan, both in print and on screen.
+Repository này chứa mã nguồn SQL và tài liệu báo cáo cho đề tài Hệ thống Chăm sóc Sức khỏe Thú cưng. Đề tài tập trung vào việc phân tích, thiết kế và xây dựng cơ sở dữ liệu phục vụ quản lý thông tin khách hàng, thú cưng, bác sĩ thú y, nhân viên, lịch hẹn, hồ sơ khám bệnh, hóa đơn và phòng chăm sóc.
 
-## Documentation
+## Mục tiêu
 
-The template is documented at https://pascalmichaillat.org/g/.
+Cơ sở dữ liệu được xây dựng nhằm:
 
-## Illustration
++ Quản lý thông tin khách hàng và thú cưng.
++ Quản lý thông tin bác sĩ thú y, nhân viên và tài khoản quản trị.
++ Quản lý lịch hẹn khám giữa khách hàng, thú cưng và bác sĩ thú y.
++ Lưu trữ hồ sơ khám bệnh và thông tin điều trị.
++ Quản lý hóa đơn và trạng thái thanh toán.
++ Quản lý thông tin phòng chăm sóc.
++ Đảm bảo tính toàn vẹn và nhất quán của dữ liệu thông qua khóa chính, khóa ngoại và các ràng buộc dữ liệu.
 
-+ The book produced by the template can be viewed at https://pascalmichaillat.org/g.pdf.
+## Cấu trúc hệ thống
 
-## Usage
+Cơ sở dữ liệu gồm 9 bảng chính:
 
-+ Clone the repository to your local machine.
-+ Edit the main file `book.tex` to set the title, subtitle, author, and date, and to add or remove parts and chapters.
-+ Edit the chapter files (`chapter1.tex`, `chapter2.tex`, and so on), appendix files (`appendixA.tex`, `appendixB.tex`, and so on), `preface.tex`, and `acknowledgements.tex` to replace the boilerplate with your content.
-+ Replace the figures in the PDF file `figures.pdf` with the figures to be included in your book (one figure per page).
-+ Replace the references in the BibTeX file `book.bib` with the references to be included in your book.
-+ Compile `book.tex` with pdfTeX. This will generate a PDF file of your book named `book.pdf`.
-+ To build the index, run `makeindex` after the first pdfTeX run, then run pdfTeX again.
++ `Customer` – Thông tin khách hàng.
++ `Pet` – Thông tin thú cưng.
++ `Veterinarian` – Thông tin bác sĩ thú y.
++ `Staff` – Thông tin nhân viên.
++ `Admin` – Thông tin tài khoản quản trị.
++ `Booking` – Thông tin lịch hẹn khám.
++ `Invoice` – Thông tin hóa đơn.
++ `MedicalRecord` – Hồ sơ khám bệnh.
++ `Room` – Thông tin phòng chăm sóc.
 
-A few files in the repository are required to use the book template but do not need to be modified. These files must remain in the same folder as `book.tex`:
+Các mối quan hệ chính:
 
-+ The LaTeX style file `book.sty` formats the book.
-+ The BibTeX style file `book.bst` formats the bibliography.
++ Một khách hàng có thể sở hữu nhiều thú cưng.
++ Một khách hàng có thể có nhiều lịch hẹn.
++ Một thú cưng có thể có nhiều lịch hẹn và hồ sơ khám bệnh.
++ Một bác sĩ thú y có thể thực hiện nhiều lịch hẹn và hồ sơ khám bệnh.
++ Một nhân viên có thể hỗ trợ nhiều lịch hẹn.
++ Một lịch hẹn có tối đa một hóa đơn.
 
-The file `book.pdf` illustrates the output of the template. It will be overwritten when `book.tex` is compiled. It is not required to use the book template.
+## Nội dung báo cáo
 
-## Software
+Báo cáo được tổ chức thành các phần:
 
-+ The template is currently operational with TeX Live 2025 on macOS.
-+ Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-book/issues) to help improve compatibility.
+### Phần 1 – Phân tích và thiết kế hệ thống
 
-## License
++ Tổng quan đề tài.
++ Phân tích nghiệp vụ.
++ Xác định thực thể, thuộc tính và mối quan hệ.
++ Thiết kế mô hình ERD.
++ Ánh xạ ERD sang mô hình quan hệ.
 
-This repository is licensed under the [MIT License](LICENSE.md).
+### Phần 2 – Xây dựng cơ sở dữ liệu
 
-## Real-world implementation
++ Cài đặt cơ sở dữ liệu.
++ Tạo các bảng và ràng buộc.
++ Khởi tạo dữ liệu mẫu.
++ Xây dựng các truy vấn SQL kiểm tra dữ liệu.
 
-- [A Theory of Economic Slack](https://pascalmichaillat.org/18.pdf) (by P. Michaillat)
+### Phần 3 – Kiểm thử và đánh giá
 
-## Related resources
++ Kiểm thử khóa chính.
++ Kiểm thử khóa ngoại.
++ Kiểm thử các ràng buộc `NOT NULL` và `UNIQUE`.
++ Kiểm tra tính toàn vẹn tham chiếu.
++ Kiểm tra cập nhật và xóa dữ liệu.
++ Chuẩn hóa cơ sở dữ liệu đến dạng chuẩn 3NF.
 
-- [latex-paper](https://github.com/pmichaillat/latex-paper) – This LaTeX template produces academic papers that follow the same typographic principles as the book template.
-- [latex-presentation](https://github.com/pmichaillat/latex-presentation) – This LaTeX template produces academic presentations that follow the same typographic principles as the book template.
-- [latex-math](https://github.com/pmichaillat/latex-math) – These LaTeX commands simplify writing mathematical expressions. They can be used in combination with this book template.
-- [matlab-figures](https://github.com/pmichaillat/matlab-figures) - This MATLAB template produces minimalist scientific figures that can be inserted into your book.
+### Phần 4 – Kết luận
+
++ Tổng kết kết quả đạt được.
++ Đánh giá cơ sở dữ liệu.
++ Những hạn chế của đề tài.
++ Đề xuất hướng phát triển.
+
+## Công nghệ sử dụng
+
++ Database: MySQL
++ Query language: SQL
++ Documentation: LaTeX
++ Diagram: ERD
++ LaTeX compiler: pdfLaTeX
++ Bibliography: BibTeX
+
+## Cài đặt cơ sở dữ liệu
+
+Tạo cơ sở dữ liệu:
+
+CREATE DATABASE pet_health_care;
+USE pet_health_care;
+
+
+Sau đó thực hiện các câu lệnh `CREATE TABLE` theo thứ tự từ các bảng cha đến các bảng có khóa ngoại.
+
+Tiếp theo, thực hiện các câu lệnh `INSERT` để thêm dữ liệu mẫu.
+
+## Biên dịch báo cáo LaTeX
+
+Mở file:
+book.tex và biên dịch bằng pdfLaTeX.
+
+
+## Mô hình ERD
+
+Mô hình ERD của hệ thống được lưu tại:
+figures/pet_health_care_erd.pdf
+
+
+Mô hình thể hiện các thực thể, thuộc tính, khóa chính, khóa ngoại và các mối quan hệ giữa các bảng trong hệ thống.
+
+## Chuẩn hóa cơ sở dữ liệu
+
+Cơ sở dữ liệu được phân tích và chuẩn hóa nhằm giảm dư thừa dữ liệu và hạn chế các bất thường khi thêm, sửa hoặc xóa dữ liệu.
+
+Các bảng được thiết kế hướng đến dạng chuẩn 3NF (Third Normal Form).
+
+Đặc biệt, bảng `Invoice` không lưu trực tiếp `customer_id` vì thông tin khách hàng có thể được xác định thông qua quan hệ:
+
+Invoice → Booking → Customer
+
+
+Việc loại bỏ thuộc tính dư thừa giúp hạn chế khả năng xảy ra mâu thuẫn dữ liệu.
+
+## Kiểm thử
+
+Các chức năng và ràng buộc cơ bản được kiểm tra thông qua các truy vấn SQL, bao gồm:
+
++ Kiểm tra khóa chính.
++ Kiểm tra khóa ngoại.
++ Kiểm tra giá trị `NULL`.
++ Kiểm tra ràng buộc `UNIQUE`.
++ Kiểm tra quan hệ giữa các bảng.
++ Kiểm tra cập nhật dữ liệu.
++ Kiểm tra xóa dữ liệu.
++ Kiểm tra các truy vấn thống kê.
+
+## Tài liệu tham khảo
+
+Các tài liệu sử dụng trong quá trình thực hiện đề tài được lưu trong file:
+book.bib và được sử dụng trong báo cáo LaTeX thông qua BibTeX.
