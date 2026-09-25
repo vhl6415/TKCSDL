@@ -1,0 +1,93 @@
+\documentclass[letterpaper,11pt,leqno,openany]{book}
+\usepackage{book}
+\bibliographystyle{book}
+\usepackage[T5]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{tabularx}
+% Enter book title to populate PDF metadata:
+\hypersetup{pdftitle={Minimalist LaTeX Template for Academic Books}}
+
+% Enter path to BibTeX file with references:
+\newcommand{\bib}{book.bib}
+
+% Enter path to PDF file with figures:
+\newcommand{\pdf}{figures.pdf}
+
+\begin{document}
+
+% Enter title:
+\title{Chăm Sóc Sức Khỏe Thú Cưng}
+
+% Enter subtitle (can be commented out):
+\subtitle{Thiết kế và Xây dựng Cơ sở dữ liệu}
+
+% Enter author:
+\author{Vũ Hoàng Lan}
+
+% Enter date:
+\date{09.2026}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\listoftables
+\listoffigures
+\chapter{Lời mở đầu}
+\input{preface}
+
+\mainmatter
+
+\part{Thiết kế Conceptual}\label{p:conceptual}
+
+\chapter{Phân tích nghiệp vụ và xác định yêu cầu}\label{c:requirements}
+\input{chapter1}
+
+\chapter{Mô hình khái niệm và ERD}\label{c:conceptual}
+\input{chapter2}
+
+\part{Thiết kế Logical}\label{p:logical}
+
+\chapter{Chuyển đổi ERD sang mô hình quan hệ}\label{c:logical}
+\input{chapter3}
+
+\chapter{Chuẩn hóa cơ sở dữ liệu}\label{c:normalization}
+\input{chapter4}
+
+\part{Thiết kế Physical}\label{p:physical}
+
+\chapter{Thiết kế vật lý}\label{c:physical}
+\input{chapter5}
+
+\chapter{Truy vấn và khai thác dữ liệu}\label{c:queries}
+\input{chapter6}
+
+\chapter{Kiểm thử và đánh giá}\label{c:testing}
+\input{chapter7}
+
+\part{Kết luận}\label{p:conclusion}
+
+\chapter{Kết luận và hướng phát triển}\label{c:conclusion}
+\input{chapter8}
+
+\appendix
+
+\part{Phụ lục}\label{p:appendix}
+
+\chapter{Dữ liệu mẫu}\label{a:data}
+\input{appendixB}
+
+\backmatter
+% Include all bibliography entries even when no in-text citations are used.
+\nocite{*}
+\bibliography{\bib}
+
+\chapter{Lời cảm ơn}
+\input{acknowledgements}
+
+\printindex
+\end{document}
