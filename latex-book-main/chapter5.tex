@@ -1,350 +1,99 @@
-Sau khi hoàn thành việc cài đặt cơ sở dữ liệu ở chương trước, chương này trình bày quá trình đưa dữ liệu mẫu vào hệ thống và thực hiện các truy vấn SQL nhằm kiểm tra hoạt động của cơ sở dữ liệu. Dữ liệu mẫu được xây dựng dựa trên các đối tượng và nghiệp vụ chính của hệ thống Chăm sóc Sức khỏe Thú cưng, bao gồm khách hàng, thú cưng, bác sĩ thú y, nhân viên, tài khoản quản trị, lịch hẹn, hóa đơn, hồ sơ khám bệnh và phòng.
-Các truy vấn được sử dụng nhằm kiểm tra khả năng thêm, sửa, xóa và truy xuất dữ liệu, đồng thời kiểm tra mối liên kết giữa các bảng thông qua khóa chính và khóa ngoại. Qua đó, có thể đánh giá tính nhất quán và khả năng đáp ứng các yêu cầu nghiệp vụ của cơ sở dữ liệu.
-
-\section{Khởi tạo dữ liệu mẫu}\label{s:sample_data}
-Dữ liệu mẫu được xây dựng với số lượng bản ghi phù hợp cho từng bảng nhằm mô phỏng một hệ thống chăm sóc thú cưng ở quy mô nhỏ. Mỗi bảng được thêm khoảng bốn, năm bản ghi để thuận tiện cho việc kiểm tra các truy vấn và mối quan hệ giữa các bảng.
-
-\subsection{Dữ liệu khách hàng}
-Bảng \texttt{Customer} lưu thông tin của khách hàng đăng ký sử dụng dịch vụ. Mỗi khách hàng được xác định bởi một mã khách hàng duy nhất.
-
-\begin{verbatim}
-INSERT INTO Customer (customer_id, full_name, phone, email, address) VALUES
-(1,'Nguyen Van An', '0901234567', 'nva@gmail.com', 'Ho Chi Minh'),
-(2,'Tran Thi Binh', '0912345678', 'ttb@gmail.com', 'Ha Noi'),
-(3,'Le Minh Chau', '0923456789', 'lmc@gmail.com', 'Da Nang'),
-(4,'Pham Quang Dung', '0934567890', 'pqd@gmail.com', 'Can Tho');
-\end{verbatim}
-
-\subsection{Dữ liệu thú cưng}
-
-Bảng \texttt{Pet} lưu thông tin thú cưng và liên kết mỗi thú cưng với một khách hàng thông qua khóa ngoại \texttt{customer\_id}.
-
-\begin{verbatim}
-INSERT INTO Pet (pet_id, name, species, breed, age, customer_id) VALUES
-(11,'Milo', 'Dog', 'Poodle', 3, 1),
-(12,'Luna', 'Cat', 'British Shorthair', 2, 2),
-(13,'Max', 'Dog', 'Golden Retriever', 5, 3),
-(14,'Coco', 'Cat', 'Persian', 4, 1),
-(15,'Buddy', 'Dog', 'Corgi', 1, 4);
-\end{verbatim}
-
-\subsection{Dữ liệu bác sĩ thú y và nhân viên}
-Thông tin bác sĩ thú y được lưu trong bảng \texttt{Veterinarian}, trong khi thông tin nhân viên được lưu trong bảng \texttt{Staff}. Hai bảng này được sử dụng để xác định người phụ trách các hoạt động khám và xử lý lịch hẹn.
-
-\begin{verbatim}
-INSERT INTO Veterinarian (vet_id, full_name, schedule) VALUES
-(111,'Nguyen Thanh Son', 'Mon-Fri 08:00-17:00'),
-(112,'Tran Minh Anh', 'Mon-Sat 09:00-18:00'),
-(113,'Le Hoang Nam', 'Tue-Sun 08:00-16:00'),
-(114,'Vo Quoc Bao', 'Thu-Sun 10:00-16:00');
-
-INSERT INTO Staff (staff_id, full_name, role) VALUES
-(21,'Nguyen Thi Mai', 'Receptionist'),
-(22,'Tran Van Long', 'Receptionist'),
-(23,'Le Thi Thuy', 'Assistant'),
-(24,'Pham Minh Duc', 'Manager');
-\end{verbatim}
-
-\subsection{Dữ liệu tài khoản quản trị}
-Bảng \texttt{Admin} lưu thông tin tài khoản có quyền quản trị hệ thống.
-
-\begin{verbatim}
-INSERT INTO Admin (admin_id, username, password) VALUES
-(91,'admin01', 'admin123'),
-(92,'manager01', 'manager123'),
-(93,'system01', 'system123');
-\end{verbatim}
-
-\subsection{Dữ liệu lịch hẹn}
-Bảng \texttt{Booking} là bảng trung tâm của hoạt động đặt lịch. Mỗi lịch hẹn được liên kết với khách hàng, thú cưng, bác sĩ thú y và có thể được nhân viên tiếp nhận hoặc xử lý.
-
-\begin{verbatim}
-INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES
-(31,'2026-09-05 09:00:00', 'Completed', 300000.00, 1, 11, 111, 21),
-(32,'2026-09-05 10:30:00', 'Completed', 500000.00, 2, 12, 112, 22),
-(33,'2026-09-06 14:00:00', 'Confirmed', 400000.00, 3, 13, 113, 23),
-(34,'2026-09-07 08:30:00', 'Pending', 250000.00, 1, 14, 114, NULL),
-(35,'2026-09-07 15:00:00', 'Cancelled', 0.00, 4, 15, 111, 24);
-\end{verbatim}
-
-Giá trị \texttt{NULL} tại trường \texttt{staff\_id} trong lịch hẹn thứ tư thể hiện trường hợp lịch hẹn chưa được phân công nhân viên xử lý. Điều này phù hợp với ràng buộc của mô hình đã thiết kế.
-
-\subsection{Dữ liệu hóa đơn}
-Bảng \texttt{Invoice} lưu thông tin thanh toán tương ứng với lịch hẹn. Mỗi lịch hẹn có tối đa một hóa đơn nên trường \texttt{booking\_id} được thiết lập ràng buộc \texttt{UNIQUE}.
-
-\begin{verbatim}
-INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES
-(41, 300000.00, '2026-09-05', 'Paid', 31, 1),
-(42, 500000.00, '2026-09-05', 'Paid', 32, 2),
-(43, 400000.00, '2026-09-06', 'Unpaid', 33, 3),
-(44, 250000.00, '2026-09-07', 'Unpaid', 34, 1),
-(45, 0.00, '2026-09-07', 'Cancelled', 35, 4);
-\end{verbatim}
-
-Việc không lưu trực tiếp \texttt{customer\_id} trong bảng \texttt{Invoice}
-giúp tránh dữ liệu dư thừa, vì thông tin khách hàng có thể được xác định
-thông qua quan hệ giữa \texttt{Invoice}, \texttt{Booking} và \texttt{Customer}.
-
-\subsection{Dữ liệu hồ sơ khám bệnh}
-
-Bảng \texttt{MedicalRecord} lưu kết quả khám và điều trị cho thú cưng. Mỗi hồ sơ xác định thú cưng được khám và bác sĩ thực hiện khám.
-
-\begin{verbatim}
-INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES
-(51, 'Di ung da', 'Thuoc khang sinh', '2026-09-05', 11, 111),
-(52, 'Nhiem trung duong ho hap', 'Uong khang sinh', '2026-09-05', 12, 112),
-(53, 'Chan thuong chan', 'Lam sach vet thuong va boi thuoc', '2026-09-06', 13, 113),
-(54, 'Nhiem trung da', 'Thuoc boi ngoai da', '2026-09-07', 14, 114),
-(55, 'Kiem tra dinh ki', 'Khong yeu cau', '2026-09-07', 15, 111);
-\end{verbatim}
-
-\subsection{Dữ liệu phòng}
-Bảng \texttt{Room} lưu thông tin các phòng được sử dụng cho hoạt động chăm sóc và theo dõi thú cưng.
-
-\begin{verbatim}
-INSERT INTO Room (room_id, room_type, status, note) VALUES
-(61, 'Tieu chuan', 'Trong', 'Pet >= 3 tuoi'),
-(62, 'Tieu chuan', 'Dang su dung', 'Pet < 3 tuoi'),
-(63, 'VIP', 'Trong', 'Duoc giam sat 24/7'),
-(64, 'Rieng biet', 'Dang su dung', 'Phong khu trung cho pet benh truyen nhiem'),
-(65, 'Phau thuat', 'Trong', 'Hoi suc sau phau thuat');
-\end{verbatim}
-
-\section{Truy vấn kiểm tra dữ liệu cơ bản}\label{s:basic_queries}
-Sau khi nhập dữ liệu mẫu, các truy vấn \texttt{SELECT} được sử dụng để kiểm tra dữ liệu trong từng bảng.
-
-\subsection{Hiển thị danh sách khách hàng}
-Truy vấn sau dùng để hiển thị toàn bộ thông tin khách hàng:
-
-\begin{verbatim}
-SELECT * FROM Customer;
-\end{verbatim}
-
-Kết quả cho phép kiểm tra các thông tin về mã khách hàng, họ tên, số điện thoại, email và địa chỉ.
-
-\subsection{Hiển thị danh sách thú cưng}
-
-\begin{verbatim}
-SELECT * FROM Pet;
-\end{verbatim}
-
-Truy vấn giúp kiểm tra thông tin thú cưng và mã khách hàng sở hữu tương ứng.
-
-\subsection{Hiển thị danh sách bác sĩ thú y}
-
-\begin{verbatim}
-SELECT * FROM Veterinarian;
-\end{verbatim}
-
-Kết quả cho biết họ tên bác sĩ và lịch làm việc.
-
-\subsection{Hiển thị danh sách lịch hẹn}
-
-\begin{verbatim}
-SELECT * FROM Booking;
-\end{verbatim}
-
-Truy vấn này được sử dụng để kiểm tra các lịch hẹn đã được thêm vào hệ thống cùng trạng thái và chi phí khám.
-
-\section{Truy vấn kết hợp nhiều bảng}\label{s:join_queries}
-Các truy vấn kết hợp giúp kiểm tra khả năng khai thác dữ liệu từ nhiều bảng có quan hệ với nhau.
-
-\subsection{Tra cứu lịch hẹn và thông tin khách hàng}
-\begin{verbatim}
-SELECT b.booking_id,
-b.date_time,
-c.full_name AS customer_name,
-b.status,
-b.payment
-FROM Booking b
-JOIN Customer c
-ON b.customer_id = c.customer_id;
-\end{verbatim}
-
-Kết quả cho biết mỗi lịch hẹn thuộc về khách hàng nào, thời gian thực hiện, trạng thái và chi phí.
-
-\subsection{Tra cứu lịch hẹn của thú cưng}
-
-\begin{verbatim}
-SELECT b.booking_id,
-p.name AS pet_name,
-p.species,
-c.full_name AS customer_name,
-b.date_time,
-b.status
-FROM Booking b
-JOIN Pet p
-ON b.pet_id = p.pet_id
-JOIN Customer c
-ON b.customer_id = c.customer_id;
-\end{verbatim}
-
-Truy vấn trên kết hợp ba bảng \texttt{Booking}, \texttt{Pet} và \texttt{Customer}, qua đó xác định thú cưng và chủ sở hữu tương ứng của từng lịch hẹn.
-
-\subsection{Tra cứu lịch hẹn cùng bác sĩ thú y}
-
-\begin{verbatim}
-SELECT b.booking_id,
-b.date_time,
-p.name AS pet_name,
-v.full_name AS veterinarian,
-v.specialization,
-b.status
-FROM Booking b
-JOIN Pet p
-ON b.pet_id = p.pet_id
-JOIN Veterinarian v
-ON b.vet_id = v.vet_id;
-\end{verbatim}
-
-Truy vấn cho phép xác định bác sĩ được phân công khám cho từng thú cưng.
-
-\subsection{Tra cứu hóa đơn và lịch hẹn}
-
-\begin{verbatim}
-SELECT i.invoice_id,
-i.date,
-i.amount,
-i.status,
-b.booking_id,
-b.date_time
-FROM Invoice i
-JOIN Booking b
-ON i.booking_id = b.booking_id;
-\end{verbatim}
-
-Do \texttt{booking\_id} trong bảng \texttt{Invoice} là duy nhất, mỗi lịch hẹn chỉ có tối đa một hóa đơn.
-
-\section{Truy vấn thống kê}\label{s:aggregate_queries}
-Ngoài việc truy xuất dữ liệu chi tiết, hệ thống cần thực hiện một số truy vấn thống kê để hỗ trợ quản lý.
-
-\subsection{Đếm số lượng thú cưng}
-
-\begin{verbatim}
-SELECT COUNT(*) AS total_pets
-FROM Pet;
-\end{verbatim}
-
-Truy vấn trả về tổng số thú cưng hiện đang được lưu trong cơ sở dữ liệu.
-
-\subsection{Thống kê số lượng lịch hẹn theo trạng thái}
-
-\begin{verbatim}
-SELECT status,
-COUNT(*) AS total_bookings
-FROM Booking
-GROUP BY status;
-\end{verbatim}
-
-Kết quả cho biết số lượng lịch hẹn tương ứng với từng trạng thái như \texttt{Completed}, \texttt{Confirmed}, \texttt{Pending} và \texttt{Cancelled}.
-
-\subsection{Tính tổng doanh thu từ các hóa đơn đã thanh toán}
-
-\begin{verbatim}
-SELECT SUM(amount) AS total_revenue
-FROM Invoice
-WHERE status = 'Paid';
-\end{verbatim}
-
-Truy vấn trên chỉ tính các hóa đơn có trạng thái \texttt{Paid}, qua đó xác định tổng số tiền đã thanh toán.
-
-\subsection{Thống kê số lịch hẹn theo bác sĩ}
-
-\begin{verbatim}
-SELECT v.full_name AS veterinarian,
-COUNT(b.booking_id) AS total_bookings
-FROM Veterinarian v
-LEFT JOIN Booking b
-ON v.vet_id = b.vet_id
-GROUP BY v.vet_id, v.full_name;
-\end{verbatim}
-
-Việc sử dụng \texttt{LEFT JOIN} giúp vẫn hiển thị bác sĩ chưa có lịch hẹn trong dữ liệu mẫu.
-
-\section{Truy vấn kiểm tra dữ liệu NULL}\label{s:null_queries}
-Trong hệ thống, một số thuộc tính có thể không có giá trị tại một thời điểm nhất định. Ví dụ, một lịch hẹn có thể chưa được phân công nhân viên. Vì vậy, cần kiểm tra các giá trị \texttt{NULL}.
-
-\begin{verbatim}
-SELECT *
-FROM Booking
-WHERE staff_id IS NULL;
-\end{verbatim}
-
-Truy vấn trên trả về các lịch hẹn chưa được phân công nhân viên.
-Để tìm các lịch hẹn đã được phân công nhân viên, có thể sử dụng:
-
-\begin{verbatim}
-SELECT *
-FROM Booking
-WHERE staff_id IS NOT NULL;
-\end{verbatim}
-
-Các truy vấn này giúp kiểm tra việc cho phép hoặc không cho phép giá trị \texttt{NULL} theo đúng yêu cầu thiết kế.
-
-\section{Truy vấn kiểm tra tính toàn vẹn tham chiếu}\label{s:referential_queries}
-Khóa ngoại được sử dụng để đảm bảo dữ liệu giữa các bảng có quan hệ luôn nhất quán. Có thể sử dụng truy vấn kết hợp để kiểm tra các bản ghi liên quan.
-Ví dụ, truy vấn sau kiểm tra thông tin khách hàng và thú cưng:
-
-\begin{verbatim}
-SELECT c.customer_id,
-c.full_name AS customer_name,
-p.pet_id,
-p.name AS pet_name
-FROM Customer c
-LEFT JOIN Pet p
-ON c.customer_id = p.customer_id
-ORDER BY c.customer_id;
-\end{verbatim}
-
-Nếu một khách hàng chưa có thú cưng, khách hàng đó vẫn được hiển thị nhờ sử dụng \texttt{LEFT JOIN}. Điều này giúp kiểm tra trường hợp một phía của quan hệ 1:N chưa có bản ghi liên quan.
-
-\section{Kiểm tra cập nhật và xóa dữ liệu}\label{s:update_delete}
-Ngoài truy vấn đọc dữ liệu, hệ thống cần kiểm tra các thao tác cập nhật và xóa dữ liệu.
-Ví dụ, để thay đổi địa chỉ của một khách hàng:
-
-\begin{verbatim}
-UPDATE Customer
-SET address = 'Ho Chi Minh City'
-WHERE customer_id = 2;
-\end{verbatim}
-
-Để thay đổi trạng thái của một lịch hẹn:
-
-\begin{verbatim}
-UPDATE Booking
-SET status = 'Completed'
-WHERE booking_id = 33;
-\end{verbatim}
-
-Các thao tác xóa cần được thực hiện cẩn thận vì dữ liệu có thể đang được tham chiếu bởi các bảng khác thông qua khóa ngoại. Ví dụ:
-
-\begin{verbatim}
-DELETE FROM Customer
-WHERE customer_id = 1;
-\end{verbatim}
-
-Trong trường hợp khách hàng vẫn có thú cưng hoặc lịch hẹn đang tham chiếu đến khách hàng đó, hệ quản trị cơ sở dữ liệu có thể từ chối thao tác xóa nhằm đảm bảo tính toàn vẹn tham chiếu.
-
-\section{Kiểm tra kết quả dữ liệu mẫu}\label{s:sample_result}
-
-Sau khi thực hiện các câu lệnh \texttt{INSERT} và các truy vấn kiểm tra, dữ liệu trong các bảng được đối chiếu với mô hình ERD và lược đồ quan hệ đã thiết kế ở các chương trước.
-
-Các nội dung cần kiểm tra bao gồm:
-
-\begin{itemize}
-\item Mỗi bảng có khóa chính và các bản ghi được xác định duy nhất.
-\item Các khóa ngoại tham chiếu đúng đến bản ghi tương ứng ở bảng cha.
-\item Một khách hàng có thể sở hữu nhiều thú cưng.
-\item Một khách hàng và thú cưng có thể có nhiều lịch hẹn.
-\item Mỗi lịch hẹn được liên kết với một bác sĩ thú y.
-\item Một lịch hẹn có thể chưa được phân công nhân viên.
-\item Một lịch hẹn có tối đa một hóa đơn.
-\item Một thú cưng có thể có nhiều hồ sơ khám bệnh.
-\item Các giá trị \texttt{NULL} xuất hiện đúng tại những thuộc tính cho phép.
-\end{itemize}
-
-Để làm minh chứng cho quá trình thực hiện, có thể chụp ảnh màn hình kết quả chạy các câu lệnh SQL trên hệ quản trị cơ sở dữ liệu và đưa vào báo cáo. Các ảnh minh họa nên tập trung vào kết quả truy vấn, cấu trúc bảng và dữ liệu sau khi thực hiện các thao tác.
-
-\section{Kết luận chương}\label{s:chapter5_conclusion}
-Chương này đã trình bày quá trình khởi tạo dữ liệu mẫu cho cơ sở dữ liệu Quản lý Chăm sóc Sức khỏe Thú cưng và thực hiện các truy vấn SQL để kiểm tra dữ liệu. Các thao tác bao gồm truy xuất dữ liệu, kết hợp nhiều bảng, thống kê, kiểm tra giá trị \texttt{NULL}, kiểm tra quan hệ khóa ngoại và thực hiện các thao tác cập nhật, xóa dữ liệu.
-Kết quả của chương là tập dữ liệu mẫu và các truy vấn kiểm tra làm cơ sở cho việc đánh giá tính đúng đắn của cơ sở dữ liệu ở chương tiếp theo. Những nội dung kiểm thử sẽ tập trung vào khóa chính, khóa ngoại, ràng buộc dữ liệu, tính toàn vẹn tham chiếu và khả năng đáp ứng các yêu cầu nghiệp vụ của hệ thống.
+Thiết kế vật lý là mức thiết kế cuối cùng, trong đó mô hình logic được triển khai trên một hệ quản trị cơ sở dữ liệu cụ thể.
+
+Trong đề tài này, hệ quản trị cơ sở dữ liệu được sử dụng là MySQL.
+
+\section{Kiểu dữ liệu và ràng buộc}
+
+Các kiểu dữ liệu được lựa chọn dựa trên đặc điểm của từng thuộc tính.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Một số kiểu dữ liệu sử dụng}
+    \label{tab:data_types}
+    \begin{tabularx}{\textwidth}{|p{3cm}|X|p{5cm}|}
+        \hline
+        \textbf{Kiểu dữ liệu} & \textbf{Mục đích} & \textbf{Ví dụ} \\ \hline
+        INT & Khóa định danh, số nguyên & customer\_id \\ \hline
+        VARCHAR & Chuỗi ký tự & name, phone, email \\ \hline
+        DATETIME & Ngày và thời gian & date\_time \\ \hline
+        DATE & Ngày & date \\ \hline
+        DECIMAL & Giá trị tiền tệ & payment, amount \\ \hline
+        TEXT & Nội dung văn bản dài & diagnosis, treatment \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Các ràng buộc trong cơ sở dữ liệu}
+    \label{tab:constraints}
+    \begin{tabularx}{\textwidth}{|p{4cm}|X|}
+        \hline
+        \textbf{Loại ràng buộc} & \textbf{Mô tả} \\ \hline
+
+        \textbf{PRIMARY KEY} &
+        Xác định duy nhất mỗi bản ghi trong một bảng.
+        \\ \hline
+
+        \textbf{FOREIGN KEY} &
+        Đảm bảo mối liên kết và tính toàn vẹn tham chiếu giữa các bảng.
+        \\ \hline
+
+        \textbf{NOT NULL} &
+        Yêu cầu thuộc tính phải có giá trị, không được để trống.
+        \\ \hline
+
+        \textbf{UNIQUE} &
+        Đảm bảo các giá trị trong thuộc tính không bị trùng lặp.
+        \\ \hline
+
+        \textbf{DEFAULT} &
+        Cung cấp giá trị mặc định cho thuộc tính khi không được chỉ định giá trị.
+        \\ \hline
+
+    \end{tabularx}
+\end{table}
+
+\section{Dữ liệu mẫu}
+
+Dữ liệu mẫu được xây dựng cho chín bảng nhằm kiểm tra hoạt động của cơ sở dữ liệu và phục vụ các truy vấn ở chương tiếp theo.
+
+Mỗi bảng được khởi tạo một số bản ghi đại diện cho các trường hợp khác nhau, bao gồm booking đã hoàn thành, booking đang chờ xử lý, booking đã xác nhận và booking bị hủy.
+
+\section{Kiểm tra dữ liệu mẫu}
+
+Sau khi dữ liệu mẫu được nhập, có thể kiểm tra số lượng bản ghi bằng truy vấn:
+
+\begin{table}[htbp]
+    \centering
+    \caption{Các truy vấn đếm số lượng bản ghi}
+    \label{tab:count_queries}
+    \begin{tabularx}{\textwidth}{|p{7cm}|X|}
+        \hline
+        \textbf{Truy vấn SQL} & \textbf{Ý nghĩa} \\ \hline
+
+        \texttt{SELECT COUNT(*) AS total\_customers FROM Customer;}
+        & Đếm tổng số khách hàng trong bảng Customer.
+        \\ \hline
+
+        \texttt{SELECT COUNT(*) AS total\_pets FROM Pet;}
+        & Đếm tổng số thú cưng trong bảng Pet.
+        \\ \hline
+
+        \texttt{SELECT COUNT(*) AS total\_bookings FROM Booking;}
+        & Đếm tổng số lịch đặt khám trong bảng Booking.
+        \\ \hline
+
+        \texttt{SELECT COUNT(*) AS total\_invoices FROM Invoice;}
+        & Đếm tổng số hóa đơn trong bảng Invoice.
+        \\ \hline
+
+        \texttt{SELECT COUNT(*) AS total\_medical\_records FROM MedicalRecord;}
+        & Đếm tổng số hồ sơ khám bệnh trong bảng MedicalRecord.
+        \\ \hline
+
+    \end{tabularx}
+\end{table}
+
+\section{Kết luận chương}
+
+Mô hình logic đã được triển khai ở mức vật lý bằng MySQL với các kiểu dữ liệu và ràng buộc phù hợp. Dữ liệu mẫu được xây dựng để phục vụ việc kiểm tra, truy vấn và đánh giá hệ thống.

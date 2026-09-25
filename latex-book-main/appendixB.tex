@@ -1,226 +1,201 @@
 Phụ lục này trình bày dữ liệu mẫu được sử dụng để kiểm tra hoạt động của cơ sở dữ liệu PetHealthCare. Dữ liệu được xây dựng với số lượng bản ghi phù hợp cho từng bảng, đảm bảo thể hiện được các mối quan hệ giữa khách hàng, thú cưng, bác sĩ thú y, nhân viên, lịch hẹn, hóa đơn và hồ sơ khám bệnh.
 
-\section{Dữ liệu bảng Customer}
-Bảng \texttt{Customer} được khởi tạo với các thông tin khách hàng như sau:
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Customer}
+    \label{tab:data_customer}
+    \begin{tabular}{|c|l|l|l|l|}
+        \hline
+        \textbf{customer\_id} & \textbf{full\_name} & \textbf{phone} &
+        \textbf{email} & \textbf{address} \\ \hline
 
-\begin{verbatim}
-INSERT INTO Customer (customer_id, full_name, phone, email, address) VALUES
-(1,'Nguyen Van An', '0901234567', 'nva@gmail.com', 'Ho Chi Minh'),
-(2,'Tran Thi Binh', '0912345678', 'ttb@gmail.com', 'Ha Noi'),
-(3,'Le Minh Chau', '0923456789', 'lmc@gmail.com', 'Da Nang'),
-(4,'Pham Quang Dung', '0934567890', 'pqd@gmail.com', 'Can Tho');
-\end{verbatim}
+        1 & Nguyen Van An & 0901234567 & nva@gmail.com & Ho Chi Minh \\ \hline
+        2 & Tran Thi Binh & 0912345678 & ttb@gmail.com & Ha Noi \\ \hline
+        3 & Le Minh Chau & 0923456789 & lmc@gmail.com & Da Nang \\ \hline
+        4 & Pham Quang Dung & 0934567890 & pqd@gmail.com & Can Tho \\ \hline
 
-\section{Dữ liệu bảng Pet}
-Bảng \texttt{Pet} lưu thông tin các thú cưng và khách hàng sở hữu chúng.
+    \end{tabular}
+\end{table}
 
-\begin{verbatim}
-INSERT INTO Pet (pet_id, name, species, breed, age, customer_id) VALUES
-(11,'Milo', 'Dog', 'Poodle', 3, 1),
-(12,'Luna', 'Cat', 'British Shorthair', 2, 2),
-(13,'Max', 'Dog', 'Golden Retriever', 5, 3),
-(14,'Coco', 'Cat', 'Persian', 4, 1),
-(15,'Buddy', 'Dog', 'Corgi', 1, 4);
-\end{verbatim}
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Pet}
+    \label{tab:data_pet}
+    \begin{tabular}{|c|l|l|l|c|c|}
+        \hline
+        \textbf{pet\_id} & \textbf{name} & \textbf{species} &
+        \textbf{breed} & \textbf{age} & \textbf{customer\_id} \\ \hline
 
-Trong dữ liệu mẫu, mỗi thú cưng được liên kết với một khách hàng thông qua thuộc tính \texttt{customer\_id}. Ví dụ, thú cưng ``Milo'' thuộc khách hàng có \texttt{customer\_id = 1}.
+        11 & Milo & Dog & Poodle & 3 & 1 \\ \hline
+        12 & Luna & Cat & British Shorthair & 2 & 2 \\ \hline
+        13 & Max & Dog & Golden Retriever & 5 & 3 \\ \hline
+        14 & Coco & Cat & Persian & 4 & 1 \\ \hline
+        15 & Buddy & Dog & Corgi & 1 & 4 \\ \hline
 
-\section{Dữ liệu bảng Veterinarian}
-Bảng \texttt{Veterinarian} được khởi tạo với thông tin các bác sĩ thú y:
+    \end{tabular}
+\end{table}
 
-\begin{verbatim}
-INSERT INTO Veterinarian (vet_id, full_name, schedule) VALUES
-(111,'Nguyen Thanh Son', 'Mon-Fri 08:00-17:00'),
-(112,'Tran Minh Anh', 'Mon-Sat 09:00-18:00'),
-(113,'Le Hoang Nam', 'Tue-Sun 08:00-16:00'),
-(114,'Vo Quoc Bao', 'Thu-Sun 10:00-16:00');
-\end{verbatim}
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Veterinarian}
+    \label{tab:data_veterinarian}
+    \begin{tabular}{|c|l|l|l|}
+        \hline
+        \textbf{vet\_id} & \textbf{full\_name} & \textbf{schedule} \\ \hline
 
-\section{Dữ liệu bảng Staff}
-Bảng \texttt{Staff} lưu thông tin nhân viên và vai trò của từng nhân viên:
+        111 & Nguyen Thanh Son & Mon-Fri 08:00-17:00 \\ \hline
+        112 & Tran Minh Anh & Mon-Sat 09:00-18:00 \\ \hline
+        113 & Le Hoang Nam & Tue-Sun 08:00-16:00 \\ \hline
+        114 & Vo Quoc Bao & Thu-Sun 10:00-16:00 \\ \hline
 
-\begin{verbatim}
-INSERT INTO Staff (staff_id, full_name, role) VALUES
-(21,'Nguyen Thi Mai', 'Receptionist'),
-(22,'Tran Van Long', 'Receptionist'),
-(23,'Le Thi Thuy', 'Assistant'),
-(24,'Pham Minh Duc', 'Manager');
-\end{verbatim}
+    \end{tabular}
+\end{table}
 
-\section{Dữ liệu bảng Admin}
-Bảng \texttt{Admin} được sử dụng để kiểm tra thông tin tài khoản quản trị:
 
-\begin{verbatim}
-INSERT INTO Admin (admin_id, username, password) VALUES
-(91,'admin01', 'admin123'),
-(92,'manager01', 'manager123'),
-(93,'system01', 'system123');
-\end{verbatim}
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Staff}
+    \label{tab:data_staff}
+    \begin{tabular}{|c|l|l|}
+        \hline
+        \textbf{staff\_id} & \textbf{full\_name} & \textbf{role} \\ \hline
 
-\section{Dữ liệu bảng Booking}
-Bảng \texttt{Booking} lưu các lịch hẹn giữa khách hàng, thú cưng và bác sĩ thú y:
+        21 & Nguyen Thi Mai & Receptionist \\ \hline
+        22 & Tran Van Long & Receptionist \\ \hline
+        23 & Le Thi Thuy & Assistant \\ \hline
+        24 & Pham Minh Duc & Manager \\ \hline
 
-\begin{verbatim}
-INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES
-(31,'2026-09-05 09:00:00', 'Completed', 300000.00, 1, 11, 111, 21),
-(32,'2026-09-05 10:30:00', 'Completed', 500000.00, 2, 12, 112, 22),
-(33,'2026-09-06 14:00:00', 'Confirmed', 400000.00, 3, 13, 113, 23),
-(34,'2026-09-07 08:30:00', 'Pending', 250000.00, 1, 14, 114, NULL),
-(35,'2026-09-07 15:00:00', 'Cancelled', 0.00, 4, 15, 111, 24);
-\end{verbatim}
+    \end{tabular}
+\end{table}
 
-Bản ghi thứ tư có \texttt{staff\_id = NULL}, nhằm thể hiện trường hợp lịch hẹn chưa được phân công nhân viên xử lý.
-Bản ghi thứ năm có trạng thái ``Cancelled'' và phí bằng 0, nhằm phục vụ việc kiểm tra các truy vấn lọc theo trạng thái lịch hẹn.
 
-\section{Dữ liệu bảng Invoice}
-Bảng \texttt{Invoice} lưu thông tin hóa đơn tương ứng với các lịch hẹn:
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Admin}
+    \label{tab:data_admin}
+    \begin{tabular}{|c|l|l|}
+        \hline
+        \textbf{admin\_id} & \textbf{username} & \textbf{password} \\ \hline
 
-\begin{verbatim}
-INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES
-(41, 300000.00, '2026-09-05', 'Paid', 31, 1),
-(42, 500000.00, '2026-09-05', 'Paid', 32, 2),
-(43, 400000.00, '2026-09-06', 'Unpaid', 33, 3),
-(44, 250000.00, '2026-09-07', 'Unpaid', 34, 1),
-(45, 0.00, '2026-09-07', 'Cancelled', 35, 4);
-\end{verbatim}
+        91 & admin01 & admin123 \\ \hline
+        92 & manager01 & manager123 \\ \hline
+        93 & system01 & system123 \\ \hline
 
-Mỗi hóa đơn được liên kết với một lịch hẹn thông qua \texttt{booking\_id}. Do thuộc tính này được thiết lập ràng buộc \texttt{UNIQUE}, một Booking không thể được liên kết với nhiều Invoice trong mô hình hiện tại.
+    \end{tabular}
+\end{table}
 
-\section{Dữ liệu bảng MedicalRecord}
-Bảng \texttt{MedicalRecord} lưu thông tin chẩn đoán, điều trị và tiêm vaccine của thú cưng:
 
-\begin{verbatim}
-INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES
-(51, 'Di ung da', 'Thuoc khang sinh', '2026-09-05', 11, 111),
-(52, 'Nhiem trung duong ho hap', 'Uong khang sinh', '2026-09-05', 12, 112),
-(53, 'Chan thuong chan', 'Lam sach vet thuong va boi thuoc', '2026-09-06', 13, 113),
-(54, 'Nhiem trung da', 'Thuoc boi ngoai da', '2026-09-07', 14, 114),
-(55, 'Kiem tra dinh ki', 'Khong yeu cau', '2026-09-07', 15, 111);
-\end{verbatim}
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Booking}
+    \label{tab:data_booking}
+    \begin{tabular}{|c|l|l|r|c|c|c|c|}
+        \hline
+        \textbf{booking\_id} & \textbf{date\_time} & \textbf{status} &
+        \textbf{payment} & \textbf{customer\_id} & \textbf{pet\_id} &
+        \textbf{vet\_id} & \textbf{staff\_id} \\ \hline
 
-Các bản ghi được liên kết với thú cưng thông qua \texttt{pet\_id} và với bác sĩ thú y thông qua \texttt{vet\_id}. Điều này cho phép xác định lịch sử khám bệnh của từng thú cưng và bác sĩ thực hiện việc khám.
+        31 & 2026-09-05 09:00 & Completed & 300000 & 1 & 11 & 111 & 21 \\ \hline
+        32 & 2026-09-05 10:30 & Completed & 500000 & 2 & 12 & 112 & 22 \\ \hline
+        33 & 2026-09-06 14:00 & Confirmed & 400000 & 3 & 13 & 113 & 23 \\ \hline
+        34 & 2026-09-07 08:30 & Pending & 250000 & 1 & 14 & 114 & NULL \\ \hline
+        35 & 2026-09-07 15:00 & Cancelled & 0 & 4 & 15 & 111 & 24 \\ \hline
 
-\section{Dữ liệu bảng Room}
-Bảng \texttt{Room} lưu thông tin các phòng phục vụ quá trình chăm sóc và điều trị:
+    \end{tabular}
+\end{table}
 
-\begin{verbatim}
-INSERT INTO Room (room_id, room_type, status, note) VALUES
-(61, 'Tieu chuan', 'Trong', 'Pet >= 3 tuoi'),
-(62, 'Tieu chuan', 'Dang su dung', 'Pet < 3 tuoi'),
-(63, 'VIP', 'Trong', 'Duoc giam sat 24/7'),
-(64, 'Rieng biet', 'Dang su dung', 'Phong khu trung cho pet benh truyen nhiem'),
-(65, 'Phau thuat', 'Trong', 'Hoi suc sau phau thuat');
-\end{verbatim}
+Bản ghi thứ tư có \texttt{staff\_id = NULL}, nhằm thể hiện trường hợp lịch hẹn
+chưa được phân công nhân viên xử lý. Bản ghi thứ năm có trạng thái
+``Cancelled'' và phí bằng 0, nhằm phục vụ việc kiểm tra các truy vấn lọc
+theo trạng thái lịch hẹn.
 
-\section{Kiểm tra dữ liệu sau khi nhập}
-Sau khi thực hiện các câu lệnh \texttt{INSERT}, có thể sử dụng các câu lệnh \texttt{SELECT} để kiểm tra dữ liệu:
 
-\begin{verbatim}
-SELECT * FROM Customer;
-SELECT * FROM Pet;
-SELECT * FROM Veterinarian;
-SELECT * FROM Staff;
-SELECT * FROM Admin;
-SELECT * FROM Booking;
-SELECT * FROM Invoice;
-SELECT * FROM MedicalRecord;
-SELECT * FROM Room;
-\end{verbatim}
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Invoice}
+    \label{tab:data_invoice}
+    \begin{tabular}{|c|r|l|l|c|}
+        \hline
+        \textbf{invoice\_id} & \textbf{amount} & \textbf{date} &
+        \textbf{status} & \textbf{booking\_id} \\ \hline
 
-Các câu lệnh trên cho phép kiểm tra toàn bộ dữ liệu đã được thêm vào từng bảng.
+        41 & 300000 & 2026-09-05 & Paid & 31 \\ \hline
+        42 & 500000 & 2026-09-05 & Paid & 32 \\ \hline
+        43 & 400000 & 2026-09-06 & Unpaid & 33 \\ \hline
+        44 & 250000 & 2026-09-07 & Unpaid & 34 \\ \hline
+        45 & 0 & 2026-09-07 & Cancelled & 35 \\ \hline
 
-\section{Kiểm tra mối quan hệ giữa các bảng}
-Để kiểm tra dữ liệu liên kết giữa khách hàng, thú cưng và lịch hẹn, có thể sử dụng truy vấn:
+    \end{tabular}
+\end{table}
 
-\begin{verbatim}
-SELECT
-c.full_name AS customer_name,
-p.name AS pet_name,
-b.date_time,
-b.status,
-b.payment
-FROM Booking b
-JOIN Customer c
-ON b.customer_id = c.customer_id
-JOIN Pet p
-ON b.pet_id = p.pet_id;
-\end{verbatim}
+Mỗi hóa đơn được liên kết với một lịch hẹn thông qua \texttt{booking\_id}.
+Do thuộc tính này được thiết lập ràng buộc \texttt{UNIQUE}, một Booking
+không thể được liên kết với nhiều Invoice trong mô hình hiện tại.
 
-Để kiểm tra thông tin bác sĩ phụ trách từng lịch hẹn:
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng MedicalRecord}
+    \label{tab:data_medical_record}
+    \begin{tabularx}{\textwidth}{|c|X|X|c|c|c|}
+        \hline
+        \textbf{record\_id} &
+        \textbf{diagnosis} &
+        \textbf{treatment} &
+        \textbf{date} &
+        \textbf{pet\_id} &
+        \textbf{vet\_id} \\ \hline
 
-\begin{verbatim}
-SELECT
-b.booking_id,
-p.name AS pet_name,
-v.full_name AS veterinarian,
-b.date_time,
-b.status
-FROM Booking b
-JOIN Pet p
-ON b.pet_id = p.pet_id
-JOIN Veterinarian v
-ON b.vet_id = v.vet_id;
-\end{verbatim}
+        51 &
+        Di ung da &
+        Thuoc khang sinh &
+        2026-09-05 &
+        11 &
+        111 \\ \hline
 
-Để kiểm tra mối quan hệ giữa Booking và Invoice:
+        52 &
+        Nhiem trung duong ho hap &
+        Uong khang sinh &
+        2026-09-05 &
+        12 &
+        112 \\ \hline
 
-\begin{verbatim}
-SELECT
-b.booking_id,
-b.date_time,
-b.payment,
-i.invoice_id,
-i.amount,
-i.status AS invoice_status
-FROM Booking b
-LEFT JOIN Invoice i
-ON b.booking_id = i.booking_id;
-\end{verbatim}
+        53 &
+        Chan thuong chan &
+        Lam sach vet thuong va boi thuoc &
+        2026-09-06 &
+        13 &
+        113 \\ \hline
 
-\section{Kiểm tra dữ liệu NULL}
+        54 &
+        Nhiem trung da &
+        Thuoc boi ngoai da &
+        2026-09-07 &
+        14 &
+        114 \\ \hline
 
-Dữ liệu mẫu có một Booking chưa được phân công nhân viên. Có thể kiểm tra bằng câu lệnh:
+        55 &
+        Kiem tra dinh ki &
+        Khong yeu cau &
+        2026-09-07 &
+        15 &
+        111 \\ \hline
 
-\begin{verbatim}
-SELECT *
-FROM Booking
-WHERE staff_id IS NULL;
-\end{verbatim}
+    \end{tabularx}
+\end{table}
 
-Ngược lại, để kiểm tra các Booking đã được phân công nhân viên:
+\begin{table}[htbp]
+    \centering
+    \caption{Dữ liệu mẫu bảng Room}
+    \label{tab:data_room}
+    \begin{tabular}{|c|l|l|l|}
+        \hline
+        \textbf{room\_id} & \textbf{room\_type} & \textbf{status} & \textbf{note} \\ \hline
 
-\begin{verbatim}
-SELECT *
-FROM Booking
-WHERE staff_id IS NOT NULL;
-\end{verbatim}
+        61 & Tieu chuan & Trong & Pet >= 3 tuoi \\ \hline
+        62 & Tieu chuan & Dang su dung & Pet < 3 tuoi \\ \hline
+        63 & VIP & Trong & Duoc giam sat 24/7 \\ \hline
+        64 & Rieng biet & Dang su dung & Phong khu trung cho pet benh truyen nhiem \\ \hline
+        65 & Phau thuat & Trong & Hoi suc sau phau thuat \\ \hline
 
-\section{Kiểm tra dữ liệu thống kê}
-Một số truy vấn thống kê được sử dụng để kiểm tra khả năng khai thác dữ liệu:
-
-\begin{verbatim}
-SELECT COUNT(*) AS total_pets
-FROM Pet;
-
-SELECT status, COUNT(*) AS total_bookings
-FROM Booking
-GROUP BY status;
-
-SELECT SUM(amount) AS total_revenue
-FROM Invoice
-WHERE status = 'Paid';
-
-SELECT
-v.full_name AS veterinarian,
-COUNT(b.booking_id) AS total_bookings
-FROM Veterinarian v
-LEFT JOIN Booking b
-ON v.vet_id = b.vet_id
-GROUP BY v.vet_id, v.full_name;
-\end{verbatim}
-
-Các truy vấn trên lần lượt kiểm tra số lượng thú cưng, số lượng lịch hẹn theo trạng thái, tổng doanh thu từ các hóa đơn đã thanh toán và số lượng lịch hẹn của từng bác sĩ thú y.
-
-\section{Kết luận phụ lục}
-Dữ liệu mẫu trong phụ lục được xây dựng nhằm phục vụ quá trình kiểm thử và minh họa hoạt động của cơ sở dữ liệu. Các dữ liệu đã bao quát những trường hợp cơ bản như lịch hẹn hoàn thành, đã xác nhận, đang chờ xử lý và bị hủy; hóa đơn đã thanh toán, chưa thanh toán và bị hủy; cũng như trường hợp thuộc tính \texttt{staff\_id} nhận giá trị \texttt{NULL}.
-Thông qua tập dữ liệu này, các chức năng truy vấn, liên kết giữa các bảng, thống kê và kiểm tra ràng buộc toàn vẹn của cơ sở dữ liệu có thể được thực hiện một cách thuận tiện.
+    \end{tabular}
+\end{table}

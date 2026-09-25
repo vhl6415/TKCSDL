@@ -2,8 +2,10 @@
 \usepackage{book}
 \bibliographystyle{book}
 \usepackage[T5]{fontenc}
+\usepackage{lmodern}
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
+\usepackage{tabularx}
 % Enter book title to populate PDF metadata:
 \hypersetup{pdftitle={Minimalist LaTeX Template for Academic Books}}
 
@@ -32,70 +34,55 @@
 \end{titlepage}
 
 \frontmatter
-
 \tableofcontents
-
-% Enter book structure
+\listoftables
+\listoffigures
 \chapter{Lời mở đầu}
-
 \input{preface}
 
 \mainmatter
 
-\part{Phân tích và Thiết kế hệ thống}\label{p:analysis}
+\part{Thiết kế Conceptual}\label{p:conceptual}
 
-\chapter{Tổng quan đề tài}\label{c:introduction}
+\chapter{Phân tích nghiệp vụ và xác định yêu cầu}\label{c:requirements}
+\input{chapter1}
 
-\input{Chapter1}
+\chapter{Mô hình khái niệm và ERD}\label{c:conceptual}
+\input{chapter2}
 
-\chapter{Phân tích nghiệp vụ và Thiết kế ERD}\label{c:erd}
+\part{Thiết kế Logical}\label{p:logical}
 
-\input{Chapter2}
+\chapter{Chuyển đổi ERD sang mô hình quan hệ}\label{c:logical}
+\input{chapter3}
 
-\chapter{Ánh xạ ERD sang mô hình quan hệ}\label{c:mapping}
+\chapter{Chuẩn hóa cơ sở dữ liệu}\label{c:normalization}
+\input{chapter4}
 
-\input{Chapter3}
+\part{Thiết kế Physical}\label{p:physical}
 
-\part{Xây dựng Cơ sở dữ liệu}\label{p:database}
+\chapter{Thiết kế vật lý}\label{c:physical}
+\input{chapter5}
 
-\chapter{Cài đặt Cơ sở dữ liệu}\label{c:implement}
+\chapter{Truy vấn và khai thác dữ liệu}\label{c:queries}
+\input{chapter6}
 
-\input{Chapter4}
-
-\chapter{Dữ liệu mẫu và Truy vấn}\label{c:datatest}
-
-\input{Chapter5}
-
-\part{Kiểm thử}\label{p:test}
-
-\chapter{Kiểm thử Cơ sở dữ liệu}\label{c:testing}
-
-\input{Chapter6}
-
-\chapter{Chuẩn hóa Cơ sở dữ liệu}\label{c:normalization}
-
-\input{Chapter7}
+\chapter{Kiểm thử và đánh giá}\label{c:testing}
+\input{chapter7}
 
 \part{Kết luận}\label{p:conclusion}
 
-\chapter{Kết luận và Phát triển}\label{c:update}
-
-\input{Chapter8}
+\chapter{Kết luận và hướng phát triển}\label{c:conclusion}
+\input{chapter8}
 
 \appendix
 
 \part{Phụ lục}\label{p:appendix}
 
-\chapter{Mã nguồn SQL}\label{a:SQL}
-
-\input{appendixA}
-
 \chapter{Dữ liệu mẫu}\label{a:data}
-
 \input{appendixB}
 
 \backmatter
-
+% Include all bibliography entries even when no in-text citations are used.
 \nocite{*}
 \bibliography{\bib}
 
@@ -103,5 +90,4 @@
 \input{acknowledgements}
 
 \printindex
-
 \end{document}

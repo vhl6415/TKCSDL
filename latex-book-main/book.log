@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.16)  17 SEP 2026 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.16)  23 SEP 2026 21:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1010,6 +1010,44 @@ File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/regular/n' undefined
 (Font)              using `T5/cmr/m/n' instead on input line 116.
 
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Encoding `U' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 24.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  U/MnSymbolF/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/MnSymbolE/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Encoding `U' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/MnSymbolF/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/MnSymbolE/b/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks42
@@ -1123,41 +1161,69 @@ LaTeX Encoding Info:    Redeclaring text symbol \OHORN (encoding T5) on input li
 LaTeX Encoding Info:    Redeclaring text symbol \UHORN (encoding T5) on input line 432.
 )
 Package babel Info: Making " an active character on input line 147.
-)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pdftex.def
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen269
+\ar@mcellbox=\box105
+\extrarowheight=\dimen270
+\NC@list=\toks44
+\extratabsurround=\skip121
+\backup@length=\skip122
+\ar@cellbox=\box106
+)
+\TX@col@width=\dimen271
+\TX@old@table=\dimen272
+\TX@old@col=\dimen273
+\TX@target=\dimen274
+\TX@delta=\dimen275
+\TX@cols=\count351
+\TX@ftn=\toks45
+)
+LaTeX Font Info:    Trying to load font information for T5+lmr on input line 18.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t5lmr.fd
+File: t5lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+LaTeX Font Warning: Font shape `T5/lmr/regular/n' undefined
+(Font)              using `T5/lmr/m/n' instead on input line 18.
+
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count351
+\l__color_backend_stack_int=\count352
 ) (book.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 9.
 )
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 16.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 18.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/ly1\ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1193,13 +1259,13 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 16.
-Package microtype Info: Applying patch `item' on input line 16.
-Package microtype Info: Applying patch `toc' on input line 16.
-Package microtype Info: Applying patch `eqnum' on input line 16.
-Package microtype Info: Applying patch `footnote' on input line 16.
-Package microtype Info: Applying patch `verbatim' on input line 16.
-LaTeX Info: Redefining \microtypesetup on input line 16.
+LaTeX Info: Redefining \microtypecontext on input line 18.
+Package microtype Info: Applying patch `item' on input line 18.
+Package microtype Info: Applying patch `toc' on input line 18.
+Package microtype Info: Applying patch `eqnum' on input line 18.
+Package microtype Info: Applying patch `footnote' on input line 18.
+Package microtype Info: Applying patch `verbatim' on input line 18.
+LaTeX Info: Redefining \microtypesetup on input line 18.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1207,40 +1273,31 @@ Package microtype Info: No font expansion.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 16.
-
-(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen269
-\scratchbox=\box105
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen270
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count353
+\scratchdimen=\dimen276
+\scratchbox=\box107
+\nofMPsegments=\count354
+\nofMParguments=\count355
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count356
+\MPscratchDim=\dimen277
+\MPnumerator=\count357
+\makeMPintoPDFobject=\count358
+\everyMPtoPDFconversion=\toks47
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 18.
  (book.out) (book.out)
 \@outlinefile=\write4
 \openout4 = `book.out'.
@@ -1248,65 +1305,50 @@ Package hyperref Info: Link coloring OFF on input line 16.
 Package babel Info: Main language set to 'vietnamese'.
 
 
-LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/bold/n' undefined
-(Font)              using `T5/cmr/m/n' instead on input line 32.
-
-(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 32.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/n/29.86'. Switching off
-(microtype)                protrusion for this font on input line 32.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/n/20.74'. Switching off
-(microtype)                protrusion for this font on input line 32.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/20.74'. Switching off
-(microtype)                protrusion for this font on input line 32.
+LaTeX Font Warning: Font shape `T5/lmr/bold/n' undefined
+(Font)              using `T5/lmr/m/n' instead on input line 34.
 
 [1
 
 
 
-{C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2
+{C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-t5.enc}] [2
 
-]
+] (book.toc
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 1.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/24.88'. Switching off
-(microtype)                protrusion for this font on input line 36.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/n/24.88'. Switching off
-(microtype)                protrusion for this font on input line 36.
-
-(book.toc
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `SourceSerifFour-LF' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+LaTeX Font Warning: Font shape `T1/lmr/regular/n' undefined
+(Font)              using `T1/lmr/m/n' instead on input line 1.
 
 
-LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/regular/sc' undefined
-(Font)              using `T5/SourceSerifFour-LF/regular/n' instead on input line 2.
+LaTeX Font Warning: Font shape `T5/lmr/regular/sc' undefined
+(Font)              using `T5/lmr/regular/n' instead on input line 2.
 
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/10.95'
-(microtype)             (new value: 10.95pt) on input line 2.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 2.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/7'
-(microtype)             (new value: 7.0pt) on input line 2.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2.
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 2.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 2.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 2.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/10.95'
 (microtype)             (new value: 10.95pt) on input line 2.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/9'
@@ -1331,6 +1373,10 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/9'
 (microtype)             (new value: 9.0pt) on input line 2.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/7'
 (microtype)             (new value: 7.0pt) on input line 2.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `SourceSerifFour-LF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
 (Font)              `T1/SourceSerifFour-LF/m/n' on input line 2.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
@@ -1352,92 +1398,99 @@ LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 2.
 LaTeX Font Info:    Trying to load font information for U+zeur on input line 2.
-(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/eulervm\uzeur.fd
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/eulervm\uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/12'. Switching off
-(microtype)                protrusion for this font on input line 3.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/n/12'. Switching off
-(microtype)                protrusion for this font on input line 3.
-
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 3.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 3.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 3.
+Missing character: There is no à in font lmex10!
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 3.
+(microtype)             (new value: 12.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 3.
+(microtype)             (new value: 10.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 3.
+(microtype)             (new value: 8.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 3.
+(microtype)             (new value: 12.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 3.
+(microtype)             (new value: 10.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 3.
+(microtype)             (new value: 8.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 3.
+(microtype)             (new value: 12.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 3.
+(microtype)             (new value: 10.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 3.
+(microtype)             (new value: 8.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 3.
+(microtype)             (new value: 12.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 3.
+(microtype)             (new value: 10.0pt) on input line 5.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 3.
+(microtype)             (new value: 8.0pt) on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
-(Font)              `T1/SourceSerifFour-LF/m/n' on input line 3.
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 3.
+(Font)              scaled to size 12.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
-(Font)              `T1/SourceSerifFour-LF/m/n' on input line 3.
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 3.
+(Font)              scaled to size 10.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/n' aliased to
-(Font)              `T1/SourceSerifFour-LF/m/n' on input line 3.
+(Font)              `T1/SourceSerifFour-LF/m/n' on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 3.
+(Font)              scaled to size 8.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
-(Font)              `T1/SourceSerifFour-LF/m/it' on input line 3.
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 3.
+(Font)              scaled to size 12.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
-(Font)              `T1/SourceSerifFour-LF/m/it' on input line 3.
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 3.
+(Font)              scaled to size 10.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
-(Font)              `T1/SourceSerifFour-LF/m/it' on input line 3.
+(Font)              `T1/SourceSerifFour-LF/m/it' on input line 5.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 3.
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/sc/10.95'. Switching off
-(microtype)                protrusion for this font on input line 4.
-
+(Font)              scaled to size 8.0pt on input line 5.
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3])
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+Missing character: There is no à in font lmex10!
+)
 \tf@toc=\write5
 \openout5 = `book.toc'.
+
+
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\h' on input line 38.
+
+(book.lot
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2] [3])
+\tf@lot=\write6
+\openout6 = `book.lot'.
+
+ (book.lof)
+\tf@lof=\write7
+\openout7 = `book.lof'.
 
  [4] (preface.tex) [5
 
@@ -1445,175 +1498,237 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/bold/sc' undefined
-(Font)              using `T5/SourceSerifFour-LF/bold/n' instead on input line 45.
+LaTeX Font Warning: Font shape `T5/lmr/bold/sc' undefined
+(Font)              using `T5/lmr/bold/n' instead on input line 45.
 
 [1
 
 ] [2]
 Ch\uhorn \ohorn ng 1.
+(chapter1.tex [3
 
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/sc/20.74'. Switching off
-(microtype)                protrusion for this font on input line 47.
+]
 
-(Chapter1.tex
-LaTeX Font Info:    Trying to load font information for TS1+SourceSerifFour-LF on input line 9.
- (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/sourceserif\ts1sourceseriffour-lf.fd
-File: TS1SourceSerifFour-LF.fd 2026/03/01 (autoinst) Font definitions for TS1/SourceSerifFour-LF.
-)
-LaTeX Font Info:    Font shape `TS1/SourceSerifFour-LF/regular/n' aliased to
-(Font)              `TS1/SourceSerifFour-LF/m/n' on input line 9.
-LaTeX Font Info:    Font shape `TS1/SourceSerifFour-LF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `SourceSerifFour-LF' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [3
+LaTeX Font Warning: Font shape `T5/lmr/regular/it' undefined
+(Font)              using `T5/lmr/regular/n' instead on input line 34.
 
-{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_hfktdb.enc}]
-LaTeX Font Info:    Trying to load font information for T5+SourceCodePro-TLF on input line 14.
-LaTeX Font Info:    No file T5SourceCodePro-TLF.fd. on input line 14.
-
-
-LaTeX Font Warning: Font shape `T5/SourceCodePro-TLF/regular/n' undefined
-(Font)              using `T5/cmr/m/n' instead on input line 14.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceCodePro-TLF/regular/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-
-LaTeX Font Warning: Font shape `T5/SourceSerifFour-LF/regular/it' undefined
-(Font)              using `T5/SourceSerifFour-LF/regular/n' instead on input line 45.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/it/10.95'. Switching off
-(microtype)                protrusion for this font on input line 45.
-
-[4] [5] [6]) [7] [8
+) [4] [5] [6
 
 ]
 Ch\uhorn \ohorn ng 2.
-(Chapter2.tex [9] [10] [11] [12] [13]
+(chapter2.tex
+Underfull \hbox (badness 3240) in paragraph at lines 52--52
+[]|\T5/lmr/regular/it/10.95 pet_id, name, species, breed,
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 52--52
+[]|\T5/lmr/regular/it/10.95 ThÊng tin h‚a ^^_Ïn cıa mÎt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\T5/lmr/regular/it/10.95 room_id, room_type, sta-tus,
+ []
+
+
 
 pdfTeX warning: pdflatex (file ./figures/pet_health_care_erd.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/pet_health_care_erd.pdf, id=730, 794.97pt x 614.295pt>
+<figures/pet_health_care_erd.pdf, id=395, 794.97pt x 614.295pt>
 File: figures/pet_health_care_erd.pdf Graphic file (type pdf)
 <use figures/pet_health_care_erd.pdf>
-Package pdftex.def Info: figures/pet_health_care_erd.pdf  used on input line 142.
-(pdftex.def)             Requested size: 426.39256pt x 329.49286pt.
-[14 <./figures/pet_health_care_erd.pdf>]) [15] [16
+Package pdftex.def Info: figures/pet_health_care_erd.pdf  used on input line 136.
+(pdftex.def)             Requested size: 426.40254pt x 329.49286pt.
+[7] [8] [9] [10 <./figures/pet_health_care_erd.pdf>]) [11] [12
 
-]
+] [13] [14]
 Ch\uhorn \ohorn ng 3.
-(Chapter3.tex [17{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
+(chapter3.tex [15
 
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/9'. Switching off
-(microtype)                protrusion for this font on input line 26.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/7'. Switching off
-(microtype)                protrusion for this font on input line 26.
-
-[18{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_5c2bot.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_blpqyz.enc}]
-Overfull \hbox (20.85481pt too wide) detected at line 76
-\T1/SourceSerifFour-LF/m/it/10.95 BOOKING\OMX/MnSymbolE/m/n/10.95 à\T1/SourceSerifFour-LF/m/it/10.95 booking[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 date[]time\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 status\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 a[]ment\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 customer[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 et[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 vet[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 sta[][][]id\OMX/MnSymbolE/m/n/10.95 ç
- []
-
-[19] [20] [21]
-Overfull \hbox (20.85481pt too wide) detected at line 211
-\T1/SourceSerifFour-LF/m/it/10.95 BOOKING\OMX/MnSymbolE/m/n/10.95 à\T1/SourceSerifFour-LF/m/it/10.95 booking[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 date[]time\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 status\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 a[]ment\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 customer[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  []\T1/SourceSerifFour-LF/m/it/10.95 et[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 vet[]id\T1/SourceSerifFour-LF/m/n/10.95 ,  \T1/SourceSerifFour-LF/m/it/10.95 sta[][][]id\OMX/MnSymbolE/m/n/10.95 ç
- []
-
-[22]) [23] [24]
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/bold/sc/24.88'. Switching off
-(microtype)                protrusion for this font on input line 59.
-
-[25
-
-] [26]
+]) [16{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_blpqyz.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourceserif/a_5c2bot.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
 Ch\uhorn \ohorn ng 4.
-(Chapter4.tex [27
+(chapter4.tex
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 10.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
-] [28] [29] [30] [31] [32] [33]) [34] [35] [36
+LaTeX Font Warning: Font shape `TS1/lmr/regular/n' undefined
+(Font)              using `TS1/lmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 10.
+
+
+Underfull \vbox (badness 1931) has occurred while \output is active []
+
+ [17
+
+{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [18]
+Overfull \hbox (3.93999pt too wide) detected at line 73
+\T1/SourceSerifFour-LF/m/it/10.95 Booking \T1/SourceSerifFour-LF/m/n/10.95 : \T1/SourceSerifFour-LF/m/it/10.95 booking[]id \U/MnSymbolA/m/n/10.95 ^^@ \T1/SourceSerifFour-LF/m/it/10.95 date[]time\T1/SourceSerifFour-LF/m/n/10.95 , \T1/SourceSerifFour-LF/m/it/10.95 status\T1/SourceSerifFour-LF/m/n/10.95 , []\T1/SourceSerifFour-LF/m/it/10.95 a[]ment\T1/SourceSerifFour-LF/m/n/10.95 , \T1/SourceSerifFour-LF/m/it/10.95 customer[]id\T1/SourceSerifFour-LF/m/n/10.95 , []\T1/SourceSerifFour-LF/m/it/10.95 et[]id\T1/SourceSerifFour-LF/m/n/10.95 , \T1/SourceSerifFour-LF/m/it/10.95 vet[]id\T1/SourceSerifFour-LF/m/n/10.95 , \T1/SourceSerifFour-LF/m/it/10.95 sta[][][]id
+ []
+
+[19]) [20] [21] [22] [23
+
+] [24]
+Ch\uhorn \ohorn ng 5.
+(chapter5.tex [25
+
+] [26] (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t5lmtt.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T5/lmtt/regular/n/10.95 SELECT COUNT(*) AS total_customers
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T5/lmtt/regular/n/10.95 SELECT COUNT(*) AS total_pets FROM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T5/lmtt/regular/n/10.95 SELECT COUNT(*) AS total_bookings
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T5/lmtt/regular/n/10.95 SELECT COUNT(*) AS total_invoices
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T5/lmtt/regular/n/10.95 SELECT COUNT(*) AS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\T5/lmtt/regular/n/10.95 total_medical_records FROM
+ []
+
+) [27] [28
 
 ]
-Ch\uhorn \ohorn ng 5.
-(Chapter5.tex [37] [38]
-Overfull \hbox (123.2226pt too wide) in paragraph at lines 68--68
-[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES[] 
+Ch\uhorn \ohorn ng 6.
+(chapter6.tex
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+
  []
 
 
-Overfull \hbox (18.09814pt too wide) in paragraph at lines 82--82
-[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES[] 
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+
  []
 
 
-Overfull \hbox (27.40337pt too wide) in paragraph at lines 99--99
-[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES[] 
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+
  []
 
-[39] [40] [41] [42] [43] [44]) [45] [46] [47
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 98--98
+[]|\T5/lmr/regular/it/10.95 S≠p x∏p book-ing theo phΩ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\T5/lmtt/regular/n/10.95 SELECT p.name AS pet_name, p.species,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\T5/lmtt/regular/n/10.95 SELECT b.booking_id, b.date_time, b.status,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\T5/lmtt/regular/n/10.95 SELECT b.booking_id, b.date_time, v.full_name
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\T5/lmtt/regular/n/10.95 SELECT b.booking_id, b.date_time, c.full_name
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\T5/lmtt/regular/n/10.95 AS customer_name, p.name AS pet_name,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\T5/lmtt/regular/n/10.95 v.full_name AS veterinarian, b.status,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\T5/lmtt/regular/n/10.95 SELECT b.booking_id, b.date_time, i.amount,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\T5/lmtt/regular/n/10.95 SELECT m.record_id, p.name AS pet_name,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\T5/lmtt/regular/n/10.95 v.full_name AS veterinarian, m.diagnosis,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 389--389
+[]|\T5/lmr/regular/it/10.95 Tºm c°c book-ing ^^_¢ ho†n
+ []
+
+) [29] [30] [31] [32] [33] [34]
+Ch\uhorn \ohorn ng 7.
+(chapter7.tex
+Underfull \vbox (badness 1635) has occurred while \output is active []
+
+ [35
+
+] [36]) [37] [38
+
+] [39] [40]
+Ch\uhorn \ohorn ng 8.
+(chapter8.tex [41
+
+] [42]) [43] [44
+
+] [45] [46]
+Ph\d {u} l\d {u}c A.
+(appendixB.tex
+Overfull \hbox (64.51682pt too wide) in paragraph at lines 92--105
+ [][] 
+ []
+
+[47
 
 ] [48]
-Ch\uhorn \ohorn ng 6.
-(Chapter6.tex [49
-
-] [50] [51] [52] [53] [54] [55]
-Underfull \hbox (badness 1454) in paragraph at lines 302--302
-[]\T5/SourceSerifFour-LF/regular/it/10.95 KhÊng cho ph≤p b‰ trËng
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\T5/lmr/regular/it/10.95 Lam sach vet
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 304--304
-[]\T5/SourceSerifFour-LF/regular/it/10.95 KhÊng cho ph≤p user-name
+Overfull \hbox (2.29327pt too wide) in paragraph at lines 190--201
+ [][] 
  []
 
-[56]) [57] [58
+) [49] [50
 
-]
-Ch\uhorn \ohorn ng 7.
-(Chapter7.tex [59] [60] [61] [62] [63] [64] [65]) [66] [67
-
-] [68]
-Ch\uhorn \ohorn ng 8.
-(Chapter8.tex [69
-
-] [70] [71]) [72] [73] [74
-
-] [75] [76]
-Ph\d {u} l\d {u}c A.
-(appendixA.tex [77
-
-] [78] [79] [80] [81]) [82]
-Ph\d {u} l\d {u}c B.
-(appendixB.tex [83
-
-]
-Overfull \hbox (123.2226pt too wide) in paragraph at lines 70--70
-[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Booking (booking_id, date_time, status, payment, customer_id, pet_id, vet_id, staff_id) VALUES[] 
- []
-
-[84]
-Overfull \hbox (18.09814pt too wide) in paragraph at lines 85--85
-[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO Invoice (invoice_id, amount, date, status, booking_id, customer_id) VALUES[] 
- []
-
-
-Overfull \hbox (27.40337pt too wide) in paragraph at lines 99--99
-[]\T5/SourceSerifFour-LF/regular/it/10.95 INSERT INTO MedicalRecord (record_id, diagnosis, treatment, date, pet_id, vet_id) VALUES[] 
- []
-
-[85] [86] [87]) [88] (book.bbl
+] (book.bbl
 
 Package hyperref Warning: Glyph not defined in PU encoding,
 (hyperref)                removing `\ecircumflex' on input line 1.
@@ -1624,21 +1739,11 @@ Package hyperref Warning: Glyph not defined in PU encoding,
 
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/n/10'. Switching off
-(microtype)                protrusion for this font on input line 1.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceSerifFour-LF/regular/it/10'. Switching off
-(microtype)                protrusion for this font on input line 8.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/SourceCodePro-TLF/regular/n/10'. Switching off
+(microtype)                `T5/lmtt/regular/n/10'. Switching off
 (microtype)                protrusion for this font on input line 19.
 
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 19.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/6'
 (microtype)             (new value: 6.0pt) on input line 19.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/6'
@@ -1655,12 +1760,11 @@ LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/regular/it' aliased to
 (Font)              `T1/SourceSerifFour-LF/m/it' on input line 19.
 LaTeX Font Info:    Font shape `T1/SourceSerifFour-LF/m/it' will be
 (Font)              scaled to size 6.0pt on input line 19.
-) [89
+) [51
 
+] [52
 
-] [90
-
-] (acknowledgements.tex) [91] [92
+] (acknowledgements.tex) [53] [54
 
 ]
 runsystem(makeindex book.idx)...executed safely (allowed).
@@ -1680,20 +1784,20 @@ L3 programming layer <2026-08-10>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: FC45712F9F8A0A6FADA3B6547C9CDDD1;23682.
+(rerunfilecheck)             Checksum: 1A1209C2CEF8CBFD46251DEEF0B553A5;8113.
  ) 
 Here is how much of TeX's memory you used:
- 24230 strings out of 467441
- 396518 string characters out of 5408077
- 842328 words of memory out of 5000000
- 52813 multiletter control sequences out of 15000+600000
- 939928 words of font info for 126 fonts, out of 8000000 for 9000
+ 24245 strings out of 467441
+ 397296 string characters out of 5408077
+ 859954 words of memory out of 5000000
+ 52953 multiletter control sequences out of 15000+600000
+ 997071 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,12n,131p,1020b,754s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourceserif/SourceSerif4-It.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourceserif/SourceSerif4-Regular.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb>
-Output written on book.pdf (100 pages, 778245 bytes).
+ 88i,12n,131p,1020b,688s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourceserif/SourceSerif4-It.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourceserif/SourceSerif4-Regular.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on book.pdf (62 pages, 721224 bytes).
 PDF statistics:
- 1275 PDF objects out of 1440 (max. 8388607)
- 327 named destinations out of 1000 (max. 500000)
- 12750 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 715 PDF objects out of 1000 (max. 8388607)
+ 173 named destinations out of 1000 (max. 500000)
+ 16254 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -1,189 +1,48 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{Lời mở đầu}{v}{chapter*.1}%
-\contentsline {part}{I\hspace {1em}Phân tích và Thiết kế hệ thống}{1}{part*.2}%
-\contentsline {chapter}{\numberline {1}Tổng quan đề tài}{3}{chapter*.3}%
-\contentsline {section}{\numberline {1.1}Mục tiêu của đề tài}{3}{section*.4}%
-\contentsline {section}{\numberline {1.2}Phạm vi của hệ thống}{4}{section*.5}%
-\contentsline {section}{\numberline {1.3}Đối tượng và chức năng quản lý}{4}{section*.6}%
-\contentsline {subsection}{\numberline {1.3.1}Khách hàng và thú cưng}{4}{subsection*.7}%
-\contentsline {subsection}{\numberline {1.3.2}Bác sĩ thú y và nhân viên}{5}{subsection*.8}%
-\contentsline {subsection}{\numberline {1.3.3}Đặt lịch khám}{5}{subsection*.9}%
-\contentsline {subsection}{\numberline {1.3.4}Hồ sơ khám bệnh}{5}{subsection*.10}%
-\contentsline {subsection}{\numberline {1.3.5}Hóa đơn}{5}{subsection*.11}%
-\contentsline {subsection}{\numberline {1.3.6}Phòng điều trị}{5}{subsection*.12}%
-\contentsline {section}{\numberline {1.4}Công cụ và môi trường thực hiện}{6}{section*.13}%
-\contentsline {section}{\numberline {1.5}Phương pháp thực hiện}{6}{section*.14}%
-\contentsline {section}{\numberline {1.6}Cấu trúc của báo cáo}{6}{section*.15}%
-\contentsline {section}{\numberline {1.7}Kết luận chương}{7}{section*.16}%
-\contentsline {chapter}{\numberline {2}Phân tích nghiệp vụ và Thiết kế ERD}{9}{chapter*.17}%
-\contentsline {section}{\numberline {2.1}Phân tích yêu cầu nghiệp vụ}{9}{section*.18}%
-\contentsline {section}{\numberline {2.2}Xác định phạm vi dữ liệu}{10}{section*.26}%
-\contentsline {section}{\numberline {2.3}Xác định thực thể}{10}{section*.27}%
-\contentsline {subsection}{\numberline {2.3.1}Customer và Pet}{11}{subsection*.37}%
-\contentsline {subsection}{\numberline {2.3.2}Veterinarian và Staff}{11}{subsection*.38}%
-\contentsline {subsection}{\numberline {2.3.3}Booking}{11}{subsection*.39}%
-\contentsline {subsection}{\numberline {2.3.4}MedicalRecord}{11}{subsection*.40}%
-\contentsline {subsection}{\numberline {2.3.5}Invoice}{12}{subsection*.41}%
-\contentsline {subsection}{\numberline {2.3.6}Room}{12}{subsection*.42}%
-\contentsline {subsection}{\numberline {2.3.7}Admin}{12}{subsection*.43}%
-\contentsline {section}{\numberline {2.4}Xác định thuộc tính và khóa}{12}{section*.44}%
-\contentsline {section}{\numberline {2.5}Xác định mối quan hệ và lực lượng kết hợp}{13}{section*.45}%
-\contentsline {section}{\numberline {2.6}Kiểm tra tính hợp lý của mô hình}{13}{section*.47}%
-\contentsline {section}{\numberline {2.7}Mô hình ERD}{14}{section*.48}%
-\contentsline {section}{\numberline {2.8}Kết luận chương}{15}{section*.50}%
-\contentsline {chapter}{\numberline {3}Ánh xạ ERD sang mô hình quan hệ}{17}{chapter*.51}%
-\contentsline {section}{\numberline {3.1}Quy tắc ánh xạ thực thể sang quan hệ}{17}{section*.52}%
-\contentsline {subsection}{\numberline {3.1.1}Ánh xạ thực thể Customer}{18}{subsection*.53}%
-\contentsline {subsection}{\numberline {3.1.2}Ánh xạ thực thể Pet}{18}{subsection*.54}%
-\contentsline {subsection}{\numberline {3.1.3}Ánh xạ thực thể Veterinarian và Staff}{18}{subsection*.55}%
-\contentsline {section}{\numberline {3.2}Ánh xạ các mối quan hệ 1:N}{19}{section*.56}%
-\contentsline {subsection}{\numberline {3.2.1}Mối quan hệ Customer--Booking}{19}{subsection*.57}%
-\contentsline {subsection}{\numberline {3.2.2}Mối quan hệ Veterinarian--Booking}{19}{subsection*.58}%
-\contentsline {subsection}{\numberline {3.2.3}Mối quan hệ Staff--Booking}{20}{subsection*.59}%
-\contentsline {section}{\numberline {3.3}Ánh xạ quan hệ 1:0..1}{20}{section*.60}%
-\contentsline {section}{\numberline {3.4}Ánh xạ MedicalRecord}{20}{section*.61}%
-\contentsline {section}{\numberline {3.5}Ánh xạ các thực thể còn lại}{21}{section*.62}%
-\contentsline {section}{\numberline {3.6}Mô hình quan hệ sau khi ánh xạ}{21}{section*.63}%
-\contentsline {section}{\numberline {3.7}Khóa chính và khóa ngoại}{22}{section*.64}%
-\contentsline {section}{\numberline {3.8}Thực thể yếu và quan hệ nhiều-nhiều}{23}{section*.66}%
-\contentsline {section}{\numberline {3.9}Ràng buộc toàn vẹn}{23}{section*.67}%
-\contentsline {subsection}{\numberline {3.9.1}Ràng buộc khóa chính}{23}{subsection*.68}%
-\contentsline {subsection}{\numberline {3.9.2}Ràng buộc khóa ngoại}{23}{subsection*.69}%
-\contentsline {subsection}{\numberline {3.9.3}Ràng buộc NOT NULL}{23}{subsection*.70}%
-\contentsline {subsection}{\numberline {3.9.4}Ràng buộc UNIQUE}{23}{subsection*.71}%
-\contentsline {section}{\numberline {3.10}Kết luận chương}{24}{section*.72}%
-\contentsline {part}{II\hspace {1em}Xây dựng Cơ sở dữ liệu}{25}{part*.73}%
-\contentsline {chapter}{\numberline {4}Cài đặt Cơ sở dữ liệu}{27}{chapter*.74}%
-\contentsline {section}{\numberline {4.1}Môi trường cài đặt}{27}{section*.75}%
-\contentsline {section}{\numberline {4.2}Tạo cơ sở dữ liệu}{28}{section*.76}%
-\contentsline {section}{\numberline {4.3}Cài đặt các bảng dữ liệu}{28}{section*.77}%
-\contentsline {subsection}{\numberline {4.3.1}Bảng Customer}{28}{subsection*.87}%
-\contentsline {subsection}{\numberline {4.3.2}Bảng Pet}{29}{subsection*.88}%
-\contentsline {subsection}{\numberline {4.3.3}Bảng Veterinarian}{29}{subsection*.89}%
-\contentsline {subsection}{\numberline {4.3.4}Bảng Staff}{29}{subsection*.90}%
-\contentsline {subsection}{\numberline {4.3.5}Bảng Admin}{30}{subsection*.91}%
-\contentsline {section}{\numberline {4.4}Cài đặt bảng Booking}{30}{section*.92}%
-\contentsline {section}{\numberline {4.5}Cài đặt bảng Invoice}{31}{section*.93}%
-\contentsline {section}{\numberline {4.6}Cài đặt bảng MedicalRecord}{32}{section*.94}%
-\contentsline {section}{\numberline {4.7}Cài đặt bảng Room}{32}{section*.95}%
-\contentsline {section}{\numberline {4.8}Tổng hợp cấu trúc cơ sở dữ liệu}{32}{section*.96}%
-\contentsline {section}{\numberline {4.9}Kiểm tra cấu trúc bảng}{34}{section*.98}%
-\contentsline {section}{\numberline {4.10}Kiểm tra ràng buộc khóa ngoại}{34}{section*.99}%
-\contentsline {section}{\numberline {4.11}Kết luận chương}{34}{section*.100}%
-\contentsline {chapter}{\numberline {5}Dữ liệu mẫu và Truy vấn}{37}{chapter*.101}%
-\contentsline {section}{\numberline {5.1}Khởi tạo dữ liệu mẫu}{37}{section*.102}%
-\contentsline {subsection}{\numberline {5.1.1}Dữ liệu khách hàng}{37}{subsection*.103}%
-\contentsline {subsection}{\numberline {5.1.2}Dữ liệu thú cưng}{38}{subsection*.104}%
-\contentsline {subsection}{\numberline {5.1.3}Dữ liệu bác sĩ thú y và nhân viên}{38}{subsection*.105}%
-\contentsline {subsection}{\numberline {5.1.4}Dữ liệu tài khoản quản trị}{38}{subsection*.106}%
-\contentsline {subsection}{\numberline {5.1.5}Dữ liệu lịch hẹn}{39}{subsection*.107}%
-\contentsline {subsection}{\numberline {5.1.6}Dữ liệu hóa đơn}{39}{subsection*.108}%
-\contentsline {subsection}{\numberline {5.1.7}Dữ liệu hồ sơ khám bệnh}{39}{subsection*.109}%
-\contentsline {subsection}{\numberline {5.1.8}Dữ liệu phòng}{40}{subsection*.110}%
-\contentsline {section}{\numberline {5.2}Truy vấn kiểm tra dữ liệu cơ bản}{40}{section*.111}%
-\contentsline {subsection}{\numberline {5.2.1}Hiển thị danh sách khách hàng}{40}{subsection*.112}%
-\contentsline {subsection}{\numberline {5.2.2}Hiển thị danh sách thú cưng}{40}{subsection*.113}%
-\contentsline {subsection}{\numberline {5.2.3}Hiển thị danh sách bác sĩ thú y}{40}{subsection*.114}%
-\contentsline {subsection}{\numberline {5.2.4}Hiển thị danh sách lịch hẹn}{41}{subsection*.115}%
-\contentsline {section}{\numberline {5.3}Truy vấn kết hợp nhiều bảng}{41}{section*.116}%
-\contentsline {subsection}{\numberline {5.3.1}Tra cứu lịch hẹn và thông tin khách hàng}{41}{subsection*.117}%
-\contentsline {subsection}{\numberline {5.3.2}Tra cứu lịch hẹn của thú cưng}{41}{subsection*.118}%
-\contentsline {subsection}{\numberline {5.3.3}Tra cứu lịch hẹn cùng bác sĩ thú y}{42}{subsection*.119}%
-\contentsline {subsection}{\numberline {5.3.4}Tra cứu hóa đơn và lịch hẹn}{42}{subsection*.120}%
-\contentsline {section}{\numberline {5.4}Truy vấn thống kê}{42}{section*.121}%
-\contentsline {subsection}{\numberline {5.4.1}Đếm số lượng thú cưng}{42}{subsection*.122}%
-\contentsline {subsection}{\numberline {5.4.2}Thống kê số lượng lịch hẹn theo trạng thái}{43}{subsection*.123}%
-\contentsline {subsection}{\numberline {5.4.3}Tính tổng doanh thu từ các hóa đơn đã thanh toán}{43}{subsection*.124}%
-\contentsline {subsection}{\numberline {5.4.4}Thống kê số lịch hẹn theo bác sĩ}{43}{subsection*.125}%
-\contentsline {section}{\numberline {5.5}Truy vấn kiểm tra dữ liệu NULL}{43}{section*.126}%
-\contentsline {section}{\numberline {5.6}Truy vấn kiểm tra tính toàn vẹn tham chiếu}{44}{section*.127}%
-\contentsline {section}{\numberline {5.7}Kiểm tra cập nhật và xóa dữ liệu}{44}{section*.128}%
-\contentsline {section}{\numberline {5.8}Kiểm tra kết quả dữ liệu mẫu}{45}{section*.129}%
-\contentsline {section}{\numberline {5.9}Kết luận chương}{45}{section*.130}%
-\contentsline {part}{III\hspace {1em}Kiểm thử}{47}{part*.131}%
-\contentsline {chapter}{\numberline {6}Kiểm thử Cơ sở dữ liệu}{49}{chapter*.132}%
-\contentsline {section}{\numberline {6.1}Mục tiêu kiểm thử}{49}{section*.133}%
-\contentsline {section}{\numberline {6.2}Kiểm thử khóa chính}{50}{section*.134}%
-\contentsline {section}{\numberline {6.3}Kiểm thử khóa ngoại}{50}{section*.135}%
-\contentsline {section}{\numberline {6.4}Kiểm thử ràng buộc NOT NULL}{51}{section*.136}%
-\contentsline {section}{\numberline {6.5}Kiểm thử ràng buộc UNIQUE}{52}{section*.137}%
-\contentsline {section}{\numberline {6.6}Kiểm thử mối quan hệ Customer -- Pet}{52}{section*.138}%
-\contentsline {section}{\numberline {6.7}Kiểm thử mối quan hệ Booking}{53}{section*.139}%
-\contentsline {section}{\numberline {6.8}Kiểm thử quan hệ Booking -- Invoice}{53}{section*.140}%
-\contentsline {section}{\numberline {6.9}Kiểm thử hồ sơ khám bệnh}{54}{section*.141}%
-\contentsline {section}{\numberline {6.10}Kiểm thử thao tác cập nhật dữ liệu}{54}{section*.142}%
-\contentsline {section}{\numberline {6.11}Kiểm thử thao tác xóa dữ liệu}{55}{section*.143}%
-\contentsline {section}{\numberline {6.12}Kiểm thử truy vấn thống kê}{55}{section*.144}%
-\contentsline {section}{\numberline {6.13}Bảng tổng hợp kết quả kiểm thử}{56}{section*.145}%
-\contentsline {section}{\numberline {6.14}Đánh giá kết quả kiểm thử}{57}{section*.147}%
-\contentsline {section}{\numberline {6.15}Kết luận chương}{57}{section*.148}%
-\contentsline {chapter}{\numberline {7}Chuẩn hóa Cơ sở dữ liệu}{59}{chapter*.149}%
-\contentsline {section}{\numberline {7.1}Mục tiêu của chuẩn hóa}{59}{section*.150}%
-\contentsline {section}{\numberline {7.2}Dạng chuẩn thứ nhất -- 1NF}{60}{section*.151}%
-\contentsline {section}{\numberline {7.3}Dạng chuẩn thứ hai -- 2NF}{60}{section*.152}%
-\contentsline {section}{\numberline {7.4}Dạng chuẩn thứ ba -- 3NF}{61}{section*.153}%
-\contentsline {subsection}{\numberline {7.4.1}Chuẩn hóa bảng Customer}{61}{subsection*.154}%
-\contentsline {subsection}{\numberline {7.4.2}Chuẩn hóa bảng Pet}{61}{subsection*.155}%
-\contentsline {subsection}{\numberline {7.4.3}Chuẩn hóa bảng Veterinarian}{61}{subsection*.156}%
-\contentsline {subsection}{\numberline {7.4.4}Chuẩn hóa bảng Staff}{61}{subsection*.157}%
-\contentsline {subsection}{\numberline {7.4.5}Chuẩn hóa bảng Admin}{62}{subsection*.158}%
-\contentsline {subsection}{\numberline {7.4.6}Chuẩn hóa bảng Booking}{62}{subsection*.159}%
-\contentsline {subsection}{\numberline {7.4.7}Chuẩn hóa bảng Invoice}{62}{subsection*.160}%
-\contentsline {subsection}{\numberline {7.4.8}Chuẩn hóa bảng MedicalRecord}{63}{subsection*.161}%
-\contentsline {subsection}{\numberline {7.4.9}Chuẩn hóa bảng Room}{63}{subsection*.162}%
-\contentsline {section}{\numberline {7.5}Kiểm tra phụ thuộc hàm}{63}{section*.163}%
-\contentsline {section}{\numberline {7.6}Kiểm tra các bất thường dữ liệu}{63}{section*.164}%
-\contentsline {subsection}{\numberline {7.6.1}Bất thường khi thêm dữ liệu}{64}{subsection*.165}%
-\contentsline {subsection}{\numberline {7.6.2}Bất thường khi cập nhật dữ liệu}{64}{subsection*.166}%
-\contentsline {subsection}{\numberline {7.6.3}Bất thường khi xóa dữ liệu}{64}{subsection*.167}%
-\contentsline {section}{\numberline {7.7}Tổng hợp kết quả chuẩn hóa}{64}{section*.168}%
-\contentsline {section}{\numberline {7.8}Đánh giá cấu trúc sau chuẩn hóa}{66}{section*.170}%
-\contentsline {section}{\numberline {7.9}Kết luận chương}{66}{section*.171}%
-\contentsline {part}{IV\hspace {1em}Kết luận}{67}{part*.172}%
-\contentsline {chapter}{\numberline {8}Kết luận và Phát triển}{69}{chapter*.173}%
-\contentsline {section}{\numberline {8.1}Tổng kết đề tài}{69}{section*.174}%
-\contentsline {section}{\numberline {8.2}Kết quả đạt được}{69}{section*.175}%
-\contentsline {section}{\numberline {8.3}Đánh giá cơ sở dữ liệu}{70}{section*.176}%
-\contentsline {section}{\numberline {8.4}Hạn chế của đề tài}{71}{section*.177}%
-\contentsline {section}{\numberline {8.5}Hướng phát triển}{71}{section*.178}%
-\contentsline {subsection}{\numberline {8.5.1}Mở rộng quản lý lịch làm việc của bác sĩ}{71}{subsection*.179}%
-\contentsline {subsection}{\numberline {8.5.2}Mở rộng quản lý dịch vụ}{71}{subsection*.180}%
-\contentsline {subsection}{\numberline {8.5.3}Mở rộng chi tiết hóa đơn}{71}{subsection*.181}%
-\contentsline {subsection}{\numberline {8.5.4}Mở rộng quản lý thuốc}{72}{subsection*.182}%
-\contentsline {subsection}{\numberline {8.5.5}Mở rộng quản lý lưu trú}{72}{subsection*.183}%
-\contentsline {subsection}{\numberline {8.5.6}Phát triển chức năng báo cáo và thống kê}{72}{subsection*.184}%
-\contentsline {subsection}{\numberline {8.5.7}Tăng cường bảo mật cơ sở dữ liệu}{72}{subsection*.185}%
-\contentsline {section}{\numberline {8.6}Kết luận chương}{72}{section*.186}%
-\contentsline {part}{V\hspace {1em}Phụ lục}{75}{part*.187}%
-\contentsline {chapter}{\numberline {A}Mã nguồn SQL}{77}{chapter*.188}%
-\contentsline {section}{\numberline {A.1}Tạo cơ sở dữ liệu}{77}{section*.189}%
-\contentsline {section}{\numberline {A.2}Tạo bảng Customer}{77}{section*.190}%
-\contentsline {section}{\numberline {A.3}Tạo bảng Pet}{78}{section*.191}%
-\contentsline {section}{\numberline {A.4}Tạo bảng Veterinarian}{78}{section*.192}%
-\contentsline {section}{\numberline {A.5}Tạo bảng Staff}{78}{section*.193}%
-\contentsline {section}{\numberline {A.6}Tạo bảng Admin}{78}{section*.194}%
-\contentsline {section}{\numberline {A.7}Tạo bảng Booking}{79}{section*.195}%
-\contentsline {section}{\numberline {A.8}Tạo bảng Invoice}{80}{section*.196}%
-\contentsline {section}{\numberline {A.9}Tạo bảng MedicalRecord}{80}{section*.197}%
-\contentsline {section}{\numberline {A.10}Tạo bảng Room}{81}{section*.198}%
-\contentsline {section}{\numberline {A.11}Tổng hợp cấu trúc cơ sở dữ liệu}{81}{section*.199}%
-\contentsline {section}{\numberline {A.12}Thứ tự thực thi mã nguồn}{81}{section*.200}%
-\contentsline {section}{\numberline {A.13}Kiểm tra cấu trúc sau khi cài đặt}{82}{section*.201}%
-\contentsline {section}{\numberline {A.14}Kết luận phụ lục}{82}{section*.202}%
-\contentsline {chapter}{\numberline {B}Dữ liệu mẫu}{83}{chapter*.203}%
-\contentsline {section}{\numberline {B.1}Dữ liệu bảng Customer}{83}{section*.204}%
-\contentsline {section}{\numberline {B.2}Dữ liệu bảng Pet}{83}{section*.205}%
-\contentsline {section}{\numberline {B.3}Dữ liệu bảng Veterinarian}{84}{section*.206}%
-\contentsline {section}{\numberline {B.4}Dữ liệu bảng Staff}{84}{section*.207}%
-\contentsline {section}{\numberline {B.5}Dữ liệu bảng Admin}{84}{section*.208}%
-\contentsline {section}{\numberline {B.6}Dữ liệu bảng Booking}{84}{section*.209}%
-\contentsline {section}{\numberline {B.7}Dữ liệu bảng Invoice}{85}{section*.210}%
-\contentsline {section}{\numberline {B.8}Dữ liệu bảng MedicalRecord}{85}{section*.211}%
-\contentsline {section}{\numberline {B.9}Dữ liệu bảng Room}{86}{section*.212}%
-\contentsline {section}{\numberline {B.10}Kiểm tra dữ liệu sau khi nhập}{86}{section*.213}%
-\contentsline {section}{\numberline {B.11}Kiểm tra mối quan hệ giữa các bảng}{86}{section*.214}%
-\contentsline {section}{\numberline {B.12}Kiểm tra dữ liệu NULL}{87}{section*.215}%
-\contentsline {section}{\numberline {B.13}Kiểm tra dữ liệu thống kê}{88}{section*.216}%
-\contentsline {section}{\numberline {B.14}Kết luận phụ lục}{88}{section*.217}%
-\contentsline {chapter}{T\`ai li\d \ecircumflex u tham kh\h {a}o}{89}{appendix*.218}%
-\contentsline {chapter}{Lời cảm ơn}{91}{appendix*.219}%
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{ii}{section*.1}%
+\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{iv}{section*.2}%
+\contentsline {chapter}{Lời mở đầu}{v}{chapter*.3}%
+\contentsline {part}{I\hspace {1em}Thiết kế Conceptual}{1}{part*.4}%
+\contentsline {chapter}{\numberline {1}Phân tích nghiệp vụ và xác định yêu cầu}{3}{chapter*.5}%
+\contentsline {section}{\numberline {1.1}Phân tích nghiệp vụ}{3}{section*.6}%
+\contentsline {section}{\numberline {1.2}Phạm vi dữ liệu}{4}{section*.16}%
+\contentsline {section}{\numberline {1.3}Kết luận chương}{4}{section*.19}%
+\contentsline {chapter}{\numberline {2}Mô hình khái niệm và ERD}{7}{chapter*.20}%
+\contentsline {section}{\numberline {2.1}Xác định thực thể và thuộc tính}{7}{section*.21}%
+\contentsline {section}{\numberline {2.2}Xác định khóa chính}{7}{section*.23}%
+\contentsline {section}{\numberline {2.3}Xác định mối quan hệ}{7}{section*.25}%
+\contentsline {section}{\numberline {2.4}Mô hình ERD}{7}{section*.27}%
+\contentsline {section}{\numberline {2.5}Kiểm tra mô hình khái niệm}{11}{section*.29}%
+\contentsline {section}{\numberline {2.6}Kết luận chương}{11}{section*.30}%
+\contentsline {part}{II\hspace {1em}Thiết kế Logical}{13}{part*.31}%
+\contentsline {chapter}{\numberline {3}Chuyển đổi ERD sang mô hình quan hệ}{15}{chapter*.32}%
+\contentsline {section}{\numberline {3.1}Mô hình quan hệ hoàn chỉnh}{15}{section*.33}%
+\contentsline {section}{\numberline {3.2}Ánh xạ quan hệ 1:N}{16}{section*.35}%
+\contentsline {section}{\numberline {3.3}Quan hệ Booking -- Invoice}{16}{section*.37}%
+\contentsline {section}{\numberline {3.4}Kết luận chương}{16}{section*.38}%
+\contentsline {chapter}{\numberline {4}Chuẩn hóa cơ sở dữ liệu}{17}{chapter*.39}%
+\contentsline {section}{\numberline {4.1}Chuẩn thứ nhất -- 1NF}{17}{section*.40}%
+\contentsline {section}{\numberline {4.2}Chuẩn thứ hai -- 2NF}{19}{section*.42}%
+\contentsline {section}{\numberline {4.3}Chuẩn thứ ba -- 3NF}{19}{section*.46}%
+\contentsline {section}{\numberline {4.4}Tổng hợp kết quả chuẩn hóa}{20}{section*.49}%
+\contentsline {section}{\numberline {4.5}Các bất thường được hạn chế}{20}{section*.51}%
+\contentsline {section}{\numberline {4.6}Kết luận chương}{22}{section*.53}%
+\contentsline {part}{III\hspace {1em}Thiết kế Physical}{23}{part*.54}%
+\contentsline {chapter}{\numberline {5}Thiết kế vật lý}{25}{chapter*.55}%
+\contentsline {section}{\numberline {5.1}Kiểu dữ liệu và ràng buộc}{25}{section*.56}%
+\contentsline {section}{\numberline {5.2}Dữ liệu mẫu}{25}{section*.59}%
+\contentsline {section}{\numberline {5.3}Kiểm tra dữ liệu mẫu}{27}{section*.60}%
+\contentsline {section}{\numberline {5.4}Kết luận chương}{27}{section*.62}%
+\contentsline {chapter}{\numberline {6}Truy vấn và khai thác dữ liệu}{29}{chapter*.63}%
+\contentsline {chapter}{\numberline {7}Kiểm thử và đánh giá}{35}{chapter*.74}%
+\contentsline {section}{\numberline {7.1}Đánh giá}{37}{section*.81}%
+\contentsline {section}{\numberline {7.2}Kết luận chương}{37}{section*.82}%
+\contentsline {part}{IV\hspace {1em}Kết luận}{39}{part*.83}%
+\contentsline {chapter}{\numberline {8}Kết luận và hướng phát triển}{41}{chapter*.84}%
+\contentsline {section}{\numberline {8.1}Kết quả đạt được và Hạn chế}{41}{section*.86}%
+\contentsline {section}{\numberline {8.2}Hướng phát triển}{43}{section*.89}%
+\contentsline {section}{\numberline {8.3}Kết luận}{43}{section*.90}%
+\contentsline {part}{V\hspace {1em}Phụ lục}{45}{part*.91}%
+\contentsline {chapter}{\numberline {A}Dữ liệu mẫu}{47}{chapter*.92}%
+\contentsline {chapter}{T\`ai li\d \ecircumflex u tham kh\h {a}o}{51}{appendix*.102}%
+\contentsline {chapter}{Lời cảm ơn}{53}{appendix*.103}%

@@ -1,278 +1,73 @@
-Chương này trình bày quá trình chuyển đổi mô hình thực thể--liên kết (Entity--Relationship Model) của hệ thống \textbf{Chăm sóc Sức khỏe Thú cưng} sang mô hình quan hệ. Đây là bước trung gian quan trọng giữa thiết kế ERD và quá trình cài đặt cơ sở dữ liệu bằng SQL.
-Dựa trên mô hình ERD đã được xây dựng ở Chương 2, các thực thể sẽ được chuyển thành các quan hệ (relations), các thuộc tính được chuyển thành các thuộc tính của quan hệ, khóa chính được xác định để định danh bản ghi và khóa ngoại được sử dụng để biểu diễn các mối quan hệ giữa các bảng.
+Thiết kế logic là mức thiết kế thứ hai, trong đó mô hình ERD được chuyển đổi thành các quan hệ để có thể triển khai trên hệ quản trị cơ sở dữ liệu quan hệ.
 
-\section{Quy tắc ánh xạ thực thể sang quan hệ}\label{s:entity_mapping}
-Theo quy tắc ánh xạ từ mô hình ER sang mô hình quan hệ, mỗi thực thể mạnh trong mô hình ER được chuyển thành một quan hệ tương ứng. Tên của thực thể được sử dụng làm tên quan hệ và các thuộc tính của thực thể trở thành các thuộc tính của quan hệ.
-Đối với hệ thống Pet Health Care, các thực thể chính được chuyển thành các quan hệ tương ứng như sau:
+Mục tiêu của mức thiết kế này là xác định rõ các bảng, khóa chính, khóa ngoại và các ràng buộc giữa các bảng.
 
-\begin{itemize}
-    \item Customer $\rightarrow$ CUSTOMER
-    \item Pet $\rightarrow$ PET
-    \item Veterinarian $\rightarrow$ VETERINARIAN
-    \item Staff $\rightarrow$ STAFF
-    \item Admin $\rightarrow$ ADMIN
-    \item Booking $\rightarrow$ BOOKING
-    \item Invoice $\rightarrow$ INVOICE
-    \item MedicalRecord $\rightarrow$ MEDICAL\_RECORD
-    \item Room $\rightarrow$ ROOM
-\end{itemize}
+\section{Mô hình quan hệ hoàn chỉnh}
 
-Mỗi quan hệ có một khóa chính dùng để định danh duy nhất các bản ghi. Các khóa ngoại được bổ sung vào những quan hệ cần thiết để biểu diễn mối quan hệ giữa các thực thể.
-
-\subsection{Ánh xạ thực thể Customer}
-Thực thể Customer được chuyển thành quan hệ CUSTOMER với các thuộc tính:
-
-\begin{equation*}
-CUSTOMER(customer\_id,\ full\_name,\ phone,\ email,\ address)
-\end{equation*}
-
-Trong đó, \texttt{customer\_id} là khóa chính của quan hệ CUSTOMER. Các thuộc tính còn lại lưu thông tin cá nhân của khách hàng.
-
-\subsection{Ánh xạ thực thể Pet}
-Thực thể Pet được chuyển thành quan hệ PET:
-
-\begin{equation*}
-PET(pet\_id,\ name,\ species,\ breed,\ age,\ customer\_id)
-\end{equation*}
-
-Thuộc tính \texttt{pet\_id} là khóa chính. Thuộc tính \texttt{customer\_id} là khóa ngoại tham chiếu đến khóa chính của CUSTOMER.
-Việc đưa \texttt{customer\_id} vào PET là kết quả của việc ánh xạ quan hệ 1:N giữa Customer và Pet. Một khách hàng có thể sở hữu nhiều thú cưng, nhưng mỗi thú cưng thuộc về một khách hàng.
-
-\subsection{Ánh xạ thực thể Veterinarian và Staff}
-Thực thể Veterinarian được chuyển thành:
-
-\begin{equation*}
-VETERINARIAN(vet\_id,\ full\_name,\ schedule)
-\end{equation*}
-
-Trong đó, \texttt{vet\_id} là khóa chính.
-Thực thể Staff được chuyển thành:
-
-\begin{equation*}
-STAFF(staff\_id,\ full\_name,\ role)
-\end{equation*}
-
-Trong đó, \texttt{staff\_id} là khóa chính.
-Hai quan hệ này được quản lý độc lập vì bác sĩ thú y và nhân viên có các vai trò nghiệp vụ khác nhau trong hệ thống.
-
-\section{Ánh xạ các mối quan hệ 1:N}\label{s:one_to_many}
-Đối với mối quan hệ 1:N giữa hai thực thể, khóa chính của thực thể ở phía ``1'' được đưa vào quan hệ tương ứng với thực thể ở phía ``N'' dưới dạng khóa ngoại.
-Trong hệ thống, mối quan hệ Customer--Pet là một ví dụ điển hình:
-
-\begin{equation*}
-Customer\ (1) \longrightarrow (N)\ Pet
-\end{equation*}
-
-Do đó, khóa chính \texttt{customer\_id} của CUSTOMER được đưa vào PET dưới dạng khóa ngoại:
-
-\begin{equation*}
-PET(pet\_id,\ name,\ species,\ breed,\ age,\ customer\_id)
-\end{equation*}
-
-Tương tự, mối quan hệ giữa Pet và Booking được ánh xạ bằng cách đưa \texttt{pet\_id} vào BOOKING:
-
-\begin{equation*}
-BOOKING(booking\_id,\ date\_time,\ status,\ payment,\ customer\_id,\ pet\_id,\ vet\_id,\ staff\_id)
-\end{equation*}
-
-Trong đó, \texttt{pet\_id} tham chiếu đến PET, \texttt{customer\_id} tham chiếu đến CUSTOMER, \texttt{vet\_id} tham chiếu đến VETERINARIAN và \texttt{staff\_id} tham chiếu đến STAFF.
-
-\subsection{Mối quan hệ Customer--Booking}
-
-Một khách hàng có thể thực hiện nhiều lần đặt lịch khám. Mỗi Booking thuộc về một Customer.
-Quan hệ được biểu diễn:
-
-\begin{equation*}
-Customer\ (1) \longrightarrow (N)\ Booking
-\end{equation*}
-
-Do đó, \texttt{customer\_id} được sử dụng làm khóa ngoại trong BOOKING.
-
-\subsection{Mối quan hệ Veterinarian--Booking}
-Một bác sĩ thú y có thể phụ trách nhiều lịch khám. Mỗi lịch khám được phân công cho một bác sĩ thú y.
-Quan hệ được biểu diễn:
-
-\begin{equation*}
-Veterinarian\ (1) \longrightarrow (N)\ Booking
-\end{equation*}
-
-Vì vậy, \texttt{vet\_id} được đưa vào BOOKING dưới dạng khóa ngoại.
-
-\subsection{Mối quan hệ Staff--Booking}
-Một nhân viên có thể hỗ trợ nhiều lịch đặt khám. Tuy nhiên, tại thời điểm tạo Booking, lịch khám có thể chưa được phân công cho nhân viên.
-Do đó, \texttt{staff\_id} trong BOOKING được phép nhận giá trị \texttt{NULL}:
-
-\begin{equation*}
-Staff\ (1) \longrightarrow (N)\ Booking
-\end{equation*}
-
-Điều này cho phép hệ thống lưu Booking trước và cập nhật nhân viên phụ trách sau.
-
-\section{Ánh xạ quan hệ 1:0..1}\label{s:one_to_zero_one}
-Trong hệ thống, Booking và Invoice có quan hệ 1:0..1. Một Booking có thể chưa có Invoice hoặc có tối đa một Invoice.
-Quan hệ được biểu diễn:
-
-\begin{equation*}
-Booking\ (1) \longrightarrow (0..1)\ Invoice
-\end{equation*}
-
-Khi ánh xạ sang mô hình quan hệ, khóa chính của BOOKING được đưa vào INVOICE dưới dạng khóa ngoại. Đồng thời, thuộc tính này được đặt ràng buộc \texttt{UNIQUE} để đảm bảo một Booking không thể có nhiều Invoice.
-Quan hệ INVOICE được xác định như sau:
-
-\begin{equation*}
-INVOICE(invoice\_id,\ amount,\ date,\ status,\ booking\_id)
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-    \item \texttt{invoice\_id}: khóa chính của INVOICE.
-    \item \texttt{booking\_id}: khóa ngoại tham chiếu đến BOOKING.
-    \item \texttt{booking\_id} phải là duy nhất.
-\end{itemize}
-
-Ràng buộc có thể được biểu diễn:
-\begin{equation*}
-UNIQUE(booking\_id)
-\end{equation*}
-
-Nhờ đó, mỗi Booking chỉ có tối đa một Invoice.
-\section{Ánh xạ MedicalRecord}\label{s:medical_mapping}
-MedicalRecord là thực thể lưu trữ lịch sử khám và điều trị của thú cưng.
-Quan hệ được xác định:
-\begin{equation*}
-MEDICAL\_RECORD(record\_id,\ diagnosis,\ treatment,\ date,\ pet\_id,\ vet\_id)
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-    \item \texttt{record\_id} là khóa chính.
-    \item \texttt{pet\_id} là khóa ngoại tham chiếu đến PET.
-    \item \texttt{vet\_id} là khóa ngoại tham chiếu đến VETERINARIAN.
-\end{itemize}
-
-Một Pet có thể có nhiều MedicalRecord theo thời gian:
-\begin{equation*}
-Pet\ (1) \longrightarrow (N)\ MedicalRecord
-\end{equation*}
-
-Tương tự, một Veterinarian có thể lập nhiều MedicalRecord:
-\begin{equation*}
-Veterinarian\ (1) \longrightarrow (N)\ MedicalRecord
-\end{equation*}
-
-Do đó, hai khóa ngoại \texttt{pet\_id} và \texttt{vet\_id} được đưa vào quan hệ MEDICAL\_RECORD.
-\section{Ánh xạ các thực thể còn lại}\label{s:remaining_entities}
-Thực thể Admin được ánh xạ thành quan hệ ADMIN:
-
-\begin{equation*}
-ADMIN(admin\_id,\ username,\ password)
-\end{equation*}
-
-Trong đó, \texttt{admin\_id} là khóa chính và \texttt{username} phải là duy nhất.
-Thực thể Room được ánh xạ thành quan hệ ROOM:
-
-\begin{equation*}
-ROOM(room\_id,\ room\_type,\ status,\ note)
-\end{equation*}
-
-Trong đó, \texttt{room\_id} là khóa chính.
-Room hiện được thiết kế như một thực thể độc lập vì phạm vi đề tài chưa yêu cầu quản lý lịch sử phân phòng theo thời gian. Việc bổ sung quan hệ giữa Pet và Room có thể được thực hiện ở phiên bản mở rộng nếu hệ thống cần quản lý quá trình lưu trú của thú cưng.
-
-\section{Mô hình quan hệ sau khi ánh xạ}\label{s:relational_schema}
-Sau khi thực hiện các quy tắc ánh xạ, mô hình quan hệ của hệ thống được xác định như sau:
-\begin{equation*}
-CUSTOMER(
-customer\_id,\ full\_name,\ phone,\ email,\ address)
-\end{equation*}
-
-\begin{equation*}
-PET(
-pet\_id,\ name,\ species,\ breed,\ age,\ customer\_id)
-\end{equation*}
-
-\begin{equation*}
-VETERINARIAN(
-vet\_id,\ full\_name,\ specialization,\ schedule)
-\end{equation*}
-
-\begin{equation*}
-STAFF(
-staff\_id,\ full\_name,\ role)
-\end{equation*}
-
-\begin{equation*}
-ADMIN(
-admin\_id,\ username,\ password)
-\end{equation*}
-
-\begin{equation*}
-BOOKING(
-booking\_id,\ date\_time,\ status,\ payment,\ customer\_id,\ pet\_id,\ vet\_id,\ staff\_id)
-\end{equation*}
-
-\begin{equation*}
-INVOICE(
-invoice\_id,\ amount,\ date,\ status,\ booking\_id)
-\end{equation*}
-
-\begin{equation*}
-MEDICAL\_RECORD(
-record\_id,\ diagnosis,\ treatment,\ date,\ pet\_id,\ vet\_id)
-\end{equation*}
-
-\begin{equation*}
-ROOM(
-room\_id,\ room\_type,\ status,\ note)
-\end{equation*}
-
-\section{Khóa chính và khóa ngoại}\label{s:keys}
-Khóa chính và khóa ngoại của các quan hệ được tổng hợp trong bảng sau:
+Mỗi thực thể mạnh trong mô hình ERD được chuyển thành một quan hệ tương ứng.
 
 \begin{table}[htbp]
-\centering
-\caption{Khóa chính và khóa ngoại của các quan hệ}
-\label{tab:keys}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Quan hệ} & \textbf{Khóa chính} & \textbf{Khóa ngoại} \\ \hline
-CUSTOMER & customer\_id & -- \\ \hline
-PET & pet\_id & customer\_id \\ \hline
-VETERINARIAN & vet\_id & -- \\ \hline
-STAFF & staff\_id & -- \\ \hline
-ADMIN & admin\_id & -- \\ \hline
-BOOKING & booking\_id & customer\_id, pet\_id, vet\_id, staff\_id \\ \hline
-INVOICE & invoice\_id & booking\_id \\ \hline
-MEDICAL\_RECORD & record\_id & pet\_id, vet\_id \\ \hline
-ROOM & room\_id & -- \\ \hline
-\end{tabular}
+    \centering
+    \caption{Mô hình logic của hệ thống}
+    \label{tab:relational_schema}
+    \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+        \hline
+        \textbf{Quan hệ} & \textbf{Các thuộc tính} \\ \hline
+        Customer &
+        customer\_id, full\_name, phone, email, address \\ \hline
+        Pet &
+        pet\_id, name, species, breed, age, customer\_id \\ \hline
+        Veterinarian &
+        vet\_id, full\_name, schedule \\ \hline
+        Staff &
+        staff\_id, full\_name, role \\ \hline
+        Admin &
+        admin\_id, username, password \\ \hline
+        Booking &
+        booking\_id, date\_time, status, payment, customer\_id, pet\_id, vet\_id, staff\_id \\ \hline
+        Invoice &
+        invoice\_id, amount, date, status, booking\_id \\ \hline
+        MedicalRecord &
+        record\_id, diagnosis, treatment, date, pet\_id, vet\_id \\ \hline
+        Room &
+        room\_id, room\_type, status, note \\ \hline
+    \end{tabularx}
 \end{table}
 
-Các khóa ngoại đảm bảo rằng những dữ liệu tham chiếu trong các bảng luôn tồn tại ở bảng được tham chiếu. Điều này giúp duy trì tính toàn vẹn tham chiếu của cơ sở dữ liệu.
-\section{Thực thể yếu và quan hệ nhiều-nhiều}\label{s:weak_many}
-Trong mô hình ERD hiện tại, tất cả các thực thể đều có khóa chính độc lập nên không có thực thể yếu.
-Do đó, thuật toán ánh xạ thực thể yếu không được áp dụng trực tiếp vào cơ sở dữ liệu hiện tại. Nếu trong tương lai hệ thống xuất hiện một thực thể phụ thuộc hoàn toàn vào một thực thể khác, khóa chính của thực thể chủ sẽ được đưa vào thực thể yếu và kết hợp với khóa cục bộ để tạo thành khóa chính.
-Mô hình hiện tại cũng không có quan hệ nhiều-nhiều (M:N). Vì vậy, chưa cần tạo thêm bảng trung gian để ánh xạ quan hệ M:N.
-Việc không tạo thêm bảng trung gian hoặc thực thể yếu không có nghĩa là mô hình thiếu thành phần, mà phản ánh đúng phạm vi nghiệp vụ được xác định trong đề tài.
+\section{Ánh xạ quan hệ 1:N}
 
-\section{Ràng buộc toàn vẹn}\label{s:integrity_constraints}
-Sau khi ánh xạ sang mô hình quan hệ, các ràng buộc toàn vẹn cần được xác định để đảm bảo dữ liệu hợp lệ.
+Đối với quan hệ một--nhiều, khóa chính của phía một được đưa sang phía nhiều dưới dạng khóa ngoại.
 
-\subsection{Ràng buộc khóa chính}
-Mỗi bảng phải có một khóa chính để xác định duy nhất từng bản ghi. Các khóa chính trong hệ thống đều có giá trị duy nhất và không được phép nhận giá trị \texttt{NULL}.
+\begin{table}[htbp]
+    \centering
+    \caption{Các khóa ngoại trong mô hình quan hệ}
+    \label{tab:foreign_keys}
+    \begin{tabularx}{1\textwidth}{|X|X|X|}
+        \hline
+        \textbf{Bảng} & \textbf{Khóa ngoại} & \textbf{Tham chiếu} \\ \hline
+        Pet & customer\_id & Customer(customer\_id) \\ \hline
+        Booking & customer\_id & Customer(customer\_id) \\ \hline
+        Booking & pet\_id & Pet(pet\_id) \\ \hline
+        Booking & vet\_id & Veterinarian(vet\_id) \\ \hline
+        Booking & staff\_id & Staff(staff\_id) \\ \hline
+        MedicalRecord & pet\_id & Pet(pet\_id) \\ \hline
+        MedicalRecord & vet\_id & Veterinarian(vet\_id) \\ \hline
+        Invoice & booking\_id & Booking(booking\_id) \\ \hline
+    \end{tabularx}
+\end{table}
 
-\subsection{Ràng buộc khóa ngoại}
-Các khóa ngoại được sử dụng để duy trì mối quan hệ giữa các bảng. Ví dụ, \texttt{customer\_id} trong PET phải tham chiếu đến một \texttt{customer\_id} tồn tại trong CUSTOMER.
-Tương tự, \texttt{pet\_id}, \texttt{vet\_id} và \texttt{customer\_id} trong BOOKING phải tham chiếu đến các bản ghi tương ứng.
+\section{Quan hệ Booking -- Invoice}
 
-\subsection{Ràng buộc NOT NULL}
-Các thuộc tính bắt buộc phải có dữ liệu được thiết lập ràng buộc \texttt{NOT NULL}. Ví dụ, tên khách hàng, số điện thoại, tên thú cưng, loài thú cưng và thời gian đặt lịch là những thông tin bắt buộc.
-Riêng \texttt{staff\_id} trong BOOKING có thể nhận \texttt{NULL} vì nhân viên có thể được phân công sau khi Booking được tạo.
+Quan hệ giữa Booking và Invoice có dạng $1:0..1$. Để đảm bảo một booking không có nhiều hơn một hóa đơn, thuộc tính booking\_id trong Invoice được đặt ràng buộc UNIQUE.
 
-\subsection{Ràng buộc UNIQUE}
-Một số thuộc tính cần có giá trị duy nhất trong toàn bộ bảng. Trong hệ thống, \texttt{username} của ADMIN phải là duy nhất.
-Ngoài ra, \texttt{booking\_id} trong INVOICE được đặt \texttt{UNIQUE} nhằm đảm bảo một Booking chỉ có tối đa một Invoice.
+Do Invoice đã liên kết với Booking, thông tin khách hàng không được lưu lại trong Invoice. Khách hàng có thể được xác định thông qua chuỗi quan hệ:
 
-\section{Kết luận chương}\label{s:chapter3_conclusion}
-Chương này đã trình bày quá trình ánh xạ mô hình ERD của hệ thống Quản lý Chăm sóc Sức khỏe Thú cưng sang mô hình quan hệ. Từ chín thực thể được xác định ở Chương 2, các quan hệ tương ứng đã được xây dựng cùng với khóa chính, khóa ngoại và các ràng buộc cần thiết.
-Các quan hệ 1:N được ánh xạ bằng cách đưa khóa chính của phía ``1'' vào phía ``N'' dưới dạng khóa ngoại. Quan hệ 1:0..1 giữa Booking và Invoice được xử lý bằng khóa ngoại kết hợp với ràng buộc \texttt{UNIQUE}. Mô hình hiện tại không có thực thể yếu và không có quan hệ M:N nên các quy tắc tương ứng không được áp dụng trực tiếp.
-Kết quả của chương là lược đồ quan hệ hoàn chỉnh, làm cơ sở để chuyển sang bước cài đặt bằng SQL. Nội dung cài đặt cơ sở dữ liệu, tạo bảng, khóa chính, khóa ngoại và dữ liệu mẫu sẽ được trình bày trong chương tiếp theo.
+\[
+Invoice \rightarrow Booking \rightarrow Customer
+\]
+
+Thiết kế này tránh việc lưu trữ dữ liệu dư thừa và hạn chế khả năng không nhất quán dữ liệu.
+
+\section{Kết luận chương}
+
+Mô hình ERD đã được chuyển đổi thành chín quan hệ. Các khóa chính và khóa ngoại được xác định rõ ràng, đồng thời quan hệ một--không hoặc một giữa Booking và Invoice được đảm bảo bằng thuộc tính UNIQUE. Mô hình logic này là cơ sở để thực hiện chuẩn hóa dữ liệu.
