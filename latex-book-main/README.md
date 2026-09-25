@@ -37,40 +37,6 @@ Các mối quan hệ chính:
 + Một nhân viên có thể hỗ trợ nhiều lịch hẹn.
 + Một lịch hẹn có tối đa một hóa đơn.
 
-## Nội dung báo cáo
-
-Báo cáo được tổ chức thành các phần:
-
-### Phần 1 – Phân tích và thiết kế hệ thống
-
-+ Tổng quan đề tài.
-+ Phân tích nghiệp vụ.
-+ Xác định thực thể, thuộc tính và mối quan hệ.
-+ Thiết kế mô hình ERD.
-+ Ánh xạ ERD sang mô hình quan hệ.
-
-### Phần 2 – Xây dựng cơ sở dữ liệu
-
-+ Cài đặt cơ sở dữ liệu.
-+ Tạo các bảng và ràng buộc.
-+ Khởi tạo dữ liệu mẫu.
-+ Xây dựng các truy vấn SQL kiểm tra dữ liệu.
-
-### Phần 3 – Kiểm thử và đánh giá
-
-+ Kiểm thử khóa chính.
-+ Kiểm thử khóa ngoại.
-+ Kiểm thử các ràng buộc `NOT NULL` và `UNIQUE`.
-+ Kiểm tra tính toàn vẹn tham chiếu.
-+ Kiểm tra cập nhật và xóa dữ liệu.
-+ Chuẩn hóa cơ sở dữ liệu đến dạng chuẩn 3NF.
-
-### Phần 4 – Kết luận
-
-+ Tổng kết kết quả đạt được.
-+ Đánh giá cơ sở dữ liệu.
-+ Những hạn chế của đề tài.
-+ Đề xuất hướng phát triển.
 
 ## Công nghệ sử dụng
 
